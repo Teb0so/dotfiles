@@ -12,9 +12,9 @@ vim.cmd[[highlight VertSplit guibg=NONE ctermbg=NONE]]
 vim.cmd[[highlight LineNr guibg=NONE ctermbg=NONE]]
 vim.cmd[[highlight CursorLineNr guibg=NONE ctermbg=NONE]]
 
--- Set identation dots
+-- Set dots
 vim.cmd("set list")
-vim.cmd("set listchars=space:·")
+vim.cmd("set listchars=tab:-->,space:·")
 
 -- Set tabs
 vim.cmd("set expandtab")
