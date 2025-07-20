@@ -2,4 +2,5 @@
 
 configuration {
     terminal: "alacritty";
+    font: "IosevkaTermSlab Nerd Font Regular 13";
 }

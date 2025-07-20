@@ -10,7 +10,6 @@
  */
 * {
   spacing: 2;
-  font: "Source Code Pro 13";
 }
 element-icon {
     size: 3.65ch ;
