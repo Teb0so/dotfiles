@@ -9,6 +9,8 @@ elif [[ $(cat /etc/hostname) == highrock ]]; then
     PS1='%F{grey}%B[%F{green}%n%F{grey}@%F{green}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ '
 elif [[ $(cat /etc/hostname) == cyrodiil ]]; then
     PS1='%F{grey}%B[%F{red}%n%F{grey}@%F{red}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ '
+else
+    PS1='%F{grey}%B[%F{grey}%n%F{grey}@%F{grey}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ '
 fi
 
 # History in cache directory:
