@@ -10,25 +10,25 @@ declare -a home=(
     )
 
 declare -a config=(
-    "alacritty/"
-    "awesome/"
-    "mpd/"
-    "nvim/"
-    "picom/"
-    "ranger/"
-    "rmpc/"
-    "rofi/"
-    "zathura/"
+    "alacritty"
+    "awesome"
+    "mpd"
+    "nvim"
+    "picom"
+    "ranger"
+    "rmpc"
+    "rofi"
+    "zathura"
     )
 
 declare -a fonts=(
-    "IosevkaTerm/"
-    "IosevkaTermSlab/"
+    "IosevkaTerm"
+    "IosevkaTermSlab"
     )
 
 declare -a icons=(
-    "Chicago95-tux/"
-    "miku-cursor-linux/"
+    "Chicago95-tux"
+    "miku-cursor-linux"
     )
 
 declare -a screenlayout=(
@@ -37,7 +37,7 @@ declare -a screenlayout=(
     )
 
 declare -a themes=(
-    "Redmond97-Retro-Dark/"
+    "Redmond97-Retro-Dark"
     )
 
 declare -a dirs=(
