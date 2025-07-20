@@ -32,11 +32,12 @@ declare -a icons=(
     )
 
 declare -a screenlayout=(
-    "ONE_ONLY.sh"
+    "ONE.sh"
+    "TWO.sh"
     )
 
 declare -a themes=(
-    "Redmond97\ Retro-Dark/"
+    "Redmond97-Retro-Dark/"
     )
 
 declare -a dirs=(
