@@ -1,4 +1,5 @@
-export QT_QPA_PLATFORMTHEME=qt5ct
+#export QT_QPA_PLATFORMTHEME=Kvantum
+export QT_STYLE_OVERRIDE=Kvantum
 export PATH="$HOME/.local/bin:$PATH"
 
 export TERMINAL=alacritty

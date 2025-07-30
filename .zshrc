@@ -74,9 +74,6 @@ alias la='ls -lha --color=tty'
 # Grep
 alias grep='grep --color=tty'
 
-# Fetch
-alias neofetch='fastfetch'
-
 # open another terminal in current directory
 alias duple="alacritty & disown"
 

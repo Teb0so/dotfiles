@@ -33,3 +33,6 @@ vim.keymap.set("n", "<leader>p", "<CMD>bp<CR>")
 
 -- Kill pannel
 vim.keymap.set("n", "<C-d>", "<C-w>q")
+
+-- Open copen
+vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")

@@ -52,7 +52,7 @@ globalkeys = gears.table.join(
         {description = "Volume -", group = "MPD"}),
     --}
 
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey, "Control"          }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
 
     awful.key({ modkey,           }, "j",
@@ -102,10 +102,21 @@ globalkeys = gears.table.join(
               {description = "increase the number of master clients", group = "layout"}),
     awful.key({ modkey,           }, "d",     function () awful.tag.incnmaster(-1, nil, true) end,
               {description = "decrease the number of master clients", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
-              {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
-              {description = "select previous", group = "layout"}),
+    awful.key({ "Control", "Mod1" }, "h",     function () awful.layout.set(awful.layout.suit.tile.right) end,
+              {description = "set layout to tile left", group = "layout"}),
+    awful.key({ "Control", "Mod1" }, "j",     function () awful.layout.set(awful.layout.suit.tile.top) end,
+              {description = "set layout to tile left", group = "layout"}),
+    awful.key({ "Control", "Mod1" }, "k",     function () awful.layout.set(awful.layout.suit.tile.bottom) end,
+              {description = "set layout to tile left", group = "layout"}),
+    awful.key({ "Control", "Mod1" }, "l",     function () awful.layout.set(awful.layout.suit.tile.left) end,
+              {description = "set layout to tile left", group = "layout"}),
+    awful.key({ modkey,           }, "s",     function () awful.layout.set(awful.layout.suit.spiral.dwindle) end,
+              {description = "set layout to tile left", group = "layout"}),
+    awful.key({ modkey,           }, "m",     function () awful.layout.set(awful.layout.suit.max) end,
+              {description = "set layout to tile left", group = "layout"}),
+    awful.key({ modkey,        }, "f",     function () awful.layout.set(awful.layout.suit.floating) end,
+              {description = "set layout to tile left", group = "layout"}),
+
 
     awful.key({ modkey, "Control" }, "n",
               function ()
@@ -140,7 +151,7 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey,           }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
+    awful.key({ modkey,           }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
@@ -155,7 +166,7 @@ clientkeys = gears.table.join(
             c.minimized = true
         end ,
         {description = "minimize", group = "client"}),
-    awful.key({ modkey,           }, "m",
+    awful.key({ modkey, "Mod1"          }, "m",
         function (c)
             c.maximized = not c.maximized
             c:raise()
