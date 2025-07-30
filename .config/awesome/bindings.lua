@@ -38,17 +38,17 @@ globalkeys = gears.table.join(
     --}
 
     --{ MPD
-        awful.key({modkey, "Mod1"}, "j", function() awful.spawn.with_shell("mpc toggle") end,
+        awful.key({modkey, "Mod1", "Shift" }, "j", function() awful.spawn.with_shell("mpc toggle") end,
         {description = "Toggle Pause", group = "MPD"}),
-        awful.key({modkey, "Mod1"}, "k", function() awful.spawn.with_shell("mpc stop") end,
+        awful.key({modkey, "Mod1", "Shift" }, "k", function() awful.spawn.with_shell("mpc stop") end,
         {description = "Stop", group = "MPD"}),
-        awful.key({modkey, "Mod1"}, "h", function () awful.spawn.with_shell("mpc prev") end,
+        awful.key({modkey, "Mod1", "Shift" }, "h", function () awful.spawn.with_shell("mpc prev") end,
         {description = "Previous Song", group = "MPD"}),
-        awful.key({modkey, "Mod1"}, "l", function () awful.spawn.with_shell("mpc next") end,
+        awful.key({modkey, "Mod1", "Shift" }, "l", function () awful.spawn.with_shell("mpc next") end,
         {description = "Next Song", group = "MPD"}),
-        awful.key({modkey, "Mod1"}, ".", function () awful.spawn.with_shell("mpc volume +5") end,
+        awful.key({modkey, "Mod1", "Shift" }, ".", function () awful.spawn.with_shell("mpc volume +5") end,
         {description = "Volume +", group = "MPD"}),
-        awful.key({modkey, "Mod1"}, ",", function () awful.spawn.with_shell("mpc volume -5") end,
+        awful.key({modkey, "Mod1", "Shift" }, ",", function () awful.spawn.with_shell("mpc volume -5") end,
         {description = "Volume -", group = "MPD"}),
     --}
 
@@ -119,36 +119,36 @@ globalkeys = gears.table.join(
               {description = "set layout to floating", group = "layout"}),
 
     --move floating
-    awful.key({ modkey, "Control" }, "h", function ()
+    awful.key({ modkey, "Mod1" }, "h", function ()
         client.focus:relative_move(-30, 0, 0, 0)
     end, {description = "move floating window left", group = "client"}),
 
-    awful.key({ modkey, "Control" }, "l", function ()
+    awful.key({ modkey, "Mod1" }, "l", function ()
         client.focus:relative_move(30, 0, 0, 0)
     end, {description = "move floating window right", group = "client"}),
 
-    awful.key({ modkey, "Control" }, "k", function ()
+    awful.key({ modkey, "Mod1" }, "k", function ()
         client.focus:relative_move(0, -30, 0, 0)
     end, {description = "move floating window up", group = "client"}),
 
-    awful.key({ modkey, "Control" }, "j", function ()
+    awful.key({ modkey, "Mod1" }, "j", function ()
         client.focus:relative_move(0, 30, 0, 0)
     end, {description = "move floating window down", group = "client"}),
 
     --resize floating
-    awful.key({ modkey, "Control", "Shift" }, "h", function ()
+    awful.key({ modkey, "Control" }, "h", function ()
             client.focus:relative_move(0, 0, -20, 0)
     end, {description = "shrink floating window horizontally", group = "client"}),
 
-    awful.key({ modkey, "Control", "Shift" }, "l", function ()
+    awful.key({ modkey, "Control" }, "l", function ()
             client.focus:relative_move(0, 0, 20, 0)
     end, {description = "expand floating window horizontally", group = "client"}),
 
-    awful.key({ modkey, "Control", "Shift" }, "k", function ()
+    awful.key({ modkey, "Control" }, "k", function ()
             client.focus:relative_move(0, 0, 0, -20)
     end, {description = "shrink floating window vertically", group = "client"}),
 
-    awful.key({ modkey, "Control", "Shift" }, "j", function ()
+    awful.key({ modkey, "Control" }, "j", function ()
             client.focus:relative_move(0, 0, 0, 20)
     end, {description = "expand floating window vertically", group = "client"}),
 
