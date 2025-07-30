@@ -102,21 +102,55 @@ globalkeys = gears.table.join(
               {description = "increase the number of master clients", group = "layout"}),
     awful.key({ modkey,           }, "d",     function () awful.tag.incnmaster(-1, nil, true) end,
               {description = "decrease the number of master clients", group = "layout"}),
-    awful.key({ "Control", "Mod1" }, "h",     function () awful.layout.set(awful.layout.suit.tile.right) end,
-              {description = "set layout to tile left", group = "layout"}),
-    awful.key({ "Control", "Mod1" }, "j",     function () awful.layout.set(awful.layout.suit.tile.top) end,
-              {description = "set layout to tile left", group = "layout"}),
-    awful.key({ "Control", "Mod1" }, "k",     function () awful.layout.set(awful.layout.suit.tile.bottom) end,
-              {description = "set layout to tile left", group = "layout"}),
-    awful.key({ "Control", "Mod1" }, "l",     function () awful.layout.set(awful.layout.suit.tile.left) end,
-              {description = "set layout to tile left", group = "layout"}),
-    awful.key({ modkey,           }, "s",     function () awful.layout.set(awful.layout.suit.spiral.dwindle) end,
-              {description = "set layout to tile left", group = "layout"}),
-    awful.key({ modkey,           }, "m",     function () awful.layout.set(awful.layout.suit.max) end,
-              {description = "set layout to tile left", group = "layout"}),
-    awful.key({ modkey,        }, "f",     function () awful.layout.set(awful.layout.suit.floating) end,
-              {description = "set layout to tile left", group = "layout"}),
 
+    awful.key({ "Control", "Mod1" }, "h",     function () awful.layout.set(awful.layout.suit.tile.right) end,
+              {description = "set layout to tile", group = "layout"}),
+    awful.key({ "Control", "Mod1" }, "j",     function () awful.layout.set(awful.layout.suit.tile.top) end,
+              {description = "set layout to tile", group = "layout"}),
+    awful.key({ "Control", "Mod1" }, "k",     function () awful.layout.set(awful.layout.suit.tile.bottom) end,
+              {description = "set layout to tile", group = "layout"}),
+    awful.key({ "Control", "Mod1" }, "l",     function () awful.layout.set(awful.layout.suit.tile.left) end,
+              {description = "set layout to tile", group = "layout"}),
+    awful.key({ modkey,           }, "s",     function () awful.layout.set(awful.layout.suit.spiral.dwindle) end,
+              {description = "set layout to dwindle", group = "layout"}),
+    awful.key({ modkey,           }, "m",     function () awful.layout.set(awful.layout.suit.max) end,
+              {description = "set layout to max", group = "layout"}),
+    awful.key({ modkey,        }, "f",        function () awful.layout.set(awful.layout.suit.floating) end,
+              {description = "set layout to floating", group = "layout"}),
+
+    --move floating
+    awful.key({ modkey, "Control" }, "h", function ()
+        client.focus:relative_move(-30, 0, 0, 0)
+    end, {description = "move floating window left", group = "client"}),
+
+    awful.key({ modkey, "Control" }, "l", function ()
+        client.focus:relative_move(30, 0, 0, 0)
+    end, {description = "move floating window right", group = "client"}),
+
+    awful.key({ modkey, "Control" }, "k", function ()
+        client.focus:relative_move(0, -30, 0, 0)
+    end, {description = "move floating window up", group = "client"}),
+
+    awful.key({ modkey, "Control" }, "j", function ()
+        client.focus:relative_move(0, 30, 0, 0)
+    end, {description = "move floating window down", group = "client"}),
+
+    --resize floating
+    awful.key({ modkey, "Control", "Shift" }, "h", function ()
+            client.focus:relative_move(0, 0, -20, 0)
+    end, {description = "shrink floating window horizontally", group = "client"}),
+
+    awful.key({ modkey, "Control", "Shift" }, "l", function ()
+            client.focus:relative_move(0, 0, 20, 0)
+    end, {description = "expand floating window horizontally", group = "client"}),
+
+    awful.key({ modkey, "Control", "Shift" }, "k", function ()
+            client.focus:relative_move(0, 0, 0, -20)
+    end, {description = "shrink floating window vertically", group = "client"}),
+
+    awful.key({ modkey, "Control", "Shift" }, "j", function ()
+            client.focus:relative_move(0, 0, 0, 20)
+    end, {description = "expand floating window vertically", group = "client"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
