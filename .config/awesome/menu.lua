@@ -13,6 +13,7 @@
 --]]
 local freedesktop= require("freedesktop")
 local beautiful = require("beautiful")
+local awful = require("awful")
 
 myawesomemenu = {
     { "hotkeys", function() return false, hotkeys_popup.show_help end },
