@@ -30,3 +30,5 @@ require("signals")
 
  -- Auto start
 require("auto_start")
+
+require("freedesktop")

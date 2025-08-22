@@ -12,11 +12,11 @@ declare -a home=(
 declare -a config=(
     "alacritty"
     "awesome"
-    "mpd"
+   #"mpd"
     "nvim"
     "picom"
     "ranger"
-    "rmpc"
+   #"rmpc"
     "rofi"
     "zathura"
     )
