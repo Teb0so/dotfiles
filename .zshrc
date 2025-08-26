@@ -19,7 +19,9 @@ SAVEHIST=10000
 HISTFILE=~/.zshhistory
 
 # Read man pages in nvim
-export MANPAGER="nvim +Man!"
+if command -v nvim > /dev/null; then
+    export MANPAGER="nvim +Man!"
+fi
 
 # Basic auto/tab complete:
 autoload -U compinit
