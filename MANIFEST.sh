@@ -7,11 +7,12 @@ declare -a home=(
     ".xinitrc"
     ".zprofile"
     ".zshrc"
-    )
+)
 
 declare -a config=(
     "alacritty"
     "awesome"
+    "fastfetch"
    #"mpd"
     "nvim"
     "picom"
@@ -19,26 +20,26 @@ declare -a config=(
    #"rmpc"
     "rofi"
     "zathura"
-    )
+)
 
 declare -a fonts=(
     "IosevkaTerm"
     "IosevkaTermSlab"
-    )
+)
 
 declare -a icons=(
     "Chicago95-tux"
     "miku-cursor-linux"
-    )
+)
 
 declare -a screenlayout=(
     "ONE.sh"
     "TWO.sh"
-    )
+)
 
 declare -a themes=(
     "Redmond97-Retro-Dark"
-    )
+)
 
 declare -a dirs=(
     "home"
@@ -47,4 +48,4 @@ declare -a dirs=(
     "icons"
     "screenlayout"
     "themes"
-    )
+)
