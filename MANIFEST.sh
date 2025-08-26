@@ -1,5 +1,3 @@
-#!/bin/env bash
-
 declare -a home=(
     ".gdbinit"
     ".tmux.conf"
