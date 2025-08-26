@@ -20,6 +20,7 @@ myawesomemenu = {
     { "manual", terminal .. " -e man awesome" },
     { "edit config", string.format("%s -e %s .config/awesome", terminal, editor_cmd) },
     { "restart", awesome.restart },
+    { "shutdown", function() awful.spawn("systemctl poweroff") end },
     { "quit", function() awful.spawn("pkill awesome") end }
 }
 mymainmenu = freedesktop.menu.build({

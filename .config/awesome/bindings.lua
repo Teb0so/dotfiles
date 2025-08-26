@@ -139,19 +139,19 @@ globalkeys = gears.table.join(
 
     --resize floating
     awful.key({ modkey, "Control" }, "h", function ()
-            client.focus:relative_move(0, 0, -20, 0)
+            client.focus:relative_move(15, 0, -30, 0)
     end, {description = "shrink floating window horizontally", group = "client"}),
 
     awful.key({ modkey, "Control" }, "l", function ()
-            client.focus:relative_move(0, 0, 20, 0)
+            client.focus:relative_move(-15, 0, 30, 0)
     end, {description = "expand floating window horizontally", group = "client"}),
 
     awful.key({ modkey, "Control" }, "k", function ()
-            client.focus:relative_move(0, 0, 0, -20)
+            client.focus:relative_move(0, 15, 0, -30)
     end, {description = "shrink floating window vertically", group = "client"}),
 
     awful.key({ modkey, "Control" }, "j", function ()
-            client.focus:relative_move(0, 0, 0, 20)
+            client.focus:relative_move(0, -15, 0, 30)
     end, {description = "expand floating window vertically", group = "client"}),
 
     awful.key({ modkey, "Control" }, "n",
