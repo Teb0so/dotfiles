@@ -45,7 +45,22 @@ local tasklist_buttons = gears.table.join(
 awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
     awful.tag({ workspaces[1], workspaces[2], workspaces[3], workspaces[4], workspaces[5], workspaces[6], workspaces[7], workspaces[8], workspaces[9], }, s, awful.layout.layouts[1])
+--{ custom battery
+    local custom_battery = wibox.widget {
+        widget = wibox.widget.textbox,
+        align = "center",
+        valign = "center"
+    }
 
+    awful.widget.watch(
+        '/home/teb0so/.local/bin/battery',
+        5,
+        function(widget, stdout)
+            widget.text = stdout:gsub("\n", "")
+        end,
+        custom_battery
+    )
+--}
 --{ custom clock
     local custom_clock = wibox.widget {
         widget = wibox.widget.textbox,
@@ -167,6 +182,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            custom_battery,
             custom_mpd,
             custom_net_widget,
             custom_pc_monitor,
