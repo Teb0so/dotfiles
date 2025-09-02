@@ -20,6 +20,10 @@ declare -a config=(
     "zathura"
 )
 
+declare -a local=(
+    "scripts"
+)
+
 declare -a fonts=(
     "IosevkaTerm"
     "IosevkaTermSlab"
@@ -42,6 +46,7 @@ declare -a themes=(
 declare -a dirs=(
     "home"
     "config"
+    "local"
     "fonts"
     "icons"
     "screenlayout"

@@ -82,9 +82,6 @@ alias duple="alacritty & disown"
 # use fzf to start a tmux on specific directory
 alias cdc='cd "$(find . -type d -print | fzf)" && tmux && cd -'
 
-# open notes in nvim
-alias notes='cd ~/notes && nvim && cd -'
-
 # To clipboard
 alias clipb='xclip -selection clipboard'
 

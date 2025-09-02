@@ -19,18 +19,16 @@ myawesomemenu = {
     { "hotkeys", function() return false, hotkeys_popup.show_help end },
     { "manual", terminal .. " -e man awesome" },
     { "edit config", string.format("%s -e %s .config/awesome", terminal, editor_cmd) },
-    { "restart", awesome.restart },
-    { "shutdown", function() awful.spawn("systemctl poweroff") end },
-    { "quit", function() awful.spawn("pkill awesome") end }
 }
 mymainmenu = freedesktop.menu.build({
     before = {
         { "Awesome", myawesomemenu, beautiful.awesome_icon },
-        -- other triads can be put here
+        { "Open terminal", terminal },
     },
     after = {
-        { "Open terminal", terminal },
-        -- other triads can be put here
+        { "restart", awesome.restart },
+        { "quit", function() awful.spawn("pkill awesome") end },
+        { "shutdown", function() awful.spawn("systemctl poweroff") end }
     }
 })
 

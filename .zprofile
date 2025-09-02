@@ -1,6 +1,7 @@
 #export QT_QPA_PLATFORMTHEME=Kvantum
 export QT_STYLE_OVERRIDE=Kvantum
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/scripts:$PATH"
 
 export TERMINAL=alacritty
 export EDITOR=nvim
