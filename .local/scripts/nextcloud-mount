@@ -1,3 +1,4 @@
 #!/bin/sh
 
+mkdir -p ~/Nextcloud
 rclone mount Nextcloud-Teb0so: ~/Nextcloud --vfs-cache-mode writes --daemon

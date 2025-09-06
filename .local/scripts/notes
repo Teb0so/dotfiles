@@ -4,6 +4,7 @@ MOUNT_POINT="$HOME/Nextcloud"
 NOTES_DIR="$MOUNT_POINT/Notes"
 
 if [ ! -d "$NOTES_DIR" ]; then
+    mkdir -p "$MOUNT_POINT"
     rclone mount Nextcloud-Teb0so: "$MOUNT_POINT" --vfs-cache-mode writes --daemon
 
     i=0
