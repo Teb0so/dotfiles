@@ -57,4 +57,5 @@ bindings = [
 vi_mode_style = { shape = "Block" , blinking = "Never" }
 
 [window]
+dimensions = {columns = 120, lines = 35 }
 opacity = 0.95

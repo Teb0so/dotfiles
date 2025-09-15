@@ -14,7 +14,7 @@ set relativenumber
 "set dots
 set list
 set listchars=tab:-->,space:·
-highlight SpecialKey ctermfg=8 guifg=#808080
+highlight SpecialKey ctermfg=8 guifg=#373b41
 
 "set tabs
 set expandtab

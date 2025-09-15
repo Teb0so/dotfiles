@@ -5,7 +5,7 @@ export PATH="$HOME/.local/scripts:$PATH"
 export XDG_DATA_DIRS="/home/teb0so/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
 
 
-export TERMINAL=alacritty
+export TERM=alacritty
 export EDITOR=nvim
 
 if [ -z "$XDG_RUNTIME_DIR" ]; then
