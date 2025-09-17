@@ -10,7 +10,7 @@ wall_picker_cmd = "waypaper"
 wall_random_cmd = "waypaper --random"
 file_xplr_gui_cmd = "pcmanfm-qt"
 file_xplr_cli_cmd = terminal .. " -e ranger"
-browser_cmd = "floorp"
+browser_cmd = "firefox"
 printscrn_cmd = [[scrot -p ~/Pictures/screenshots/screenshot_%Y-%m-%d-%H%M%S.png & notify-send "Taking screenshot!"]]
 modkey = "Mod4"
 
