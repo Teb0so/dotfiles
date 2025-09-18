@@ -13,6 +13,8 @@ root.buttons(gears.table.join(
 -- {{{ Key bindings
 globalkeys = gears.table.join(
     --{
+        awful.key({"Mod1"}, "space", function() awful.spawn("toggle-kb-layout") end,
+        {description = "Toggle keyboard layout", group = "Launch"}),
         awful.key({modkey}, "Return", function() awful.spawn(terminal) end,
         {description = "Launch terminal", group = "Launch"}),
         awful.key({modkey}, "p", function() awful.spawn(applauncher_cmd) end,
