@@ -13,4 +13,6 @@ awful.spawn.once("xset s off -dpms")
 
 awful.spawn.single_instance("picom")
 
+awful.spawn.single_instance("gkrellm")
+
 awful.spawn.once("flatpak run com.discordapp.Discord")
