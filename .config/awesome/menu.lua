@@ -24,7 +24,7 @@ mymainmenu = freedesktop.menu.build({
     before = {
         { "  Awesome", myawesomemenu},
         { "  Terminal", terminal},
-        { "  File", file_xplr_gui_cmd},
+        { "  Explorer", file_xplr_gui_cmd},
         { "󰖟  Browser ", browser_cmd},
         { "  Mail", mail_client_cmd},
         { "  Music", music_player_cmd}
