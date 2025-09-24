@@ -16,3 +16,5 @@ awful.spawn.single_instance("picom")
 awful.spawn.single_instance("gkrellm")
 
 awful.spawn.once("flatpak run com.discordapp.Discord")
+
+awful.spawn.once("protonmail-bridge")

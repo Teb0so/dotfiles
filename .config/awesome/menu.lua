@@ -22,13 +22,19 @@ myawesomemenu = {
 }
 mymainmenu = freedesktop.menu.build({
     before = {
-        { "Awesome", myawesomemenu, beautiful.awesome_icon },
-        { "Open terminal", terminal },
+        { "  Awesome", myawesomemenu},
+        { "  Terminal", terminal},
+        { "  File", file_xplr_gui_cmd},
+        { "󰖟  Browser ", browser_cmd},
+        { "  Mail", mail_client_cmd},
+        { "  Music", music_player_cmd}
     },
     after = {
-        { "restart", awesome.restart },
-        { "quit", function() awful.spawn("pkill awesome") end },
-        { "shutdown", function() awful.spawn("systemctl poweroff") end }
+        { "  Restart", awesome.restart },
+        { "󰈆  Quit", function() awful.spawn("pkill awesome") end },
+        { "  Reboot", function() awful.spawn("systemctl reboot") end },
+        { "  Hibernate", function() awful.spawn("systemctl hibernate") end };
+        { "⏻  Shutdown", function() awful.spawn("systemctl poweroff") end }
     }
 })
 
