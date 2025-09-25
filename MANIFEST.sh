@@ -41,6 +41,7 @@ declare -a screenlayout=(
 
 declare -a themes=(
     "Redmond97-Retro-Dark"
+    "oomox-SimplicityDarkGtk"
 )
 
 declare -a dirs=(
