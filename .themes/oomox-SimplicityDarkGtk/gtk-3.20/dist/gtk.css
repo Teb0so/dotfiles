@@ -55,7 +55,7 @@
 @define-color panel_fg_color @dark_fg_color;
 @define-color borders mix(#3e3e3e,#e5e5e5,0.18);
 @define-color unfocused_borders mix(#3e3e3e,mix(#3e3e3e,#e5e5e5,0.18),0.9);
-@define-color button_bg_color #696969;
+@define-color button_bg_color #3e3e3e;
 @define-color button_fg_color #e5e5e5;
 @define-color header_button_bg_color #363636;
 @define-color header_button_fg_color #e5e5e5;
@@ -110,7 +110,7 @@
   outline-style: dashed;
   outline-width: 1px;
   outline-offset: -1px;
-  -gtk-outline-radius: 5px; }
+  -gtk-outline-radius: 4px; }
 
 /*************
  ! Base states
@@ -217,14 +217,14 @@ stacksidebar row.needs-attention > label {
   padding: 3px;
   border-width: 1px;
   border-style: solid;
-  border-radius: 5px;
-  -gtk-outline-radius: 4.5px;
+  border-radius: 4px;
+  -gtk-outline-radius: 3.6px;
   transition: 150ms ease;
   outline-color: transparent; }
   #restart_button button.text-button, #shutdown_button button.text-button, #login_window button.text-button, .nemo-window .sidebar + separator + box .primary-toolbar button.text-button.flat, .nemo-window .sidebar + separator + box .primary-toolbar button.text-button.flat.nautilus-circular-button.image-button, treeview.view header button.text-button, .osd spinbutton.vertical button.text-button:first-child, .osd spinbutton:not(.vertical) button.text-button,
   #XfceNotifyWindow button.text-button, frame.app-notification button.text-button, popover.background button.text-button, infobar.error button.text-button, infobar.question button.text-button, infobar.warning button.text-button, infobar.info button.text-button, headerbar.selection-mode button.text-button,
   .titlebar:not(headerbar).selection-mode button.text-button, .text-button.destructive-action, .text-button.suggested-action, toolbar.inline-toolbar button.text-button, button.text-button, button.text-button.nautilus-circular-button.image-button {
-    padding: 3px 4.0714285714px; }
+    padding: 3px 3.8571428571px; }
 
 notebook > header > tabs > tab button.flat:active, notebook > header > tabs > tab button.flat:active:hover, notebook > header > tabs > tab button.flat:hover, modelbutton.flat,
 menuitem.button.flat, menu menuitem calendar.button:hover,
@@ -257,16 +257,16 @@ toolbar .linked > button:first-child, .titlebar:not(headerbar) viewswitcher butt
 .titlebar:not(headerbar) .linked > button:first-child,
 headerbar .linked > button:first-child, combobox box button:first-child, combobox box button.nautilus-circular-button.image-button:first-child, combobox box entry:first-child, .inline-toolbar button:first-child, .linked > button:first-child {
   border-width: 1px;
-  border-radius: 5px 0 0 5px;
-  -gtk-outline-radius: 4.5px 0 0 4.5px; }
+  border-radius: 4px 0 0 4px;
+  -gtk-outline-radius: 3.6px 0 0 3.6px; }
 
 toolbar.inline-toolbar toolbutton:last-child > button.flat, .linked:not(.vertical) > combobox:last-child > box > button.combo, .nemo-window toolbar toolitem stack widget button:last-child, popover.background .linked > button:last-child, headerbar.selection-mode viewswitcher button:last-child, toolbar.inline-toolbar toolbutton > button.flat:last-child, toolbar viewswitcher button:last-child, toolbar viewswitcher button.nautilus-circular-button.image-button:last-child,
 toolbar .linked > button:last-child, .titlebar:not(headerbar) viewswitcher button:last-child, headerbar viewswitcher button:last-child, headerbar viewswitcher button.nautilus-circular-button.image-button:last-child,
 .titlebar:not(headerbar) .linked > button:last-child,
 headerbar .linked > button:last-child, combobox box button:last-child, combobox box button.nautilus-circular-button.image-button:last-child, combobox box entry:last-child, .inline-toolbar button:last-child, .linked > button:last-child {
   border-width: 1px;
-  border-radius: 0 5px 5px 0;
-  -gtk-outline-radius: 0 4.5px 4.5px 0; }
+  border-radius: 0 4px 4px 0;
+  -gtk-outline-radius: 0 3.6px 3.6px 0; }
 
 toolbar.inline-toolbar toolbutton:only-child > button.flat, .linked:not(.vertical) > combobox:only-child > box > button.combo, .nemo-window toolbar toolitem stack widget button:only-child, popover.background .linked > button:only-child, headerbar.selection-mode viewswitcher button:only-child, toolbar.inline-toolbar toolbutton > button.flat:only-child, toolbar viewswitcher button:only-child, toolbar viewswitcher button.nautilus-circular-button.image-button:only-child,
 toolbar .linked > button:only-child, .titlebar:not(headerbar) viewswitcher button:only-child, headerbar viewswitcher button:only-child, headerbar viewswitcher button.nautilus-circular-button.image-button:only-child,
@@ -274,8 +274,8 @@ toolbar .linked > button:only-child, .titlebar:not(headerbar) viewswitcher butto
 headerbar .linked > button:only-child, combobox box button:only-child, combobox box button.nautilus-circular-button.image-button:only-child, combobox box entry:only-child, .inline-toolbar button:only-child, .linked > button:only-child {
   border-width: 1px;
   border-style: solid;
-  border-radius: 5px;
-  -gtk-outline-radius: 4.5px; }
+  border-radius: 4px;
+  -gtk-outline-radius: 3.6px; }
 
 .nemo-window toolbar toolitem stack widget button, .nemo-window toolbar toolitem stack widget button.nautilus-circular-button.image-button, popover.background .linked > button, headerbar.selection-mode viewswitcher button,
 headerbar.selection-mode .linked > button,
@@ -292,18 +292,18 @@ headerbar .linked > button.nautilus-circular-button.image-button, combobox box b
 
 .linked.vertical > combobox:first-child > box > button.combo, .linked.vertical > button:first-child {
   border-width: 1px;
-  border-radius: 5px 5px 0 0;
-  -gtk-outline-radius: 4.5px 4.5px 0 0; }
+  border-radius: 4px 4px 0 0;
+  -gtk-outline-radius: 3.6px 3.6px 0 0; }
 
 .linked.vertical > combobox:last-child > box > button.combo, .linked.vertical > button:last-child {
   border-width: 1px;
-  border-radius: 0 0 5px 5px;
-  -gtk-outline-radius: 0 0 4.5px 4.5px; }
+  border-radius: 0 0 4px 4px;
+  -gtk-outline-radius: 0 0 3.6px 3.6px; }
 
 .linked.vertical > combobox:only-child > box > button.combo, .linked.vertical > button:only-child {
   border-width: 1px;
-  border-radius: 5px;
-  -gtk-outline-radius: 4.5px; }
+  border-radius: 4px;
+  -gtk-outline-radius: 3.6px; }
 
 .linked.vertical > button {
   border-width: 1px;
@@ -328,7 +328,7 @@ notebook > header > tabs > arrow, infobar.error button.close, infobar.question b
     box-shadow: none; }
 
 button, button.nautilus-circular-button.image-button {
-  background-color: #696969;
+  background-color: #3e3e3e;
   background-image: none;
   border-color: rgba(183, 183, 183, 0.22);
   color: #e5e5e5;
@@ -367,12 +367,12 @@ button, button.nautilus-circular-button.image-button {
       box-shadow: inset 0 -1px mix(#416fa1,rgba(65, 111, 161, 0.36),0.3); }
   button.flat, button.flat.nautilus-circular-button.image-button {
     color: #e5e5e5;
-    border-color: rgba(105, 105, 105, 0);
-    background-color: rgba(105, 105, 105, 0);
+    border-color: rgba(62, 62, 62, 0);
+    background-color: rgba(62, 62, 62, 0);
     background-image: none;
     box-shadow: none; }
   button:hover, button.nautilus-circular-button.image-button:hover, button.flat:hover {
-    background-color: #6e6e6e;
+    background-color: #414141;
     background-image: none;
     border-color: rgba(183, 183, 183, 0.3);
     color: #e5e5e5;
@@ -386,7 +386,7 @@ button, button.nautilus-circular-button.image-button {
     button:hover:active:disabled, button:hover:checked:disabled, button.flat:hover:active:disabled, button.flat:hover:checked:disabled {
       border-color: rgba(183, 183, 183, 0.3); }
   button:focus, button.nautilus-circular-button.image-button:focus, button.flat:focus {
-    background-color: #6e6e6e;
+    background-color: #414141;
     background-image: none;
     border-color: rgba(229, 229, 229, 0.22);
     outline-color: rgba(65, 111, 161, 0.5);
@@ -396,7 +396,7 @@ button, button.nautilus-circular-button.image-button {
     color: #e5e5e5;
     box-shadow: 0 1px 2px -1px rgba(46, 46, 46, 0.42); }
     button:focus:hover, button.flat:focus:hover {
-      background-color: #747474;
+      background-color: #444444;
       background-image: none;
       border-color: rgba(183, 183, 183, 0.3);
       box-shadow: 0 1px 2px -1px rgba(46, 46, 46, 0.48); }
@@ -431,14 +431,14 @@ button, button.nautilus-circular-button.image-button {
   button:focus, button.nautilus-circular-button.image-button:focus, button:hover, button.nautilus-circular-button.image-button:hover, button.flat:focus, button.flat:hover {
     color: #e5e5e5; }
   button:disabled:disabled, button.flat:disabled:disabled {
-    background-color: alpha(mix(#696969,#e5e5e5,0.2),0.4);
+    background-color: alpha(mix(#3e3e3e,#e5e5e5,0.2),0.4);
     background-image: none;
     /*border: 1px solid alpha($bg, .2);*/
     opacity: .6;
-    color: mix(#696969,#e5e5e5,0.6);
+    color: mix(#3e3e3e,#e5e5e5,0.6);
     box-shadow: none; }
     button:disabled:disabled :disabled, button.flat:disabled:disabled :disabled {
-      color: mix(#696969,#e5e5e5,0.6); }
+      color: mix(#3e3e3e,#e5e5e5,0.6); }
   button:active:disabled, button:checked:disabled, button.flat:active:disabled, button.flat:checked:disabled {
     background-color: rgba(65, 111, 161, 0.6);
     background-image: none;
@@ -450,11 +450,11 @@ button, button.nautilus-circular-button.image-button {
     color: mix(#e5e5e5,mix(#e5e5e5,#3e3e3e,0.5),0.8); }
   button.separator, button.separator.nautilus-circular-button.image-button, button .separator, button.nautilus-circular-button.image-button .separator {
     border: 1px solid currentColor;
-    color: rgba(105, 105, 105, 0.9); }
+    color: rgba(62, 62, 62, 0.9); }
     button.separator:disabled, button .separator:disabled {
-      color: rgba(105, 105, 105, 0.85); }
+      color: rgba(62, 62, 62, 0.85); }
   button separator, button.nautilus-circular-button.image-button separator {
-    background-image: image(mix(#e5e5e5,#696969,0.9)); }
+    background-image: image(mix(#e5e5e5,#3e3e3e,0.9)); }
   .inline-toolbar button, .inline-toolbar button.nautilus-circular-button.image-button, .linked > button, .linked > button.nautilus-circular-button.image-button {
     box-shadow: 0 1px 2px -1px rgba(46, 46, 46, 0.22); }
     .inline-toolbar button:focus, .inline-toolbar button:hover, .linked > button:focus, .linked > button:hover {
@@ -462,7 +462,7 @@ button, button.nautilus-circular-button.image-button {
     .inline-toolbar button:active, .inline-toolbar button:active:hover, .inline-toolbar button:active:focus, .inline-toolbar button:active:hover:focus, .inline-toolbar button:checked, .inline-toolbar button:checked:hover, .inline-toolbar button:checked:focus, .inline-toolbar button:checked:hover:focus, .linked > button:active, .linked > button:active:hover, .linked > button:active:focus, .linked > button:active:hover:focus, .linked > button:checked, .linked > button:checked:hover, .linked > button:checked:focus, .linked > button:checked:hover:focus {
       box-shadow: inset 0 1px rgba(46, 46, 46, 0.07), inset 0 -1px rgba(46, 46, 46, 0.05); }
     .inline-toolbar button:disabled, .linked > button:disabled {
-      box-shadow: inset -1px 0 #545454; }
+      box-shadow: inset -1px 0 #323232; }
     .inline-toolbar button:last-child, .inline-toolbar button:only-child, .linked > button:last-child, .linked > button:only-child {
       box-shadow: 0 1px 2px -1px rgba(46, 46, 46, 0.22); }
     .inline-toolbar button:last-child:hover, .inline-toolbar button:only-child:hover, .linked > button:last-child:hover, .linked > button:only-child:hover {
@@ -480,7 +480,7 @@ button, button.nautilus-circular-button.image-button {
     .linked.vertical > button:active, .linked.vertical > button:active:hover, .linked.vertical > button:active:focus, .linked.vertical > button:active:hover:focus, .linked.vertical > button:checked, .linked.vertical > button:checked:hover, .linked.vertical > button:checked:focus, .linked.vertical > button:checked:hover:focus {
       box-shadow: inset 1px 0 rgba(46, 46, 46, 0.07), inset -1px 0 rgba(46, 46, 46, 0.05); }
     .linked.vertical > button:disabled {
-      box-shadow: inset 0 -1px #545454; }
+      box-shadow: inset 0 -1px #323232; }
     .linked.vertical > button:last-child, .linked.vertical > button:only-child {
       box-shadow: 0 1px 2px -1px rgba(46, 46, 46, 0.22); }
     .linked.vertical > button:last-child:hover, .linked.vertical > button:only-child:hover {
@@ -507,7 +507,7 @@ spinbutton button, spinbutton button.nautilus-circular-button.image-button {
   color: #e5e5e5;
   padding: 3px 5px; }
   spinbutton button:active, spinbutton button.nautilus-circular-button.image-button:active, spinbutton button:checked, spinbutton button.nautilus-circular-button.image-button:checked, spinbutton button:hover, spinbutton button.nautilus-circular-button.image-button:hover {
-    background-color: #7e7e7e;
+    background-color: #4a4a4a;
     background-image: none; }
   spinbutton button:hover, spinbutton button.nautilus-circular-button.image-button:hover, spinbutton button:focus:hover {
     border-color: rgba(183, 183, 183, 0.3); }
@@ -534,8 +534,8 @@ spinbutton:not(.vertical) {
   background-image: none;
   /*@include border($base_color);*/
   padding: 0;
-  border-radius: 5px;
-  -gtk-outline-radius: 4.5px;
+  border-radius: 4px;
+  -gtk-outline-radius: 3.6px;
   color: #e5e5e5;
   caret-color: #e5e5e5;
   /*&:focus, &:active { border-color: border_focus($borders_color); }*/ }
@@ -544,8 +544,8 @@ spinbutton:not(.vertical) {
     background-image: none;
     color: mix(#282828,#e5e5e5,0.5); }
   spinbutton:not(.vertical) entry {
-    border-radius: 5px 0 0 5px;
-    -gtk-outline-radius: 4.5px 0 0 4.5px;
+    border-radius: 4px 0 0 4px;
+    -gtk-outline-radius: 3.6px 0 0 3.6px;
     border-right-width: 0;
     box-shadow: none; }
   spinbutton:not(.vertical) button, spinbutton:not(.vertical) button.nautilus-circular-button.image-button {
@@ -567,8 +567,8 @@ spinbutton:not(.vertical) {
         border-color: mix(#416fa1,rgba(229, 229, 229, 0.3),0.3); }
     spinbutton:not(.vertical) button.down:dir(rtl) {
       border-right-style: none;
-      border-radius: 5px 0 0 5px;
-      -gtk-outline-radius: 4.5px 0 0 4.5px; }
+      border-radius: 4px 0 0 4px;
+      -gtk-outline-radius: 3.6px 0 0 3.6px; }
       spinbutton:not(.vertical) button.down:dir(rtl):focus {
         border-top-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.18),0.3);
         border-bottom-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.18),0.3);
@@ -578,8 +578,8 @@ spinbutton:not(.vertical) {
         box-shadow: inset-1px 0 0 mix(#416fa1,rgba(229, 229, 229, 0.3),0.3); }
     spinbutton:not(.vertical) button.up:dir(ltr) {
       border-left-style: none;
-      border-radius: 0 5px 5px 0;
-      -gtk-outline-radius: 0 4.5px 4.5px 0; }
+      border-radius: 0 4px 4px 0;
+      -gtk-outline-radius: 0 3.6px 3.6px 0; }
       spinbutton:not(.vertical) button.up:dir(ltr):focus {
         border-top-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.18),0.3);
         border-bottom-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.18),0.3);
@@ -603,16 +603,16 @@ spinbutton.vertical button.up:focus:hover, spinbutton.vertical button.down:focus
   border-color: mix(#416fa1,rgba(229, 229, 229, 0.3),0.3); }
 
 spinbutton.vertical button.up {
-  border-radius: 5px 5px 0 0;
-  -gtk-outline-radius: 4.5px 4.5px 0 0; }
+  border-radius: 4px 4px 0 0;
+  -gtk-outline-radius: 3.6px 3.6px 0 0; }
   spinbutton.vertical button.up:focus {
     border-top-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.18),0.3);
     border-left-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.18),0.3);
     border-right-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.18),0.3); }
 
 spinbutton.vertical button.down {
-  border-radius: 0 0 5px 5px;
-  -gtk-outline-radius: 0 0 4.5px 4.5px; }
+  border-radius: 0 0 4px 4px;
+  -gtk-outline-radius: 0 0 3.6px 3.6px; }
   spinbutton.vertical button.down:focus {
     border-bottom-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.18),0.3);
     border-left-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.18),0.3);
@@ -623,8 +623,8 @@ spinbutton.vertical button.down {
 *******************/
 combobox button.combo, combobox button.combo.nautilus-circular-button.image-button {
   min-width: 0;
-  padding-left: 4.0714285714px;
-  padding-right: 4.0714285714px; }
+  padding-left: 3.8571428571px;
+  padding-right: 3.8571428571px; }
 
 combobox arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
@@ -633,7 +633,7 @@ combobox arrow {
   padding: 1.5px; }
 
 combobox box button, combobox box button.nautilus-circular-button.image-button, combobox box entry {
-  padding: 3px 4.0714285714px; }
+  padding: 3px 3.8571428571px; }
 
 combobox box > entry + button.combo, combobox box > entry + button.combo.nautilus-circular-button.image-button {
   padding: 3px; }
@@ -653,7 +653,7 @@ combobox menu menuitem {
   border-left-width: 0; }
   .linked:not(.vertical) > entry:first-child {
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 4px;
     border-right-width: 0;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
@@ -662,7 +662,7 @@ combobox menu menuitem {
       border-right-width: 1px; }
   .linked:not(.vertical) > entry:last-child {
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 4px;
     border-left-width: 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
@@ -672,7 +672,7 @@ combobox menu menuitem {
   .linked:not(.vertical) > entry:only-child {
     border-width: 1px; }
   .linked:not(.vertical) > entry:only-child {
-    border-radius: 5px; }
+    border-radius: 4px; }
 
 .linked.vertical > entry {
   border-width: 1px;
@@ -681,7 +681,7 @@ combobox menu menuitem {
   border-bottom-width: 0; }
   .linked.vertical > entry:first-child {
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 4px;
     border-top-width: 1px;
     border-bottom-width: 0;
     border-bottom-left-radius: 0;
@@ -691,7 +691,7 @@ combobox menu menuitem {
       border-bottom-width: 1px; }
   .linked.vertical > entry:last-child {
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 4px;
     border-top-width: 0;
     border-bottom-width: 1px;
     border-top-left-radius: 0;
@@ -702,13 +702,13 @@ combobox menu menuitem {
   .linked.vertical > entry:only-child {
     border-width: 1px; }
   .linked.vertical > entry:only-child {
-    border-radius: 5px; }
+    border-radius: 4px; }
 
 #login_window entry, .osd entry,
 #XfceNotifyWindow entry, popover.background entry, menuitem entry, entry {
   border-width: 1px;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 4px;
   transition: border 100ms ease-out;
   box-shadow: inset 1px 0 rgba(46, 46, 46, 0.1), inset 0 1px rgba(46, 46, 46, 0.12), inset -1px 0 rgba(46, 46, 46, 0.1), inset 0 -1px rgba(46, 46, 46, 0.05); }
   #login_window entry:focus,
@@ -728,7 +728,7 @@ combobox menu menuitem {
     background-color: #416fa1;
     background-image: none;
     border-width: 0;
-    border-radius: 5px;
+    border-radius: 4px;
     color: #e5e5e5; }
   #login_window entry image.left,
   #XfceNotifyWindow entry image.left, entry image.left {
@@ -795,7 +795,7 @@ entry {
   background-color: #282828;
   background-image: none;
   border-color: mix(#e5e5e5,#282828,0.8);
-  padding: 5px 4.0714285714px;
+  padding: 5px 3.8571428571px;
   color: #e5e5e5;
   caret-color: #e5e5e5;
   -gtk-secondary-caret-color: #e5e5e5; }
@@ -852,9 +852,9 @@ headerbar {
     margin-top: 4px;
     margin-bottom: 4px; }
   window:not(.tiled):not(.maximized) separator:first-child + headerbar, window:not(.tiled):not(.maximized) headerbar:first-child {
-    border-top-left-radius: 5px; }
+    border-top-left-radius: 4px; }
   window:not(.tiled):not(.maximized) headerbar:last-child {
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 4px; }
 
 .titlebar:not(headerbar), headerbar {
   background-color: #363636;
@@ -863,7 +863,7 @@ headerbar {
   color: #e5e5e5;
   background-color: #363636;
   background-image: none;
-  border-radius: 5px 5px 0 0;
+  border-radius: 4px 4px 0 0;
   color: #e5e5e5;
   padding: 0 6px;
   min-height: 42px; }
@@ -1641,8 +1641,8 @@ window.csd > .titlebar:not(headerbar) {
   background-color: #303030; }
 
 .background .titlebar:backdrop, .background .titlebar {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px; }
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
 
 .background.tiled .titlebar:backdrop, .background.tiled .titlebar,
 .background.tiled-top .titlebar:backdrop,
@@ -2833,7 +2833,7 @@ calendar {
   outline-offset: -1px;
   color: #e5e5e5; }
   calendar:selected {
-    border-radius: 5px; }
+    border-radius: 4px; }
   calendar.header {
     border-bottom: 1px solid rgba(92, 92, 92, 0.1);
     border-radius: 0; }
@@ -2867,32 +2867,32 @@ colorswatch:drop(active), colorswatch {
   border-style: none; }
 
 colorswatch.top {
-  border-top-left-radius: 5.5px;
-  border-top-right-radius: 5.5px; }
+  border-top-left-radius: 4.5px;
+  border-top-right-radius: 4.5px; }
   colorswatch.top overlay {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; }
 
 colorswatch.bottom {
-  border-bottom-left-radius: 5.5px;
-  border-bottom-right-radius: 5.5px; }
+  border-bottom-left-radius: 4.5px;
+  border-bottom-right-radius: 4.5px; }
   colorswatch.bottom overlay {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px; }
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
 
 colorswatch.left, colorswatch:first-child:not(.top) {
-  border-top-left-radius: 5.5px;
-  border-bottom-left-radius: 5.5px; }
+  border-top-left-radius: 4.5px;
+  border-bottom-left-radius: 4.5px; }
   colorswatch.left overlay, colorswatch:first-child:not(.top) overlay {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px; }
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
 
 colorswatch.right, colorswatch:last-child:not(.bottom) {
-  border-top-right-radius: 5.5px;
-  border-bottom-right-radius: 5.5px; }
+  border-top-right-radius: 4.5px;
+  border-bottom-right-radius: 4.5px; }
   colorswatch.right overlay, colorswatch:last-child:not(.bottom) overlay {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px; }
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; }
 
 colorswatch.dark overlay {
   color: #e5e5e5; }
@@ -2935,9 +2935,9 @@ row:selected colorswatch {
   box-shadow: 0 0 0 2px #e5e5e5; }
 
 colorswatch#add-color-button {
-  border-radius: 5px 5px 0 0; }
+  border-radius: 4px 4px 0 0; }
   colorswatch#add-color-button:only-child {
-    border-radius: 5px; }
+    border-radius: 4px; }
   colorswatch#add-color-button overlay {
     background-color: #3b3b3b;
     color: #e5e5e5; }
@@ -2947,14 +2947,14 @@ colorswatch#add-color-button {
       background-color: #3b3b3b; }
 
 colorswatch#editor-color-sample {
-  border-radius: 5px; }
+  border-radius: 4px; }
   colorswatch#editor-color-sample overlay {
-    border-radius: 5.5px; }
+    border-radius: 4.5px; }
 
 button.color, button.color.nautilus-circular-button.image-button {
   padding: 3px; }
   button.color colorswatch:only-child, button.color colorswatch:only-child overlay {
-    border-radius: 5px; }
+    border-radius: 4px; }
   button.color:disabled colorswatch:only-child, button.color:backdrop colorswatch:only-child, button.color:active colorswatch:only-child, button.color:checked colorswatch:only-child {
     box-shadow: none; }
 
@@ -3012,7 +3012,7 @@ row {
 
 flowbox flowboxchild {
   padding: 3px;
-  border-radius: 5px; }
+  border-radius: 4px; }
   flowbox flowboxchild:selected {
     outline-offset: -2px; }
 
@@ -3578,7 +3578,7 @@ infobar {
   border-left-width: 0; }
   .linked:not(.vertical) > entry:first-child {
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 4px;
     border-right-width: 0;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
@@ -3587,7 +3587,7 @@ infobar {
       border-right-width: 1px; }
   .linked:not(.vertical) > entry:last-child {
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 4px;
     border-left-width: 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
@@ -3597,7 +3597,7 @@ infobar {
   .linked:not(.vertical) > entry:only-child {
     border-width: 1px; }
   .linked:not(.vertical) > entry:only-child {
-    border-radius: 5px; }
+    border-radius: 4px; }
 
 .linked.vertical > entry {
   border-width: 1px;
@@ -3606,7 +3606,7 @@ infobar {
   border-bottom-width: 0; }
   .linked.vertical > entry:first-child {
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 4px;
     border-top-width: 1px;
     border-bottom-width: 0;
     border-bottom-left-radius: 0;
@@ -3616,7 +3616,7 @@ infobar {
       border-bottom-width: 1px; }
   .linked.vertical > entry:last-child {
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 4px;
     border-top-width: 0;
     border-bottom-width: 1px;
     border-top-left-radius: 0;
@@ -3627,13 +3627,13 @@ infobar {
   .linked.vertical > entry:only-child {
     border-width: 1px; }
   .linked.vertical > entry:only-child {
-    border-radius: 5px; }
+    border-radius: 4px; }
 
 #login_window entry, .osd entry,
 #XfceNotifyWindow entry, popover.background entry, menuitem entry, entry {
   border-width: 1px;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 4px;
   transition: border 100ms ease-out;
   box-shadow: inset 1px 0 rgba(46, 46, 46, 0.1), inset 0 1px rgba(46, 46, 46, 0.12), inset -1px 0 rgba(46, 46, 46, 0.1), inset 0 -1px rgba(46, 46, 46, 0.05); }
   #login_window entry:focus,
@@ -3653,7 +3653,7 @@ infobar {
     background-color: #416fa1;
     background-image: none;
     border-width: 0;
-    border-radius: 5px;
+    border-radius: 4px;
     color: #e5e5e5; }
   #login_window entry image.left,
   #XfceNotifyWindow entry image.left, entry image.left {
@@ -3959,7 +3959,7 @@ menuitem entry {
   background-color: #363636;
   background-image: none;
   border-color: mix(#e5e5e5,#363636,0.8);
-  padding: 5px 4.0714285714px;
+  padding: 5px 3.8571428571px;
   color: #e5e5e5;
   caret-color: #e5e5e5;
   -gtk-secondary-caret-color: #e5e5e5; }
@@ -3984,7 +3984,7 @@ menuitem entry {
 **********/
 popover.background {
   padding: 0px;
-  border-radius: 5px;
+  border-radius: 4px;
   background-clip: border-box;
   background-color: #363636;
   background-image: none;
@@ -4027,12 +4027,12 @@ popover.background {
       color: #e5e5e5; }
   popover.background .frame {
     border-color: mix(#e5e5e5,#363636,0.8);
-    border-radius: 5px; }
+    border-radius: 4px; }
   popover.background entry {
     background-color: #282828;
     background-image: none;
     border-color: mix(#e5e5e5,#282828,0.8);
-    padding: 5px 4.0714285714px;
+    padding: 5px 3.8571428571px;
     color: #e5e5e5;
     caret-color: #e5e5e5;
     -gtk-secondary-caret-color: #e5e5e5; }
@@ -4206,11 +4206,11 @@ popover.background {
 modelbutton.flat,
 menuitem.button.flat {
   padding: 3px;
-  padding-left: 5px;
+  padding-left: 4px;
   transition: none; }
   modelbutton.flat:hover,
   menuitem.button.flat:hover {
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #416fa1;
     color: #e5e5e5; }
   modelbutton.flat:checked,
@@ -4249,7 +4249,7 @@ tooltip.background.csd {
   background-color: #3e3e3e;
   background-clip: padding-box;
   border: 1px solid #323232;
-  border-radius: 5px;
+  border-radius: 4px;
   color: #e5e5e5; }
 
 .tooltip *,
@@ -4288,7 +4288,7 @@ frame.app-notification {
   border-style: solid;
   border-color: rgba(43, 43, 43, 0.8);
   border-width: 0 1px 1px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 4px 4px;
   padding: 6px;
   background-color: rgba(54, 54, 54, 0.8);
   background-image: none;
@@ -4455,7 +4455,7 @@ expander arrow {
   background-color: #3e3e3e;
   background-image: none;
   border: 1px solid #323232;
-  border-radius: 5px;
+  border-radius: 4px;
   color: #e5e5e5; }
   .floating-bar.top {
     border-top-width: 0;
@@ -4482,7 +4482,7 @@ expander arrow {
  ! Touch text selections *
 **************************/
 GtkBubbleWindow {
-  border-radius: 5px;
+  border-radius: 4px;
   background-clip: border-box; }
   GtkBubbleWindow.osd.background {
     background-color: rgba(54, 54, 54, 0.8); }
@@ -4536,7 +4536,7 @@ label.pin-label {
   background-color: #282828;
   border: 1px solid;
   border-color: mix(mix(#3e3e3e,#e5e5e5,0.18),#3e3e3e,0.5);
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: inset 0 -3px mix(#282828,#3e3e3e,0.2);
   font-size: smaller; }
   .keycap:backdrop {
@@ -4714,22 +4714,22 @@ notebook {
       notebook > header.top > tabs > tab {
         border-bottom: none;
         -gtk-outline-radius: 0;
-        margin-top: 5px; }
+        margin-top: 4px; }
         notebook > header.top > tabs > tab + tab {
           margin-left: -1px; }
         notebook > header.top > tabs > tab:first-child {
-          border-radius: 5px 0 0;
-          -gtk-outline-radius: 5px 0 0; }
+          border-radius: 4px 0 0;
+          -gtk-outline-radius: 4px 0 0; }
         notebook > header.top > tabs > tab:last-child {
-          border-radius: 0 5px 0 0;
-          -gtk-outline-radius: 0 5px 0 0; }
+          border-radius: 0 4px 0 0;
+          -gtk-outline-radius: 0 4px 0 0; }
         notebook > header.top > tabs > tab:hover:not(:checked), notebook > header.top > tabs > tab:checked {
           border-top-width: 3px;
           border-top-color: #416fa1;
           margin-top: 0;
-          -gtk-outline-radius: 5px;
-          border-radius: 5px 5px 0 0;
-          padding-top: 6px; }
+          -gtk-outline-radius: 4px;
+          border-radius: 4px 4px 0 0;
+          padding-top: 5px; }
         notebook > header.top > tabs > tab:hover:not(:checked) {
           border-top-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.2),0.66); }
     notebook > header.bottom {
@@ -4737,22 +4737,22 @@ notebook {
       notebook > header.bottom > tabs > tab {
         border-top: none;
         -gtk-outline-radius: 0;
-        margin-bottom: 5px; }
+        margin-bottom: 4px; }
         notebook > header.bottom > tabs > tab + tab {
           margin-left: -1px; }
         notebook > header.bottom > tabs > tab:first-child {
-          border-radius: 0 0 0 5px;
-          -gtk-outline-radius: 0 0 0 5px; }
+          border-radius: 0 0 0 4px;
+          -gtk-outline-radius: 0 0 0 4px; }
         notebook > header.bottom > tabs > tab:last-child {
-          border-radius: 0 0 5px;
-          -gtk-outline-radius: 0 0 5px; }
+          border-radius: 0 0 4px;
+          -gtk-outline-radius: 0 0 4px; }
         notebook > header.bottom > tabs > tab:hover:not(:checked), notebook > header.bottom > tabs > tab:checked {
           border-bottom-width: 3px;
           border-bottom-color: #416fa1;
           margin-bottom: 0;
-          -gtk-outline-radius: 5px;
-          border-radius: 0 0 5px 5px;
-          padding-bottom: 6px; }
+          -gtk-outline-radius: 4px;
+          border-radius: 0 0 4px 4px;
+          padding-bottom: 5px; }
         notebook > header.bottom > tabs > tab:hover:not(:checked) {
           border-bottom-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.2),0.66); }
     notebook > header.right {
@@ -4760,22 +4760,22 @@ notebook {
       notebook > header.right > tabs > tab {
         border-left: none;
         -gtk-outline-radius: 0;
-        margin-right: 5px; }
+        margin-right: 4px; }
         notebook > header.right > tabs > tab + tab {
           margin-top: -1px; }
         notebook > header.right > tabs > tab:first-child {
-          border-radius: 0 5px 0 0;
-          -gtk-outline-radius: 0 5px 0 0; }
+          border-radius: 0 4px 0 0;
+          -gtk-outline-radius: 0 4px 0 0; }
         notebook > header.right > tabs > tab:last-child {
-          border-radius: 0 0 5px;
-          -gtk-outline-radius: 0 0 5px; }
+          border-radius: 0 0 4px;
+          -gtk-outline-radius: 0 0 4px; }
         notebook > header.right > tabs > tab:hover:not(:checked), notebook > header.right > tabs > tab:checked {
           border-right-width: 3px;
           border-right-color: #416fa1;
           margin-right: 0;
-          -gtk-outline-radius: 5px;
-          border-radius: 0 5px 5px 0;
-          padding-right: 14px; }
+          -gtk-outline-radius: 4px;
+          border-radius: 0 4px 4px 0;
+          padding-right: 13px; }
         notebook > header.right > tabs > tab:hover:not(:checked) {
           border-right-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.2),0.66); }
     notebook > header.left {
@@ -4783,22 +4783,22 @@ notebook {
       notebook > header.left > tabs > tab {
         border-right: none;
         -gtk-outline-radius: 0;
-        margin-left: 5px; }
+        margin-left: 4px; }
         notebook > header.left > tabs > tab + tab {
           margin-top: -1px; }
         notebook > header.left > tabs > tab:first-child {
-          border-radius: 5px 0 0;
-          -gtk-outline-radius: 5px 0 0; }
+          border-radius: 4px 0 0;
+          -gtk-outline-radius: 4px 0 0; }
         notebook > header.left > tabs > tab:last-child {
-          border-radius: 0 0 0 5px;
-          -gtk-outline-radius: 0 0 0 5px; }
+          border-radius: 0 0 0 4px;
+          -gtk-outline-radius: 0 0 0 4px; }
         notebook > header.left > tabs > tab:hover:not(:checked), notebook > header.left > tabs > tab:checked {
           border-left-width: 3px;
           border-left-color: #416fa1;
           margin-left: 0;
-          -gtk-outline-radius: 5px;
-          border-radius: 5px 0 0 5px;
-          padding-left: 14px; }
+          -gtk-outline-radius: 4px;
+          border-radius: 4px 0 0 4px;
+          padding-left: 13px; }
         notebook > header.left > tabs > tab:hover:not(:checked) {
           border-left-color: mix(#416fa1,mix(#3e3e3e,#e5e5e5,0.2),0.66); }
 
@@ -4815,7 +4815,7 @@ overlay.osd {
   background-color: transparent; }
 
 colorchooser .popover.osd {
-  border-radius: 5px; }
+  border-radius: 4px; }
 
 button.color .osd colorswatch:only-child {
   box-shadow: none; }
@@ -5131,7 +5131,7 @@ toolbar.osd {
   -GtkToolbar-button-relief: normal;
   padding: 3px;
   border: 1px solid rgba(43, 43, 43, 0.8);
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: rgba(54, 54, 54, 0.8);
   background-image: none;
   color: #e5e5e5; }
@@ -5472,7 +5472,7 @@ progressbar.osd {
     background-color: #363636;
     background-image: none;
     border-color: mix(#e5e5e5,#363636,0.8);
-    padding: 5px 4.0714285714px;
+    padding: 5px 3.8571428571px;
     color: #e5e5e5;
     caret-color: #e5e5e5;
     -gtk-secondary-caret-color: #e5e5e5; }
@@ -5608,7 +5608,7 @@ progressbar.osd {
   #XfceNotifyWindow iconview.cell:selected:focus {
     background-color: transparent;
     border: 3px solid mix(rgba(47, 47, 47, 0.8),#e5e5e5,0.21);
-    border-radius: 5px;
+    border-radius: 4px;
     outline-color: transparent; }
   .osd .page-thumbnail,
   #XfceNotifyWindow .page-thumbnail {
@@ -5991,10 +5991,10 @@ progressbar.osd {
           border-style: none solid none none; }
       .osd spinbutton:not(.vertical) button:dir(rtl):first-child,
       #XfceNotifyWindow spinbutton:not(.vertical) button:dir(rtl):first-child {
-        border-radius: 5px 0 0 5px; }
+        border-radius: 4px 0 0 4px; }
       .osd spinbutton:not(.vertical) button:dir(ltr):last-child,
       #XfceNotifyWindow spinbutton:not(.vertical) button:dir(ltr):last-child {
-        border-radius: 0 5px 5px 0; }
+        border-radius: 0 4px 4px 0; }
   .osd spinbutton.vertical button:first-child,
   #XfceNotifyWindow spinbutton.vertical button:first-child {
     background-color: rgba(54, 54, 54, 0.8);
@@ -6433,7 +6433,7 @@ scrolledwindow junction {
 ******************/
 progressbar {
   padding: 0;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: smaller;
   color: rgba(229, 229, 229, 0.6); }
   progressbar.horizontal trough,
@@ -6446,23 +6446,23 @@ progressbar {
     border: 1px solid mix(#3e3e3e,#e5e5e5,0.17);
     background-color: mix(#282828,#3e3e3e,0.08);
     background-image: none;
-    border-radius: 5px; }
+    border-radius: 4px; }
   progressbar progress {
     background-color: #416fa1;
     background-image: none;
     border-radius: 0; }
     progressbar progress.left {
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px; }
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px; }
     progressbar progress.right {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px; }
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
     progressbar progress.bottom {
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px; }
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px; }
     progressbar progress.top {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px; }
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px; }
 
 levelbar.horizontal block {
   min-width: 34px;
@@ -6478,7 +6478,7 @@ levelbar:backdrop {
 levelbar trough {
   background-color: mix(#282828,#3e3e3e,0.08);
   border: 1px solid mix(#3e3e3e,#e5e5e5,0.17);
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 2px; }
 
 levelbar.horizontal.discrete block {
@@ -6494,7 +6494,7 @@ levelbar.vertical.discrete block {
 levelbar block {
   background-color: #416fa1;
   border-color: transparent;
-  border-radius: 5px; }
+  border-radius: 4px; }
   levelbar block.low {
     background-color: #f2e6a9;
     border-color: transparent; }
@@ -6560,19 +6560,19 @@ scale {
     scale fill:disabled {
       background-color: transparent; }
   scale slider {
-    background-color: #696969;
+    background-color: #3e3e3e;
     border: 1px solid rgba(229, 229, 229, 0.16);
     border-radius: 100%;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition-property: background, border; }
     scale slider:hover {
-      background-color: #767676; }
+      background-color: #4b4b4b; }
     scale slider:active {
       background-clip: border-box;
       background-color: #416fa1;
       border-color: #416fa1; }
     scale slider:disabled {
-      background-color: mix(#696969,#3e3e3e,0.55);
+      background-color: mix(#3e3e3e,#3e3e3e,0.55);
       border-color: mix(#e5e5e5,#3e3e3e,0.92); }
     menuitem:hover scale slider, row:selected scale slider, infobar scale slider {
       background-clip: border-box;
@@ -6681,7 +6681,7 @@ scrollbar {
     min-width: 7px;
     min-height: 7px;
     border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius: 4px;
     background-clip: padding-box;
     background-color: mix(#3e3e3e,#e5e5e5,0.5); }
     scrollbar slider:hover {
@@ -6972,7 +6972,7 @@ check {
 
 check, radio {
   box-shadow: -1px 0 mix(#3e3e3e,#e5e5e5,0.3) inset, 1px 0 mix(#3e3e3e,#e5e5e5,0.3) inset, 0 -1px mix(#3e3e3e,#e5e5e5,0.3) inset, 0 1px mix(#3e3e3e,#e5e5e5,0.3) inset;
-  border-radius: 2.5px;
+  border-radius: 2px;
   background-color: #282828; }
   check:disabled, radio:disabled {
     box-shadow: -1px 0 mix(#3e3e3e,#e5e5e5,0.15) inset, 1px 0 mix(#3e3e3e,#e5e5e5,0.15) inset, 0 -1px mix(#3e3e3e,#e5e5e5,0.15) inset, 0 1px mix(#3e3e3e,#e5e5e5,0.15) inset;
@@ -7036,7 +7036,7 @@ radio:dir(rtl), check:dir(rtl) {
  ! Switch
 *********/
 switch {
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 2px;
   border: 0;
   outline: none;
@@ -7051,7 +7051,7 @@ switch {
     background-color: mix(#e5e5e5,#3e3e3e,0.5);
     transition: all .3s ease-in;
     box-shadow: 0 1px 2px 0 rgba(46, 46, 46, 0.07), 1px 0 2px 0 rgba(46, 46, 46, 0.07);
-    border-radius: 5px; }
+    border-radius: 4px; }
   switch:checked {
     background-color: #416fa1;
     background-image: none;
@@ -7113,7 +7113,7 @@ textview border {
   background-color: mix(#3e3e3e,#282828,0.5); }
 
 iconview :selected {
-  border-radius: 5px; }
+  border-radius: 4px; }
 
 /************
 ! Treeview
@@ -7147,7 +7147,7 @@ treeview.view header button:active, treeview.view header button:hover, treeview.
   treeview.view header button:backdrop {
     color: mix(#e5e5e5,mix(#e5e5e5,#3e3e3e,0.5),0.5);
     background-image: none;
-    background-color: mix(#696969,#3e3e3e,0.5); }
+    background-color: mix(#3e3e3e,#3e3e3e,0.5); }
     treeview.view header button:backdrop:disabled {
       border-color: #3e3e3e;
       background-image: none; }
@@ -7209,7 +7209,7 @@ treeview.view {
     background-color: #416fa1;
     background-image: none;
     color: #282828;
-    border-radius: 5px;
+    border-radius: 4px;
     border: 1px solid mix(#416fa1,#e5e5e5,0.3); }
     treeview.view.progressbar:selected {
       border: 1px solid mix(#416fa1,#e5e5e5,0.2); }
@@ -7218,7 +7218,7 @@ treeview.view {
         box-shadow: none;
         background-color: #416fa1;
         background-image: none;
-        border-radius: 5px; }
+        border-radius: 4px; }
         treeview.view.progressbar:selected:focus:backdrop, treeview.view.progressbar:selected:backdrop {
           color: mix(#416fa1,#e5e5e5,0.66);
           border-color: mix(#416fa1,#e5e5e5,0.3);
@@ -7233,13 +7233,13 @@ treeview.view {
       box-shadow: none; }
   treeview.view.trough {
     background-color: rgba(229, 229, 229, 0.1);
-    border-radius: 5px; }
+    border-radius: 4px; }
     treeview.view.trough:selected:focus, treeview.view.trough:selected {
       background-color: rgba(229, 229, 229, 0.3);
       border-width: 1px 0;
       border-style: solid;
       border-color: #416fa1;
-      border-radius: 5px; }
+      border-radius: 4px; }
   treeview.view header button, treeview.view header button.nautilus-circular-button.image-button {
     font-weight: normal;
     text-shadow: none;
@@ -7331,7 +7331,7 @@ placesview > actionbar > revealer > box > label {
 decoration {
   background-color: #363636;
   background-image: none;
-  border-radius: 5px 5px 0 0;
+  border-radius: 4px 4px 0 0;
   border-width: 0;
   box-shadow: 0 3px 9px 1px rgba(92, 92, 92, 0.7), 0 0 0 1px #282828;
   /* this is used for the resize cursor area */
@@ -7355,10 +7355,10 @@ decoration {
     border-radius: 0;
     box-shadow: 0 1px 2px rgba(92, 92, 92, 0.2), 0 0 0 1px rgba(40, 40, 40, 0.13); }
   tooltip.csd decoration {
-    border-radius: 5px;
+    border-radius: 4px;
     box-shadow: none; }
   messagedialog.csd decoration {
-    border-radius: 5px;
+    border-radius: 4px;
     box-shadow: 0 1px 2px rgba(92, 92, 92, 0.2), 0 0 0 1px rgba(40, 40, 40, 0.13); }
 
 /***********************
@@ -7524,7 +7524,7 @@ workbench.csd > stack.titlebar:not(headerbar) {
   border: 0;
   box-shadow: none; }
   workbench.csd > stack.titlebar:not(headerbar) headerbar, workbench.csd > stack.titlebar:not(headerbar) headerbar:first-child, workbench.csd > stack.titlebar:not(headerbar) headerbar:last-child {
-    border-radius: 5px 5px 0 0; }
+    border-radius: 4px 4px 0 0; }
 
 /****************
  ! Geary *
@@ -7549,7 +7549,7 @@ workbench.csd > stack.titlebar:not(headerbar) {
   background-image: none;
   background-color: rgba(92, 92, 92, 0.3);
   border-color: rgba(63, 63, 63, 0.9);
-  border-radius: 11px;
+  border-radius: 9px;
   padding: 3px;
   color: #3f3f3f; }
 
@@ -7557,7 +7557,7 @@ workbench.csd > stack.titlebar:not(headerbar) {
   background-image: none;
   background-color: rgba(92, 92, 92, 0.6);
   border-color: rgba(63, 63, 63, 0.2);
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 1px;
   color: #3f3f3f; }
   .lightdm.menu .menuitem *, .lightdm.menu .menuitem.check:active, .lightdm.menu .menuitem.radio:active {
@@ -7590,7 +7590,7 @@ workbench.csd > stack.titlebar:not(headerbar) {
   background-image: none;
   background-color: rgba(92, 92, 92, 0.3);
   border-color: rgba(63, 63, 63, 0.6);
-  border-radius: 11px;
+  border-radius: 9px;
   padding: 5px;
   color: #3f3f3f;
   text-shadow: none; }
@@ -7635,7 +7635,7 @@ GeditWindow .pane-separator {
     padding: 3px; }
     .gedit-document-panel list row button, .gedit-document-panel list row button.nautilus-circular-button.image-button {
       padding: 1px;
-      border-radius: 5px;
+      border-radius: 4px;
       border-style: solid;
       border-color: transparent;
       border-width: 1px;
@@ -7687,7 +7687,7 @@ statusbar GeditSmallButton, GeditStatusMenuButton {
 
 GeditViewFrame .gedit-search-slider {
   padding: 3px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 4px 4px;
   border-width: 0 1px 1px;
   border-style: solid;
   border-color: #202020;
@@ -7815,7 +7815,7 @@ paned.titlebar {
       margin-left: 15px; }
       .nemo-window toolbar toolitem stack widget button, .nemo-window toolbar toolitem stack widget button.nautilus-circular-button.image-button {
         box-shadow: 0 1px 2px -1px rgba(46, 46, 46, 0.22);
-        -NemoPathbarButton-border-radius: 5px; }
+        -NemoPathbarButton-border-radius: 4px; }
         .nemo-window toolbar toolitem stack widget button:focus, .nemo-window toolbar toolitem stack widget button:hover {
           box-shadow: 0 1px 2px -1px rgba(46, 46, 46, 0.42); }
         .nemo-window toolbar toolitem stack widget button:active, .nemo-window toolbar toolitem stack widget button:active:hover, .nemo-window toolbar toolitem stack widget button:active:focus, .nemo-window toolbar toolitem stack widget button:active:hover:focus, .nemo-window toolbar toolitem stack widget button:checked, .nemo-window toolbar toolitem stack widget button:checked:hover, .nemo-window toolbar toolitem stack widget button:checked:focus, .nemo-window toolbar toolitem stack widget button:checked:hover:focus {
@@ -7944,7 +7944,7 @@ UnityDecoration {
   UnityDecoration .top {
     border: 1px solid #282828;
     border-bottom: 0;
-    border-radius: 5px 5px 0 0;
+    border-radius: 4px 4px 0 0;
     padding: 1px 6px 0;
     background-color: #363636;
     color: #e5e5e5;
@@ -8021,7 +8021,7 @@ SheetStyleDialog.unity-force-quit {
 
 #login_window, #shutdown_dialog, #restart_dialog {
   border-style: none;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #363636;
   color: #e5e5e5;
   /* draw border using box-shadow */
@@ -8163,7 +8163,7 @@ SheetStyleDialog.unity-force-quit {
   background-color: #363636;
   background-image: none;
   border-color: mix(#e5e5e5,#363636,0.8);
-  padding: 5px 4.0714285714px;
+  padding: 5px 3.8571428571px;
   color: #e5e5e5;
   caret-color: #e5e5e5;
   -gtk-secondary-caret-color: #e5e5e5; }
@@ -8192,12 +8192,12 @@ SheetStyleDialog.unity-force-quit {
     color: mix(#e5e5e5,#363636,0.5); }
 
 #user_image {
-  border-radius: 5px;
+  border-radius: 4px;
   /* draw border using box-shadow */
   box-shadow: inset 1px 0 #262626, inset -1px 0 #262626, inset 0 1px #262626, inset 0 -1px #262626; }
 
 #user_image_border {
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #313131;
   background-image: none;
   box-shadow: inset 1px 0 rgba(46, 46, 46, 0.07), inset 0 1px rgba(46, 46, 46, 0.08), inset -1px 0 rgba(46, 46, 46, 0.07), inset 0 -1px rgba(46, 46, 46, 0.05); }
@@ -8206,8 +8206,8 @@ SheetStyleDialog.unity-force-quit {
   padding-top: 6px;
   padding-bottom: 0;
   border-style: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   background-color: transparent;
   background-image: none;
   box-shadow: none; }

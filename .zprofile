@@ -1,4 +1,3 @@
-export QT_QPA_PLATFORMTHEME=kvantum
 export QT_STYLE_OVERRIDE=kvantum
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
