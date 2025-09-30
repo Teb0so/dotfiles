@@ -1,4 +1,4 @@
-@import "~/.config/rofi/multicolor-retro-dark.rasi"
+@import "~/.config/rofi/multicolor-simplicity-dark.rasi"
 
 configuration {
     terminal: "alacritty";
