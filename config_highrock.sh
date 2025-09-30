@@ -9,13 +9,13 @@ declare -a home=(
 
 declare -a config=(
     "alacritty"
-    "awesome"
-    "fastfetch"
     "nvim"
     "picom"
     "ranger"
     "rofi"
     "zathura"
+    "openbox"
+    "sxhkd"
 )
 
 declare -a local=(
@@ -28,12 +28,10 @@ declare -a fonts=(
 )
 
 declare -a icons=(
-    "Chicago95-tux"
     "miku-cursor-linux"
 )
 
 declare -a themes=(
-    "Redmond97-Retro-Dark"
     "oomox-SimplicityDarkGtk"
 )
 

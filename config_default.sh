@@ -16,6 +16,8 @@ declare -a config=(
     "ranger"
     "rofi"
     "zathura"
+    "openbox"
+    "sxhkd"
 )
 
 declare -a local=(
