@@ -11,11 +11,9 @@ declare -a config=(
     "alacritty"
     "awesome"
     "fastfetch"
-   #"mpd"
     "nvim"
     "picom"
     "ranger"
-   #"rmpc"
     "rofi"
     "zathura"
 )

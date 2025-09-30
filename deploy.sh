@@ -3,31 +3,36 @@
 set -e
 
 script_path=$(pwd)
+hostname=$(cat /etc/hostname)
 
-source MANIFEST.sh
+if [[ -e "$script_path"/config_"$hostname".sh ]]; then
+    source "$script_path"/config_"$hostname".sh
+else
+    source "$script_path"/config_default.sh
+fi
 
 for dir in "${dirs[@]}"; do
     array_name="$dir[@]"
     for file in "${!array_name}"; do
 
         if [[ $dir == "home" ]]; then
-            actual_path=$HOME/
-            actual_file_path="$script_path"/"$file"
+            path=$HOME/
+            file_path="$script_path"/"$file"
         else
-            actual_path=$HOME/."$dir"/
-            actual_file_path="$script_path"/."$dir"/"$file"
+            path=$HOME/."$dir"/
+            file_path="$script_path"/."$dir"/"$file"
         fi
 
-        mkdir -p "$actual_path"
+        mkdir -p "$path"
 
-        if [[ -L "$actual_path""$file" ]]; then
+        if [[ -L "$path""$file" ]]; then
             echo "[WARNING] "$HOME"/."$dir"/"$file" is alredy a symlink. Doing nothing"
-        elif [[ -e "$actual_path""$file" ]]; then
+        elif [[ -e "$path""$file" ]]; then
             echo "[ERROR] "$HOME"/."$dir"/"$file" alredy exists and its not a symlink. Please fix this manually"
             exit 1
         else
-            echo Deploying "$actual_file_path" to "$actual_path"
-            ln -s "$actual_file_path" "$actual_path"
+            echo Deploying "$file_path" to "$path"
+            ln -s "$file_path" "$path"
         fi
     done
 done
