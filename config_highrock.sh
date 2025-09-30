@@ -1,5 +1,5 @@
 declare -a home=(
-   ".gdbinit"
+    ".gdbinit"
     ".tmux.conf"
     ".vimrc"
     ".xinitrc"
@@ -32,11 +32,6 @@ declare -a icons=(
     "miku-cursor-linux"
 )
 
-declare -a screenlayout=(
-    "ONE.sh"
-    "TWO.sh"
-)
-
 declare -a themes=(
     "Redmond97-Retro-Dark"
     "oomox-SimplicityDarkGtk"
@@ -48,6 +43,5 @@ declare -a dirs=(
     "local"
     "fonts"
     "icons"
-    "screenlayout"
     "themes"
 )

@@ -1,5 +1,5 @@
 declare -a home=(
-   ".gdbinit"
+    ".gdbinit"
     ".tmux.conf"
     ".vimrc"
     ".xinitrc"
