@@ -11,6 +11,7 @@ declare -a config=(
     "nvim"
     "ranger"
     "zathura"
+    "strawberry"
 )
 
 declare -a local=(
