@@ -85,6 +85,9 @@ alias cdc='cd "$(find . -type d -print | fzf)" && tmux && cd -'
 # To clipboard
 alias clipb='xclip -selection clipboard'
 
+# To clipboard
+alias inst='sudo apt install --no-install-recommends'
+
 # Load other aliases.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
 
