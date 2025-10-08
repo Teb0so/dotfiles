@@ -19,6 +19,9 @@ require("layout")
  -- Wibar
 require("wibar")
 
+-- Titlebar
+require("titlebar")
+
  -- Bindings
 require("bindings")
 
@@ -28,7 +31,6 @@ require("rules")
  -- Signals
 require("signals")
 
- -- Auto start
+ -- Right Click Menu
 require("auto_start")
-
 require("freedesktop")

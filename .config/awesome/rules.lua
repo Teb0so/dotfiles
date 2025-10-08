@@ -15,6 +15,10 @@ awful.rules.rules = {
             placement = awful.placement.no_overlap+awful.placement.no_offscreen+awful.placement.centered
         }
     },
+    { rule_any = {type = {"normal", "dialog" }
+        }, properties = { titlebars_enabled = true }
+    },
+
     -- Floating clients.
     { rule_any = {
         instance = {
