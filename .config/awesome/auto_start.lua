@@ -11,9 +11,17 @@ awful.spawn.with_shell("nitrogen --restore")
 
 awful.spawn.once("xset s off -dpms")
 
+awful.spawn.with_shell("pkill volumeicon")
+
+awful.spawn.with_shell("pkill nm-tray")
+
 awful.spawn.single_instance("picom")
 
 awful.spawn.single_instance("gkrellm")
+
+awful.spawn.single_instance("volumeicon")
+
+awful.spawn.single_instance("nm-tray")
 
 awful.spawn.once("flatpak run com.discordapp.Discord")
 

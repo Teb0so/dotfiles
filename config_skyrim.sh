@@ -12,6 +12,9 @@ declare -a config=(
     "ranger"
     "zathura"
     "strawberry"
+    "picom"
+    "awesome"
+    "rofi"
 )
 
 declare -a local=(

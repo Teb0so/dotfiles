@@ -46,7 +46,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
     awful.tag({ workspaces[1], workspaces[2], workspaces[3], workspaces[4], workspaces[5], workspaces[6], workspaces[7], workspaces[8], workspaces[9], }, s, awful.layout.layouts[1])
 
---{ custom keyboar layout
+--{ custom keyboard layout
     local custom_kblayout = wibox.widget {
         widget = wibox.widget.textbox,
         align = "center",
@@ -55,7 +55,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     awful.widget.watch(
         [[sh -c 'echo "「  " && sb_kb-layout && echo "」"']],
-        3,
+        1,
         function(widget, stdout)
             widget.text = stdout:gsub("\n", "")
         end,
@@ -166,26 +166,10 @@ awful.screen.connect_for_each_screen(function(s)
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons,
-        layout  = {
-            layout = wibox.layout.flex.horizontal,
-        },
-        widget_template = {
-            {
-                {
-                    id     = 'text_role',
-                    widget = wibox.widget.textbox,
-                },
-                left  = 4,
-                right = 4,
-                widget = wibox.container.margin
-            },
-            id     = 'background_role',
-            widget = wibox.container.background
-        }
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 26 })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -199,13 +183,10 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            custom_battery,
-            custom_mpd,
-            custom_kblayout,
-            custom_net_widget,
-            custom_pc_monitor,
-            custom_clock,
             wibox.widget.systray(),
+            custom_battery,
+            custom_kblayout,
+            custom_clock,
         },
     }
 end)
