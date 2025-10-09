@@ -15,45 +15,36 @@ globalkeys = gears.table.join(
     --{
         awful.key({"Mod1"}, "space", function() awful.spawn("toggle-kb-layout") end,
         {description = "Toggle keyboard layout", group = "Launch"}),
+
         awful.key({modkey}, "Return", function() awful.spawn(terminal) end,
         {description = "Launch terminal", group = "Launch"}),
+
         awful.key({modkey}, "p", function() awful.spawn(applauncher_cmd) end,
         {description = "Launch application launcher", group = "Launch"}),
-        awful.key({modkey, "Shift"}, "p", function() awful.spawn.with_shell(system_menu_cmd) end,
-        {description = "Launch system menu", group = "Launch"}),
-        awful.key({modkey, "Shift"}, "q", function() awful.spawn.with_shell(pwr_menu_cmd) end,
-        {description = "Launch power menu", group = "Launch"}),
-        awful.key({modkey, "Shift"}, "c", function() awful.spawn.with_shell(rofi_calc) end,
+
+        awful.key({modkey}, "c", function() awful.spawn.with_shell("qalculate-qt") end,
         {description = "Launch calculator", group = "Launch"}),
-        awful.key({modkey}, "w", function() awful.spawn(wall_picker_cmd) end,
+
+        awful.key({modkey, "Shift"}, "w", function() awful.spawn(wall_picker_cmd) end,
         {description = "Launch wallpaper picker", group = "Launch"}),
+
         awful.key({modkey, "Mod1"}, "w", function() awful.spawn(wall_random_cmd) end,
         {description = "Change to random wallpaper", group = "Launch"}),
-        awful.key({modkey, "Mod1"}, "f", function() awful.spawn(file_xplr_gui_cmd) end,
+
+        awful.key({modkey}, "e", function() awful.spawn(file_xplr_gui_cmd) end,
         {description = "Launch GUI file manager", group = "Launch"}),
-        awful.key({modkey, "Shift"}, "f", function() awful.spawn(file_xplr_cli_cmd) end,
-        {description = "Launch CLI file manager", group = "Launch"}),
-        awful.key({modkey, "Shift"}, "m", function() awful.spawn(msc_plr_cmd) end,
+
+        awful.key({modkey}, "m", function() awful.spawn("strawberry") end,
         {description = "Launch music player", group = "Launch"}),
-        awful.key({modkey, "Shift"}, "w", function() awful.spawn(browser_cmd) end,
+
+        awful.key({modkey}, "g", function() awful.spawn("claws-mail") end,
+        {description = "Launch Mail client", group = "Launch"}),
+
+        awful.key({modkey}, "w", function() awful.spawn(browser_cmd) end,
         {description = "Launch browser", group = "Launch"}),
+
         awful.key({}, "Print", function() awful.spawn.with_shell(printscrn_cmd) end,
         {description = "Take screenshot", group = "Launch"}),
-    --}
-
-    --{ MPD
-        awful.key({modkey, "Mod1", "Shift" }, "j", function() awful.spawn.with_shell("mpc toggle") end,
-        {description = "Toggle Pause", group = "MPD"}),
-        awful.key({modkey, "Mod1", "Shift" }, "k", function() awful.spawn.with_shell("mpc stop") end,
-        {description = "Stop", group = "MPD"}),
-        awful.key({modkey, "Mod1", "Shift" }, "h", function () awful.spawn.with_shell("mpc prev") end,
-        {description = "Previous Song", group = "MPD"}),
-        awful.key({modkey, "Mod1", "Shift" }, "l", function () awful.spawn.with_shell("mpc next") end,
-        {description = "Next Song", group = "MPD"}),
-        awful.key({modkey, "Mod1", "Shift" }, ".", function () awful.spawn.with_shell("mpc volume +5") end,
-        {description = "Volume +", group = "MPD"}),
-        awful.key({modkey, "Mod1", "Shift" }, ",", function () awful.spawn.with_shell("mpc volume -5") end,
-        {description = "Volume -", group = "MPD"}),
     --}
 
     awful.key({ modkey, "Control"          }, "s",      hotkeys_popup.show_help,
@@ -117,9 +108,9 @@ globalkeys = gears.table.join(
               {description = "set layout to tile", group = "layout"}),
     awful.key({ modkey,           }, "s",     function () awful.layout.set(awful.layout.suit.spiral.dwindle) end,
               {description = "set layout to dwindle", group = "layout"}),
-    awful.key({ modkey,           }, "m",     function () awful.layout.set(awful.layout.suit.max) end,
+    awful.key({ modkey, "Control" }, "m",     function () awful.layout.set(awful.layout.suit.max) end,
               {description = "set layout to max", group = "layout"}),
-    awful.key({ modkey,        }, "f",        function () awful.layout.set(awful.layout.suit.floating) end,
+    awful.key({ modkey, "Control"       }, "f",        function () awful.layout.set(awful.layout.suit.floating) end,
               {description = "set layout to floating", group = "layout"}),
 
     --move floating
@@ -181,7 +172,7 @@ globalkeys = gears.table.join(
 )
 
 clientkeys = gears.table.join(
-    awful.key({ modkey,           }, "f",
+    awful.key({ modkey, "Shift"         }, "f",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()
@@ -204,12 +195,12 @@ clientkeys = gears.table.join(
             c.minimized = true
         end ,
         {description = "minimize", group = "client"}),
-    awful.key({ modkey, "Mod1"          }, "m",
+    awful.key({ modkey }, "f",
         function (c)
             c.maximized = not c.maximized
             c:raise()
         end ,
-        {description = "(un)maximize", group = "client"}),
+        {description = "toggle_maximized", group = "client"}),
         awful.key({ modkey, "Control" }, "c",
         function()
             local c = client.focus

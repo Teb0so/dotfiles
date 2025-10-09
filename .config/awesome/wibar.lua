@@ -167,9 +167,8 @@ awful.screen.connect_for_each_screen(function(s)
         filter  = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons,
     }
-
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 26 })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 26, bg = "#00000000", bgimage = "/home/teb0so/.config/awesome/assets/statusbar_bg.png" })
 
     -- Add widgets to the wibox
     s.mywibox:setup {

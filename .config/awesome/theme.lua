@@ -13,11 +13,11 @@ local theme = {}
 
 theme.font          = "IosevkaTermSlabNerdFont 10"
 
-theme.bg_normal     = "#1d1f21"
-theme.bg_focus      = "#285577"
-theme.bg_urgent     = "#d54e53"
-theme.bg_minimize   = "#373b41"
-theme.bg_systray    = theme.bg_normal
+theme.bg_normal     = "#282828"
+theme.bg_focus      = "#416fa1cc"
+theme.bg_urgent     = "#d54e53cc"
+theme.bg_minimize   = "#3e3e3ecc"
+theme.bg_systray    = "#282828"
 
 theme.fg_normal     = "#c5c8c6"
 theme.fg_focus      = "#ffffff"
