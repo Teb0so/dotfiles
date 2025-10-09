@@ -13,16 +13,16 @@ local theme = {}
 
 theme.font          = "IosevkaTermSlabNerdFont 10"
 
-theme.bg_normal     = "#282828"
+theme.bg_normal     = "#28282800"
 theme.bg_focus      = "#416fa1cc"
 theme.bg_urgent     = "#d54e53cc"
-theme.bg_minimize   = "#3e3e3ecc"
+theme.bg_minimize   = "#3e3e3e00"
 theme.bg_systray    = "#282828"
 
 theme.fg_normal     = "#c5c8c6"
 theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_minimize   = "#3e3e3e"
 
 theme.useless_gap   = dpi(4)
 theme.border_width  = dpi(1)
