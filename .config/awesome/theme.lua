@@ -44,31 +44,31 @@ theme.menu_height = dpi(18)
 theme.menu_width  = dpi(150)
 
 -- Define the image to load
-theme.titlebar_close_button_normal = "~/.config/awesome/assets/button.png"
-theme.titlebar_close_button_focus  = "~/.config/awesome/assets/button.png"
+theme.titlebar_close_button_normal = "~/.config/awesome/assets/button_close_unfocused.png"
+theme.titlebar_close_button_focus  = "~/.config/awesome/assets/button_close_focused.png"
 
-theme.titlebar_minimize_button_normal = "~/.config/awesome/assets/button.png"
-theme.titlebar_minimize_button_focus  = "~/.config/awesome/assets/button.png"
+theme.titlebar_minimize_button_normal = "~/.config/awesome/assets/button_minimize_unfocused.png"
+theme.titlebar_minimize_button_focus  = "~/.config/awesome/assets/button_minimize_focused.png"
 
-theme.titlebar_ontop_button_normal_inactive     = "~/.config/awesome/assets/button.png"
-theme.titlebar_ontop_button_focus_inactive      = "~/.config/awesome/assets/button.png"
-theme.titlebar_ontop_button_normal_active       = "~/.config/awesome/assets/button.png"
-theme.titlebar_ontop_button_focus_active        = "~/.config/awesome/assets/button.png"
+theme.titlebar_ontop_button_normal_inactive     = "~/.config/awesome/assets/button_ontop_unactivated_unfocused.png"
+theme.titlebar_ontop_button_focus_inactive      = "~/.config/awesome/assets/button_ontop_unactivated_focused.png"
+theme.titlebar_ontop_button_normal_active       = "~/.config/awesome/assets/button_ontop_activated_unfocused.png"
+theme.titlebar_ontop_button_focus_active        = "~/.config/awesome/assets/button_ontop_activated_focused.png"
 
-theme.titlebar_sticky_button_normal_inactive    = "~/.config/awesome/assets/button.png"
-theme.titlebar_sticky_button_focus_inactive     = "~/.config/awesome/assets/button.png"
-theme.titlebar_sticky_button_normal_active      = "~/.config/awesome/assets/button.png"
-theme.titlebar_sticky_button_focus_active       = "~/.config/awesome/assets/button.png"
+theme.titlebar_sticky_button_normal_inactive    = "~/.config/awesome/assets/button_sticky_unactivated_unfocused.png"
+theme.titlebar_sticky_button_focus_inactive     = "~/.config/awesome/assets/button_sticky_unactivated_focused.png"
+theme.titlebar_sticky_button_normal_active      = "~/.config/awesome/assets/button_sticky_activated_unfocused.png"
+theme.titlebar_sticky_button_focus_active       = "~/.config/awesome/assets/button_sticky_activated_focused.png"
 
 theme.titlebar_floating_button_normal_inactive  = "~/.config/awesome/assets/button.png"
 theme.titlebar_floating_button_focus_inactive   = "~/.config/awesome/assets/button.png"
 theme.titlebar_floating_button_normal_active    = "~/.config/awesome/assets/button.png"
 theme.titlebar_floating_button_focus_active     = "~/.config/awesome/assets/button.png"
 
-theme.titlebar_maximized_button_normal_inactive = "~/.config/awesome/assets/button.png"
-theme.titlebar_maximized_button_focus_inactive  = "~/.config/awesome/assets/button.png"
-theme.titlebar_maximized_button_normal_active   = "~/.config/awesome/assets/button.png"
-theme.titlebar_maximized_button_focus_active    = "~/.config/awesome/assets/button.png"
+theme.titlebar_maximized_button_normal_inactive = "~/.config/awesome/assets/button_maximize_unfocused.png"
+theme.titlebar_maximized_button_focus_inactive  = "~/.config/awesome/assets/button_maximize_focused.png"
+theme.titlebar_maximized_button_normal_active   = "~/.config/awesome/assets/button_unmaximize_unfocused.png"
+theme.titlebar_maximized_button_focus_active    = "~/.config/awesome/assets/button_unmaximize_focused.png"
 
 theme.wallpaper = themes_path.."default/background.png"
 
