@@ -26,6 +26,11 @@ declare -a fonts=(
     "IosevkaTermSlab"
 )
 
+declare -a screenlayout=(
+    "ONE.sh"
+    "TWO.sh"
+)
+
 declare -a icons=(
     "miku-cursor-linux"
 )
@@ -39,6 +44,7 @@ declare -a dirs=(
     "config"
     "local"
     "fonts"
+    "screenlayout"
     "icons"
     "themes"
 )

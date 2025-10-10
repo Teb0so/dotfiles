@@ -5,6 +5,12 @@ require("awful.hotkeys_popup.keys")
  -- Error handling
 require("error")
 
+-- Auto Start
+require("auto_start")
+
+ -- Menu
+require("freedesktop")
+
  -- Theme
 local beautiful = require("beautiful")
 beautiful.init("~/.config/awesome/theme.lua")
@@ -30,7 +36,3 @@ require("rules")
 
  -- Signals
 require("signals")
-
- -- Right Click Menu
-require("auto_start")
-require("freedesktop")

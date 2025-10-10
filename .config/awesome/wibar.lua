@@ -1,6 +1,8 @@
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
+local beautiful = require("beautiful")
+require("menu")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -41,6 +43,24 @@ local tasklist_buttons = gears.table.join(
                      awful.button({ }, 5, function ()
                                               awful.client.focus.byidx(-1)
                                           end))
+
+local startmenu = wibox.widget {
+    {
+        awful.widget.launcher({
+            image = "/usr/share/pixmaps/debian-logo.png",
+            menu  = mymainmenu
+        }),
+        {
+            widget = wibox.widget.textbox,
+            text   = " Start",
+            align  = "left",
+            valign = "center"
+        },
+        layout = wibox.layout.fixed.horizontal,
+    },
+    layout = wibox.container.margin,
+    right = 5,
+}
 
 awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
@@ -175,6 +195,7 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
+            startmenu,
             s.mytaglist,
             s.mylayoutbox,
             s.mypromptbox,
