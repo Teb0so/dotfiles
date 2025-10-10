@@ -1,7 +1,7 @@
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
-applauncher_cmd = "rofi -show drun"
+applauncher_cmd = "rofi -show drun -show-icons &"
 system_menu_cmd = "sys_menu.sh"
 pwr_menu_cmd = "sys_pwr_menu.sh"
 rofi_calc = "rofi -show calc"

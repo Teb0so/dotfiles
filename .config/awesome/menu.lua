@@ -23,6 +23,7 @@ myawesomemenu = {
 mymainmenu = freedesktop.menu.build({
     before = {
         { "  Awesome", myawesomemenu},
+        { "  Search", applauncher_cmd },
         { "  Terminal", terminal},
         { "  Explorer", file_xplr_gui_cmd},
         { "󰖟  Browser ", browser_cmd},
