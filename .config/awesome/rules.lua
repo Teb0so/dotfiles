@@ -58,10 +58,4 @@ awful.rules.rules = {
             "nicotine",
             "qbittorrent" }},
         properties = { tag = workspaces[8] } },
-
-    { rule_any = { 
-        name = {
-            "Proton Mail Bridge" }},
-        properties = { tag = workspaces[9] } },
-
 }
