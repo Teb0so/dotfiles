@@ -16,7 +16,6 @@ declare -a config=(
     "zathura"
     "openbox"
     "sxhkd"
-    "strawberry"
 )
 
 declare -a local=(

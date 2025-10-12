@@ -11,7 +11,6 @@ declare -a config=(
     "nvim"
     "ranger"
     "zathura"
-    "strawberry"
     "picom"
     "awesome"
     "rofi"
