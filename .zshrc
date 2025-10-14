@@ -88,6 +88,9 @@ alias clipb='xclip -selection clipboard'
 # To clipboard
 alias inst='sudo apt install --no-install-recommends'
 
+# Clone my repositories
+alias gitcln='git clone https://github.com/teb0so'
+
 # Load other aliases.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
 

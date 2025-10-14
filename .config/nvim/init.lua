@@ -36,3 +36,19 @@ vim.keymap.set("n", "<C-d>", "<C-w>q")
 
 -- Open copen
 vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")
+
+_G.lsp_status = function()
+  local bufnr = vim.api.nvim_get_current_buf()
+  local clients = vim.lsp.get_clients({ buffer = bufnr })
+  if not clients or vim.tbl_isempty(clients) then
+    return "LSP: none"
+  end
+  local names = {}
+  for _, client in pairs(clients) do
+    table.insert(names, client.name)
+  end
+  return "LSP: " .. table.concat(names, ", ")
+end
+
+vim.o.statusline = "%f %m %r %= %{%v:lua.lsp_status()%}"
+
