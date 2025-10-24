@@ -14,5 +14,6 @@ if [ ! -d "$NOTES_DIR" ]; then
     done
 fi
 
-nvim "$NOTES_DIR"
-
+cd "$NOTES_DIR" &&
+nvim ./ &&
+cd -

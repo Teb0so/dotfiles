@@ -71,7 +71,8 @@ bindkey '^e' edit-command-line
 
 # ls
 alias ls='ls --color=tty'
-alias la='ls -lha --color=tty'
+alias la='ls -a --color=tty'
+alias ll='ls -lha --color=tty'
 
 # Grep
 alias grep='grep --color=tty'
@@ -82,14 +83,14 @@ alias duple="alacritty & disown"
 # use fzf to start a tmux on specific directory
 alias cdc='cd "$(find . -type d -print | fzf)" && tmux && cd -'
 
+# Find book with fzf
+alias book='cd ~/Books && zathura ~/Books/"$(fzf)" && cd -'
+
 # To clipboard
 alias clipb='xclip -selection clipboard'
 
 # To clipboard
 alias inst='sudo apt install --no-install-recommends'
-
-# Clone my repositories
-alias gitcln='git clone https://github.com/teb0so'
 
 # Load other aliases.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"

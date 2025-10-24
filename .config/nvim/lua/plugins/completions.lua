@@ -14,7 +14,7 @@ return {
         config = function()
             local cmp = require("cmp")
             require("luasnip.loaders.from_vscode").lazy_load()
-            _G.cmp_enabled = true
+            _G.cmp_enabled = false
 
             cmp.setup({
                 enabled = function()
@@ -43,6 +43,7 @@ return {
                 }, {
                         { name = "buffer" },
                     }),
+
                 -- Toggle
                 vim.keymap.set('n', '<leader>tc', function()
                     _G.cmp_enabled = not _G.cmp_enabled

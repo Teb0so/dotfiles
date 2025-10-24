@@ -2,36 +2,36 @@
 term = "xterm-256color"
 
 [colors.cursor]
-text    = "#1d1f21"
-cursor  = "#c5c8c6"
+text    = "#f7f8fa"
+cursor  = "#2e3440"
 
 [colors.primary]
-background = "#1d1f21"
-foreground = "#c5c8c6"
+background = "#f7f8fa"
+foreground = "#2e3440"
 
 [colors.normal]
-black   = '#282a2e'
-red     = '#a54242'
-green   = '#8c9440'
-yellow  = '#de935f'
-blue    = '#5f819d'
-magenta = '#85678f'
-cyan    = '#5e8d87'
-white   = '#707880'
+black   = '#2E3440'
+red     = '#CB4F53'
+green   = '#48A53D'
+yellow  = '#EE5E25'
+blue    = '#3879C5'
+magenta = '#9F4ACA'
+cyan    = '#3EA1AD'
+white   = '#888888'
 
 [colors.bright]
-black   = '#373b41'
-red     = '#cc6666'
-green   = '#b5bd68'
-yellow  = '#f0c674'
-blue    = '#81a2be'
-magenta = '#b294bb'
-cyan    = '#8abeb7'
-white   = '#c5c8c6'
+black   = '#646A76'
+red     = '#D16366'
+green   = '#5F9E9D'
+yellow  = '#BA793E'
+blue    = '#1B40A6'
+magenta = '#9665AF'
+cyan    = '#8FBCBB'
+white   = '#ECEFF4'
 
 [colors.selection]
-text    = "#c5c8c6"
-background = "#373b41"
+text    = "#f7f2fa"
+background = "#3879c5"
 
 [font]
 size = 14
@@ -56,5 +56,5 @@ bindings = [
 [cursor]
 vi_mode_style = { shape = "Block" , blinking = "Never" }
 
-[window]
-opacity = 0.95
+# [window]
+# opacity = 0.95
