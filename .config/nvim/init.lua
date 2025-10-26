@@ -53,6 +53,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yankin
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
+-- Move chunks of code
 vim.keymap.set("n", "E", "ddp")
 vim.keymap.set("n", "Y", "ddkP")
 
@@ -60,7 +61,7 @@ vim.keymap.set('v', 'E', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'Y', ":m '<-2<CR>gv=gv")
 
 -- Kill pannel
-vim.keymap.set("n", "<C-d>", "<C-w>q")
+vim.keymap.set("n", "<C-d>", "<CMD>bd<CR>")
 
 -- Open copen
 vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")

@@ -10,12 +10,8 @@ declare -a home=(
 declare -a config=(
     "alacritty"
     "nvim"
-    "picom"
     "ranger"
-    "rofi"
     "zathura"
-    "openbox"
-    "sxhkd"
 )
 
 declare -a local=(
