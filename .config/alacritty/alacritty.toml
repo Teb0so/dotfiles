@@ -2,36 +2,19 @@
 term = "xterm-256color"
 
 [colors.cursor]
-text    = "#f7f8fa"
-cursor  = "#2e3440"
+text    = "#ffffff"
+cursor  = "#000000"
 
 [colors.primary]
-background = "#f7f8fa"
-foreground = "#2e3440"
+background = "#ffffff"
+foreground = "#000000"
 
 [colors.normal]
-black   = '#2E3440'
-red     = '#CB4F53'
-green   = '#48A53D'
-yellow  = '#EE5E25'
-blue    = '#3879C5'
-magenta = '#9F4ACA'
-cyan    = '#3EA1AD'
 white   = '#888888'
 
-[colors.bright]
-black   = '#646A76'
-red     = '#D16366'
-green   = '#5F9E9D'
-yellow  = '#BA793E'
-blue    = '#1B40A6'
-magenta = '#9665AF'
-cyan    = '#8FBCBB'
-white   = '#ECEFF4'
-
 [colors.selection]
-text    = "#f7f2fa"
-background = "#3879c5"
+text    = "#ffffff"
+background = "#00aaff"
 
 [font]
 size = 14
@@ -47,14 +30,3 @@ style  = "Bold"
 [font.italic]
 family = "IosevkaTermSlabNerdFont"
 style  = "Italic"
-
-[keyboard]
-bindings = [
-  { key = "X", mods = "Control|Shift", action = "ToggleViMode" },
-]
-
-[cursor]
-vi_mode_style = { shape = "Block" , blinking = "Never" }
-
-# [window]
-# opacity = 0.95

@@ -7,13 +7,8 @@ declare -a home=(
 )
 
 declare -a config=(
-    "alacritty"
     "nvim"
-    "ranger"
-    "zathura"
-    "picom"
-    "awesome"
-    "rofi"
+    "foot"
 )
 
 declare -a local=(
@@ -21,7 +16,6 @@ declare -a local=(
 )
 
 declare -a fonts=(
-    "IosevkaTerm"
     "IosevkaTermSlab"
 )
 
@@ -34,10 +28,6 @@ declare -a icons=(
     "miku-cursor-linux"
 )
 
-declare -a themes=(
-    "oomox-SimplicityDarkGtk"
-)
-
 declare -a dirs=(
     "home"
     "config"
@@ -45,5 +35,4 @@ declare -a dirs=(
     "fonts"
     "screenlayout"
     "icons"
-    "themes"
 )
