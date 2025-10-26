@@ -61,7 +61,7 @@ vim.keymap.set('v', 'E', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'Y', ":m '<-2<CR>gv=gv")
 
 -- Kill pannel
-vim.keymap.set("n", "<C-d>", "<CMD>bd<CR>")
+vim.keymap.set("n", "<C-d>", "<C-w>q")
 
 -- Open copen
 vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")
