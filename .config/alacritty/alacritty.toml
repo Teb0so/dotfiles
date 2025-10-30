@@ -2,18 +2,19 @@
 term = "xterm-256color"
 
 [colors.cursor]
-text    = "#ffffff"
+text    = "#ffffdd"
 cursor  = "#000000"
 
 [colors.primary]
-background = "#ffffff"
+background = "#ffffdd"
 foreground = "#000000"
 
 [colors.normal]
+yellow = '#ff8800'
 white   = '#888888'
 
 [colors.selection]
-text    = "#ffffff"
+text    = "#ffffdd"
 background = "#00aaff"
 
 [font]
