@@ -1,5 +1,3 @@
-@import "~/.config/rofi/multicolor-simplicity-dark.rasi"
-
 configuration {
     terminal: "alacritty";
     font: "IosevkaTermSlab Nerd Font Regular 13";
