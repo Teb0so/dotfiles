@@ -8,8 +8,10 @@ declare -a home=(
 
 declare -a config=(
     "nvim"
-    "foot"
     "rofi"
+    "awesome"
+    "alacritty"
+    "picom"
 )
 
 declare -a local=(
