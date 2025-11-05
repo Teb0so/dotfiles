@@ -16,8 +16,7 @@ return {
                 callback = function()
                     vim.treesitter.stop(0)
                 end,
-})
-
+            })
         }
     end,
 }
