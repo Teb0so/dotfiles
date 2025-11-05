@@ -7,7 +7,7 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "IosevkaTermslabNerdFont 10"
 
 theme.bg_normal     = "#bbbbbb"
 theme.bg_focus      = "#005577"
@@ -20,7 +20,7 @@ theme.fg_focus      = "#eeeeee"
 theme.fg_urgent     = "#eeeeee"
 theme.fg_minimize   = "#eeeeee"
 
-theme.useless_gap   = dpi(5)
+theme.useless_gap   = dpi(2)
 theme.border_width  = dpi(2)
 theme.border_normal = theme.bg_normal
 theme.border_focus  = theme.bg_focus
