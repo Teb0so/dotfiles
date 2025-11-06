@@ -27,6 +27,6 @@ $HOME/.local/scripts/mouse &
 nitrogen --restore &
 
 run_once picom &
-run_once protonmail-bridge --no-window &
+sleep 1 && run_once protonmail-bridge --no-window &
 
 run_once_flatpak com.discordapp.Discord --start-minimized

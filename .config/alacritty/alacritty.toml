@@ -10,12 +10,24 @@ background = "#ffffff"
 foreground = "#000000"
 
 [colors.normal]
-yellow = '#ff8800'
-white   = '#888888'
+black   = "#000000"
+red     = "#a52a2a"
+green   = "#008000"
+yellow  = "#b8860b"
+blue    = "#0000ff"
+magenta = "#800080"
+cyan    = "#008080"
+white   = "#c0c0c0"
 
-[colors.selection]
-text    = "#ffffff"
-background = "#00aaff"
+[colors.bright]
+black   = "#606060"
+red     = "#cd5c5c"
+green   = "#228b22"
+yellow  = "#daa520"
+blue    = "#4169e1"
+magenta = "#9932cc"
+cyan    = "#20b2aa"
+white   = "#ffffff"
 
 [font]
 size = 14

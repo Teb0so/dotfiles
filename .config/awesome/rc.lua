@@ -249,8 +249,6 @@ local tasklist_buttons = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-    {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -275,6 +273,17 @@ local tasklist_buttons = gears.table.join(
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
     {description = "open a terminal", group = "launcher"}),
+    awful.key({ modkey,           }, "e", function () awful.spawn("pcmanfm-qt") end,
+    {description = "open a file manager", group = "launcher"}),
+    awful.key({ modkey,           }, "w", function () awful.spawn("firefox") end,
+    {description = "open a web browser", group = "launcher"}),
+    awful.key({ modkey,           }, "g", function () awful.spawn("claws-mail") end,
+    {description = "open a mail client", group = "launcher"}),
+    awful.key({ modkey,           }, "c", function () awful.spawn("qalculate-qt") end,
+    {description = "open a calculator", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "w", function () awful.spawn("nitrogen") end,
+    {description = "open wallpaper selector", group = "launcher"}),
+
     awful.key({ modkey, "Control" }, "r", awesome.restart,
     {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -543,10 +552,6 @@ client.connect_signal("request::titlebars", function(c)
             layout  = wibox.layout.flex.horizontal
         },
         { -- Right
-            awful.titlebar.widget.floatingbutton (c),
-            awful.titlebar.widget.maximizedbutton(c),
-            awful.titlebar.widget.stickybutton   (c),
-            awful.titlebar.widget.ontopbutton    (c),
             awful.titlebar.widget.closebutton    (c),
             layout = wibox.layout.fixed.horizontal()
         },
