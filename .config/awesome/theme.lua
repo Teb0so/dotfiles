@@ -10,7 +10,7 @@ local theme = {}
 theme.font          = "IosevkaTermslabNerdFont 10"
 
 theme.bg_normal     = "#bbbbbb"
-theme.bg_focus      = "#005577"
+theme.bg_focus      = "#447799"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
@@ -36,8 +36,8 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 )
 
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
-theme.menu_height = dpi(15)
-theme.menu_width  = dpi(100)
+theme.menu_height = dpi(20)
+theme.menu_width  = dpi(150)
 
 
 -- Define the image to load
