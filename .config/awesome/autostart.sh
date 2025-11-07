@@ -24,7 +24,7 @@ run_once_flatpak() {
 exec_applets &
 
 $HOME/.local/scripts/mouse &
-nitrogen --restore &
+$HOME/.local/scripts/random_wall.sh&
 
 run_once picom &
 sleep 1 && run_once protonmail-bridge --no-window &
