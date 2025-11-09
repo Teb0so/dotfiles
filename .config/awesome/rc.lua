@@ -271,6 +271,8 @@ local tasklist_buttons = gears.table.join(
     {description = "go back", group = "client"}),
 
     -- Standard program
+    awful.key({ "Mod1",           }, "space", function () awful.spawn("toggle-kb-layout") end,
+    {description = "change keyboard layout", group = "launcher"}),
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
     {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "e", function () awful.spawn("pcmanfm-qt") end,
