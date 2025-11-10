@@ -21,12 +21,13 @@ run_once_flatpak() {
     fi
 }
 
+source $HOME/.zprofile &
+
 exec_applets &
 
 $HOME/.local/scripts/mouse &
-$HOME/.local/scripts/random_wall.sh&
+$HOME/.local/scripts/random_wall.sh &
 
 run_once picom &
 sleep 1 && run_once protonmail-bridge --no-window &
-
-run_once_flatpak com.discordapp.Discord --start-minimized
+run_once_flatpak dev.vencord.Vesktop --start-minimized
