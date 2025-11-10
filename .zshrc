@@ -89,8 +89,9 @@ alias book='cd ~/Books && zathura ~/Books/"$(fzf)" && cd -'
 # To clipboard
 alias clipb='xclip -selection clipboard'
 
-# To clipboard
+# Apt
 alias inst='sudo apt install --no-install-recommends'
+alias remv='sudo apt autoremove -y'
 
 # Load other aliases.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
