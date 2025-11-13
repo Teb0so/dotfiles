@@ -1,27 +1,72 @@
-"Set leader
+" Set leader
 let mapleader = " "
 
-"set syntax
+" Set syntax
 syntax on
 
 " Load theme
 colorscheme wildcharm
-set background=light
 
-"Set binds
-nnoremap <leader>, :Ex<CR>
+" Keep 10 lines above / bellow cursor
+set scrolloff=10
 
-"Set identation
+" Set dots
+set list
+set listchars=tab:-->,space:·
+
+" Set identation
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-"set numbers
+" Serch settings
+set ignorecase
+set smartcase
+set nohlsearch
+set incsearch
+
+" File handling
+set nobackup
+set nowritebackup
+set autoread
+
+"Set line numbers
 set number
 set relativenumber
 
-"set dots
-set list
-set listchars=tab:-->,space:·
+"Cycle buffers
+nnoremap <leader>b :b#<CR>
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>p :bp<CR>
 
+" Delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" Keep selection after indenting
+vnoremap > >gv
+vnoremap < <gv
+
+" Move chunks of code
+nnoremap E ddp
+nnoremap Y ddkP
+
+vnoremap E :m '>+1<CR>gv=gv
+vnoremap Y :m '<-2<CR>gv=gv
+
+" Kill panel
+nnoremap <C-d> <C-w>q
+
+" Open copen
+nnoremap <leader>co :copen<CR>
+
+" Quick search
+nnoremap <leader>ff :find 
+set path+=**
+
+" List buffers
+nnoremap <leader>fb :buffers<CR>
+
+"Open explorer
+nnoremap <leader>, :Ex<CR>
