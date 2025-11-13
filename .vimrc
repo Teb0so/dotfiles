@@ -55,8 +55,12 @@ nnoremap Y ddkP
 vnoremap E :m '>+1<CR>gv=gv
 vnoremap Y :m '<-2<CR>gv=gv
 
-" Kill panel
+" Panel operations
 nnoremap <C-d> <C-w>q
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Open copen
 nnoremap <leader>co :copen<CR>
