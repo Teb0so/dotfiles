@@ -7,6 +7,9 @@ return {
             pattern = { "md", "markdown" },
             callback = function()
                 vim.cmd("setlocal spell spelllang=pt,en")
+                vim.cmd("setlocal norelativenumber")
+                vim.cmd("setlocal nonumber")
+                vim.cmd("setlocal nolist")
             end,
         })
     end
