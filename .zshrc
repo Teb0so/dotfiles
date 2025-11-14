@@ -77,6 +77,9 @@ alias ll='ls -lha --color=tty'
 # Grep
 alias grep='grep --color=tty'
 
+# Open ranger with ","
+alias ,="ranger"
+
 # open another terminal in current directory
 alias duple="alacritty & disown"
 

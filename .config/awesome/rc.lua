@@ -283,7 +283,7 @@ local tasklist_buttons = gears.table.join(
     {description = "open a mail client", group = "launcher"}),
     awful.key({ modkey,           }, "c", function () awful.spawn("qalculate-qt") end,
     {description = "open a calculator", group = "launcher"}),
-    awful.key({ modkey, "Shift"   }, "w", function () awful.spawn("nitrogen") end,
+    awful.key({ modkey, "Shift"   }, "w", function () awful.spawn("alacritty -e ranger /home/teb0so/Pictures/wals/") end,
     {description = "open wallpaper selector", group = "launcher"}),
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
