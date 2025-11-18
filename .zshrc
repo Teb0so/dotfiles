@@ -85,6 +85,7 @@ alias duple="alacritty & disown"
 
 # use fzf to start a tmux on specific directory
 alias cdc='cd "$(find . -type d -print | fzf)" && tmux && cd -'
+alias prog='cd "$(find $HOME/prog -type d -print | fzf)" && tmux && cd -'
 
 # Find book with fzf
 alias book='cd ~/Books && zathura ~/Books/"$(fzf)" && cd -'

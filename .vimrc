@@ -56,7 +56,6 @@ vnoremap E :m '>+1<CR>gv=gv
 vnoremap Y :m '<-2<CR>gv=gv
 
 " Panel operations
-nnoremap <C-d> <C-w>q
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k

@@ -2,11 +2,11 @@
 term = "xterm-256color"
 
 [colors.cursor]
-text    = "#ffffff"
+text    = "#ffffee"
 cursor  = "#000000"
 
 [colors.primary]
-background = "#ffffff"
+background = "#ffffee"
 foreground = "#000000"
 
 [colors.normal]

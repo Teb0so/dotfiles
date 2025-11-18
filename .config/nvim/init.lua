@@ -9,6 +9,9 @@ require("lazy").setup("plugins")
 -- Load theme
 vim.cmd("colorscheme wildcharm")
 vim.cmd("set background=light")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
 -- Keep 10 lines above / bellow cursor
 vim.opt.scrolloff = 10
@@ -59,9 +62,6 @@ vim.keymap.set("n", "Y", "ddkP")
 
 vim.keymap.set('v', 'E', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'Y', ":m '<-2<CR>gv=gv")
-
--- Kill pannel
-vim.keymap.set("n", "<C-d>", "<C-w>q")
 
 -- Open copen
 vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")
