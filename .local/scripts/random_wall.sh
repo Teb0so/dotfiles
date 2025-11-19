@@ -6,4 +6,4 @@ walls=( "$WALLPAPPER_DIR"/* )
 
 random=($(($RANDOM % ${#walls[@]})))
 
-feh --bg-fill ${walls[$random]}
+feh --bg-fill "${walls[$random]}"
