@@ -9,21 +9,21 @@ local theme = {}
 
 theme.font          = "IosevkaTermslabNerdFont 10"
 
-theme.bg_normal     = "#bbbbbb"
-theme.bg_focus      = "#447799"
-theme.bg_urgent     = "#ff0000"
+theme.bg_normal     = "#efefef"
+theme.bg_focus      = "#a0a0a0"
+theme.bg_urgent     = "#dd6666"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#222222"
-theme.fg_focus      = "#eeeeee"
-theme.fg_urgent     = "#eeeeee"
+theme.fg_focus      = "#000000"
+theme.fg_urgent     = "#222222"
 theme.fg_minimize   = "#eeeeee"
 
 theme.useless_gap   = dpi(2)
 theme.border_width  = dpi(2)
 theme.border_normal = theme.bg_normal
-theme.border_focus  = theme.bg_focus
+theme.border_focus  = "#3daee9"
 theme.border_marked = theme.bg_urgent
 
 -- Generate taglist squares:

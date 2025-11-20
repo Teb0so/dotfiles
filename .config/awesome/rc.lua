@@ -91,7 +91,7 @@ myawesomemenu = {
     { "manual", terminal .. " -e man awesome" },
     { "edit config", editor_cmd .. " " .. awesome.conffile },
     { "restart", awesome.restart },
-    { "quit", function() awesome.quit() end },
+    { "quit", function() awesome.quit() awful.spawn.with_shell("pkill lxqt") end },
 }
 
 local menu_awesome = { "awesome", myawesomemenu, beautiful.awesome_icon }
@@ -285,10 +285,12 @@ local tasklist_buttons = gears.table.join(
     {description = "open a calculator", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "w", function () awful.spawn("alacritty -e ranger /home/teb0so/Pictures/wals/") end,
     {description = "open wallpaper selector", group = "launcher"}),
+    awful.key({ modkey, "Control"   }, "w", function () awful.spawn.with_shell("/home/teb0so/.local/scripts/random_wall.sh") end,
+    {description = "change to arandom wallpaper", group = "launcher"}),
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
     {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
+    awful.key({ modkey, "Shift"   }, "q", function () awesome.quit() awful.spawn.with_shell("pkill lxqt") end,
     {description = "quit awesome", group = "awesome"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
@@ -569,6 +571,3 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
--- {{{ Autostart
-awful.spawn.with_shell("$HOME/.config/awesome/autostart.sh")
