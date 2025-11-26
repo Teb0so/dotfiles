@@ -271,7 +271,7 @@ local tasklist_buttons = gears.table.join(
     {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ "Mod1",           }, "space", function () awful.spawn("toggle-kb-layout") end,
+    awful.key({ "Mod1",           }, "space", function () awful.spawn("/home/teb0so/.local/scripts/toggle-kb-layout") end,
     {description = "change keyboard layout", group = "launcher"}),
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
     {description = "open a terminal", group = "launcher"}),
@@ -281,6 +281,8 @@ local tasklist_buttons = gears.table.join(
     {description = "open a web browser", group = "launcher"}),
     awful.key({ modkey,           }, "g", function () awful.spawn("claws-mail") end,
     {description = "open a mail client", group = "launcher"}),
+    awful.key({ modkey,           }, "y", function () awful.spawn("strawberry") end,
+    {description = "open a music player", group = "launcher"}),
     awful.key({ modkey,           }, "c", function () awful.spawn("qalculate-qt") end,
     {description = "open a calculator", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "w", function () awful.spawn("alacritty -e ranger /home/teb0so/Pictures/wals/") end,
