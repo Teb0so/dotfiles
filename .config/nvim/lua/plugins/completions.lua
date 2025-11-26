@@ -6,7 +6,7 @@ return {
         "hrsh7th/nvim-cmp",
         config = function()
             local cmp = require("cmp")
-            _G.cmp_enabled = true
+            _G.cmp_enabled = false
 
             cmp.setup({
                 enabled = function()
