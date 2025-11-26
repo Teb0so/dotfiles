@@ -9,6 +9,8 @@ require("lazy").setup("plugins")
 -- Load theme
 vim.cmd("colorscheme wildcharm")
 vim.cmd("set background=light")
+vim.cmd("highlight Function ctermfg=0 guifg=#000000")
+vim.cmd("highlight asmIdentifier ctermfg=0 guifg=#000000")
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
