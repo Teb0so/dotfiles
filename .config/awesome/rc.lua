@@ -288,7 +288,9 @@ local tasklist_buttons = gears.table.join(
     awful.key({ modkey, "Shift"   }, "w", function () awful.spawn("alacritty -e ranger /home/teb0so/Pictures/wals/") end,
     {description = "open wallpaper selector", group = "launcher"}),
     awful.key({ modkey, "Control"   }, "w", function () awful.spawn.with_shell("/home/teb0so/.local/scripts/random_wall.sh") end,
-    {description = "change to arandom wallpaper", group = "launcher"}),
+    {description = "change to a random wallpaper", group = "launcher"}),
+    awful.key({ }, "Print", function () awful.spawn("scrot '%Y-%m-%d-%H%M%S.png' -p -e 'mv $f ~/Pictures/screenshots'") end,
+    {description = "take a screenshot", group = "launcher"}),
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
     {description = "reload awesome", group = "awesome"}),
