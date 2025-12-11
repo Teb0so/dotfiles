@@ -6,4 +6,8 @@ walls=( "$WALLPAPPER_DIR"/* )
 
 random=($(($RANDOM % ${#walls[@]})))
 
-feh --bg-fill "${walls[$random]}"
+if ($WAYLAND_DISPLAY); then
+    feh --bg-fill "${walls[$random]}"
+else
+    swaybg -m fill -i "${walls[$random]}" & disown
+fi

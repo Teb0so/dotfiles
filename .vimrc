@@ -6,6 +6,11 @@ syntax on
 
 " Load theme
 colorscheme wildcharm
+highlight Identifier ctermfg=0 guifg=#000000
+highlight Comment ctermfg=90 guifg=#870087
+highlight Normal ctermbg=none guibg=#ffffee
+highlight NormalNC ctermbg=none guibg=#ffffee
+highlight EndOfBuffer ctermbg=none guibg=#ffffee
 
 " Keep 10 lines above / bellow cursor
 set scrolloff=10

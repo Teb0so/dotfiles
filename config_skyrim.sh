@@ -2,16 +2,12 @@ declare -a home=(
     ".gdbinit"
     ".tmux.conf"
     ".vimrc"
-    ".zprofile"
     ".zshrc"
 )
 
 declare -a config=(
     "nvim"
-    "rofi"
-    "awesome"
     "alacritty"
-    "picom"
 )
 
 declare -a local=(
@@ -36,6 +32,4 @@ declare -a dirs=(
     "config"
     "local"
     "fonts"
-    "screenlayout"
-    "icons"
 )
