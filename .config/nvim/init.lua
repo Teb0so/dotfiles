@@ -73,7 +73,7 @@ vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
 vim.opt.path:append("**")
 
 -- List buffers
-vim.keymap.set("n", "<leader>fb", "<CMD>buffers<CR>", { desc = "List buffers" })
+vim.keymap.set('n', '<leader>fb', ':buffers<CR>:b ', { desc = "List buffers" })
 
 ------------------------------ Status line ----------------------------------------
 

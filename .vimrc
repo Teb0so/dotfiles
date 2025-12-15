@@ -74,7 +74,7 @@ nnoremap <leader>ff :find
 set path+=**
 
 " List buffers
-nnoremap <leader>fb :buffers<CR>
+nnoremap <leader>fb :buffers<CR>:b<Space>
 
 "Open explorer
 nnoremap <leader>, :Ex<CR>
