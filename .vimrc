@@ -83,7 +83,7 @@ nnoremap <leader>co :copen<CR>
 nnoremap <leader>e :enew<CR>
 
 " Quick search
-nnoremap <leader>ff :find
+nnoremap <leader>ff :find<Space>
 set path+=**
 
 " List buffers
