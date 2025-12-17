@@ -16,12 +16,7 @@ declare -a local=(
 )
 
 declare -a fonts=(
-    "IosevkaTerm"
     "IosevkaTermSlab"
-)
-
-declare -a icons=(
-    "miku-cursor-linux"
 )
 
 declare -a dirs=(
@@ -29,5 +24,4 @@ declare -a dirs=(
     "config"
     "local"
     "fonts"
-    "icons"
 )
