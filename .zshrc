@@ -77,8 +77,8 @@ alias ll='ls -lha --color=tty'
 # Grep
 alias grep='grep --color=tty'
 
-# Open ranger with ","
-alias ,="ranger"
+# Open cli filemanager with ","
+alias ,='LC_COLLATE=C nnn -dH'
 
 # open another terminal in current directory
 alias duple="alacritty & disown"
