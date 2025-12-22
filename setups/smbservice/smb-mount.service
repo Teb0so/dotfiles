@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount SMB Share and Monitor Connection
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/bash -c 'mountpoint -q /mmnt/cloud || mount -t cifs //192.168.0.32/cloud /mnt/cloud -o credentials=/root/.smbcredentials,uid=1000,gid=1000,rw,vers=3.0,iocharset=utf8'
+ExecStop=/bin/bash -c 'mountpoint -q /mnt/cloud && umount /mnt/cloud'
+
+[Install]
+WantedBy=multi-user.target
