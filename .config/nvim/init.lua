@@ -67,6 +67,11 @@ vim.keymap.set('v', 'Y', ":m '<-2<CR>gv=gv")
 
 -- Open copen
 vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")
+vim.keymap.set("n", "<leader>ca", function()
+  vim.diagnostic.setqflist({ open = true })
+end, { desc = "Open diagnostics in quickfix" })
+
+
 
 -- Quick search
 vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
