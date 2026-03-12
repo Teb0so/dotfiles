@@ -26,7 +26,10 @@ set $filemanager pcmanfm-qt
 include /etc/sway/config-vars.d/*
 
 # Output configuration
-# output HDMI-A-1 resolution 1920x1080 position 1920,0
+output HDMI-A-1 mode 1920x1080@60.000Hz
+output HDMI-A-1 pos 0 0
+output DP-1 mode 1920x1080@74.973Hz
+output DP-1 pos 1920 0
 
 # Idle configuration
 
@@ -93,9 +96,9 @@ input type:keyboard {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
- 
+
 # Workspaces:
- 
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -107,6 +110,9 @@ input type:keyboard {
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
+    # Workspace switch output
+    bindsym $mod+greater move workspace to output right
+    bindsym $mod+less move workspace to output left
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -135,6 +141,9 @@ input type:keyboard {
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+    # Assign workspace 1 to main monitor
+    workspace 1 output DP-1
 
 # Scratchpad
 
