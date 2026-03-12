@@ -2,31 +2,31 @@
 term = "xterm-256color"
 
 [colors.cursor]
-text    = "#ffffee"
+text    = "#c0c0c0"
 cursor  = "#000000"
 
 [colors.primary]
-background = "#ffffee"
+background = "#c0c0c0"
 foreground = "#000000"
 
 [colors.normal]
 black   = "#000000"
-red     = "#a52a2a"
-green   = "#008000"
-yellow  = "#b8860b"
-blue    = "#0000ff"
-magenta = "#800080"
-cyan    = "#008080"
-white   = "#c0c0c0"
+red     = "#af0000"
+green   = "#008700"
+yellow  = "#af5f00"
+blue    = "#005faf"
+magenta = "#870087"
+cyan    = "#008787"
+white   = "#8a8a8a"
 
 [colors.bright]
-black   = "#606060"
-red     = "#cd5c5c"
-green   = "#228b22"
-yellow  = "#daa520"
-blue    = "#4169e1"
-magenta = "#9932cc"
-cyan    = "#20b2aa"
+black   = "#808080"
+red     = "#d70000"
+green   = "#5faf5f"
+yellow  = "#d78700"
+blue    = "#0087d7"
+magenta = "#af00af"
+cyan    = "#00afaf"
 white   = "#ffffff"
 
 [font]
@@ -43,3 +43,6 @@ style  = "Bold"
 [font.italic]
 family = "IosevkaTermSlabNerdFont"
 style  = "Italic"
+
+[window]
+opacity = 0.93

@@ -1,8 +1,0 @@
-#!/bin/sh
-
-if setxkbmap -query | grep -q "variant: *intl"; then
-    setxkbmap us
-else
-    setxkbmap us intl
-fi
-

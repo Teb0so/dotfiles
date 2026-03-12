@@ -4,19 +4,14 @@ let mapleader = " "
 " Set syntax
 syntax on
 
-" Load theme
-colorscheme wildcharm
-highlight Identifier ctermfg=0
-highlight Comment ctermfg=90
-highlight Normal ctermbg=none
-highlight NormalNC ctermbg=none
-highlight EndOfBuffer ctermbg=none
+highlight SpecialKey ctermfg=246
 
 if has("gui_running")
+    colorscheme wildcharm
     set background=light
-    highlight Normal guibg=#ffffee guifg=#000000
-    highlight NormalNC guibg=#ffffee
-    highlight EndOfBuffer guibg=#ffffee
+    highlight Normal guibg=#ffffdd guifg=#000000
+    highlight NormalNC guibg=#ffffdd
+    highlight EndOfBuffer guibg=#ffffdd
     highlight Comment guifg=#870087
     highlight Identifier guifg=#000000
     set guifont=Consolas:h16
@@ -79,7 +74,7 @@ nnoremap <C-l> <C-w>l
 " Open copen
 nnoremap <leader>co :copen<CR>
 
-" Open new empy buffer
+" Open new empty buffer
 nnoremap <leader>e :enew<CR>
 
 " Quick search

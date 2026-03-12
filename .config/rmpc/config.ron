@@ -41,6 +41,8 @@
             "5":       SwitchToTab("Albums"),
             "6":       SwitchToTab("Playlists"),
             "7":       SwitchToTab("Search"),
+            "8":       SwitchToTab("Browser"),
+            //"9":       SwitchToTab("Lyrics"),
             "q":       Quit,
             ">":       NextTrack,
             "p":       TogglePause,
@@ -220,6 +222,7 @@
                             panes: [(size: "100%", borders: "ALL", pane: Pane(Browser(root_tag: "Artist")))],
                             ),
                        ),
+                       /*
                        (
                         name: "Lyrics",
                         pane: Split(
@@ -227,6 +230,7 @@
                             panes: [(size: "100%", borders: "ALL", pane: Pane(Lyrics))],
                             ),
                        ),
+                       */
                        ],
                        )
 

@@ -8,6 +8,13 @@ declare -a home=(
 declare -a config=(
     "nvim"
     "alacritty"
+    "foot"
+    "mpd"
+    "rmpc"
+    "ranger"
+    "dunst"
+    "fuzzel"
+    "sway"
 )
 
 declare -a local=(

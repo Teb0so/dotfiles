@@ -32,6 +32,13 @@ _comp_options+=(globdots)		# Include hidden files.
 
 # vi mode
 bindkey -v
+
+bindkey -M viins '^W' backward-kill-word
+bindkey -M vicmd '^W' backward-kill-word
+
+bindkey -M viins '^H' backward-delete-char
+bindkey -M vicmd '^H' backward-delete-char
+
 export KEYTIMEOUT=1
 
 # Use vim keys in tab complete menu:
@@ -78,14 +85,14 @@ alias ll='ls -lha --color=tty'
 alias grep='grep --color=tty'
 
 # Open cli filemanager with ","
-alias ,='LC_COLLATE=C nnn -dH'
-
-# open another terminal in current directory
-alias duple="alacritty & disown"
+alias ,='ranger'
 
 # use fzf to start a tmux on specific directory
 alias cdc='cd "$(find . -type d -print | fzf)" && tmux && cd -'
 alias prog='cd "$(find $HOME/prog -type d -print | fzf)" && tmux && cd -'
+
+# Tmux
+alias ta='if tmux attach; then tmux attach; else tmux; fi'
 
 # Find book with fzf
 alias book='cd ~/Books && zathura ~/Books/"$(fzf)" && cd -'
@@ -96,6 +103,9 @@ alias clipb='xclip -selection clipboard'
 # Apt
 alias inst='sudo apt install --no-install-recommends'
 alias remv='sudo apt autoremove -y'
+
+# Open glow in notes directory
+alias notes='glow $HOME/Notes'
 
 # Load other aliases.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"

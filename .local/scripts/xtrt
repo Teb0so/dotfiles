@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+shopt -s nullglob
+
+for file in *.zip; do
+    dir="${file%.zip}"
+
+    [[ -d "$dir" ]] && continue
+
+    mkdir -p "$dir"
+    unzip "$file" -d "$dir"
+
+done
+
+for file in *.rar; do
+    dir="${file%.rar}"
+
+    [[ -d "$dir" ]] && continue
+
+    mkdir -p "$dir"
+    unrar "$file" "$dir"
+
+done
+
+for file in *.7z; do
+    dir="${file%.7z}"
+
+    [[ -d "$dir" ]] && continue
+
+    mkdir -p "$dir"
+    7z x "$file" -o"$dir"
+
+done
+

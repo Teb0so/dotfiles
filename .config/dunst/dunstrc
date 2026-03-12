@@ -1,0 +1,16 @@
+[global]
+    transparency = 20
+    frame_color = "#870087"
+    frame_width = 2
+
+[urgency_low]
+    foreground = "#000000"
+    background = "#8a8a8a"
+
+[urgency_normal]
+    foreground = "#000000"
+    background = "#8a8a8a"
+
+[urgency_critical]
+    foreground = "#ffffff"
+    background = "#af0000"
