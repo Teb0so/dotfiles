@@ -1,34 +1,18 @@
 #!/usr/bin/env bash
 
-shopt -s nullglob
+shopt -s nullglob extglob
 
-for file in *.zip; do
-    dir="${file%.zip}"
+for file in *@(.zip|.rar|.7z); do
+    ext="${file##*.}"
+    dir="${file%.*}"
 
-    [[ -d "$dir" ]] && continue
+    [[ -d "$dir" && -n "$(ls -A "$dir" 2>/dev/null)" ]] && continue
 
-    mkdir -p "$dir"
-    unzip "$file" -d "$dir"
+    echo "Creating directory ${dir}..." && mkdir -p -- "$dir"
 
+    case "$ext" in
+        zip) echo "Extracting ${file} with unzip..." && unzip -- "$file" -d "$dir" ;;
+        rar) echo "Extracting ${file} with unrar..." && unrar x -- "$file" "$dir/" ;;
+        7z)  echo "Extracting ${file} with 7z..."    && 7z x "$file" -o"$dir" ;;
+    esac
 done
-
-for file in *.rar; do
-    dir="${file%.rar}"
-
-    [[ -d "$dir" ]] && continue
-
-    mkdir -p "$dir"
-    unrar "$file" "$dir"
-
-done
-
-for file in *.7z; do
-    dir="${file%.7z}"
-
-    [[ -d "$dir" ]] && continue
-
-    mkdir -p "$dir"
-    7z x "$file" -o"$dir"
-
-done
-
