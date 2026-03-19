@@ -2,16 +2,15 @@
 # Edited by Teb0so
 
 # Enable colors and change prompt:
-autoload -U colors && colors
-if [[ $(cat /etc/hostname) == skyrim ]]; then
-    PS1='%F{grey}%B[%F{blue}%n%F{grey}@%F{blue}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ '
-elif [[ $(cat /etc/hostname) == highrock ]]; then
-    PS1='%F{grey}%B[%F{green}%n%F{grey}@%F{green}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ '
-elif [[ $(cat /etc/hostname) == cyrodiil ]]; then
-    PS1='%F{grey}%B[%F{red}%n%F{grey}@%F{red}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ '
-else
-    PS1='%F{grey}%B[%F{grey}%n%F{grey}@%F{grey}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ '
-fi
+
+hostname=$(hostname)
+
+case "$hostname" in
+    skyrim)   PS1='%F{grey}%B[%F{blue}%n%F{grey}@%F{blue}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
+    highrock) PS1='%F{grey}%B[%F{green}%n%F{grey}@%F{green}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
+    cyrodiil) PS1='%F{grey}%B[%F{red}%n%F{grey}@%F{red}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
+    *)        PS1='%F{grey}%B[%F{grey}%n%F{grey}@%F{grey}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
+esac
 
 # History in cache directory:
 HISTSIZE=10000
@@ -92,7 +91,7 @@ alias cdc='cd "$(find . -type d -print | fzf)" && tmux && cd -'
 alias prog='cd "$(find $HOME/prog -type d -print | fzf)" && tmux && cd -'
 
 # Tmux
-alias ta='if tmux attach; then tmux attach; else tmux; fi'
+alias ta='tmux attach-session -t $(tmux list-sessions -F "#{session_name}" | head -n 1 || echo "") || tmux new-session'
 
 # Find book with fzf
 alias book='cd ~/Books && zathura ~/Books/"$(fzf)" && cd -'
@@ -115,5 +114,7 @@ alias notes='glow $HOME/Notes'
 if [[ -e /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 elif [[ -e /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # Debian
+elif [[ -e /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # FreeBSD
 fi
