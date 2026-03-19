@@ -22,7 +22,7 @@ require("lazy").setup({
     { import = "plugins" },
   },
   -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "hybrid2" } },
+  install = { colorscheme = { "wildcharm" } },
   -- automatically check for plugin updates
   checker = { enabled = true, notify = false},
 })
