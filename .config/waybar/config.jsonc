@@ -1,0 +1,76 @@
+// Separators: 「」
+{
+    "layer": "top",
+    "position": "top",
+    // "height": 27,
+    "spacing": 0,
+
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-right": ["tray", "mpd", "custom/vpn", "network", "cpu", "memory", "pulseaudio", "clock"],
+
+    "clock": {
+        "format": "「{:%Y-%m-%d %H:%M}」"
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false
+    },
+
+    "sway/window": {
+        // "max-length": 50,
+        "format": "| {title}"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 5
+    },
+    "pulseaudio": {
+        "format": "「{volume}%  」",
+        "scroll-step": 5,
+        "on-click": "pavucontrol-qt",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "network": {
+        "format-wifi": "「{ifname}: {ipaddr}」",
+        "format-ethernet": "「{ifname}: {ipaddr}」",
+        "format-disconnected": "「Disconnected」"
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "「{}%  "
+    },
+    "memory": {
+        "interval": 30,
+        "format": " | {}%  」"
+    },
+    "mpd": {
+        "format": "「{stateIcon} {artist} · {album} - {title}」",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "",
+        "interval": 10,
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)",
+        "on-click": "mpc toggle",
+        "on-click-right": "mpc stop"
+    },
+    "custom/vpn": {
+        "exec": "~/.local/scripts/sb_vpn.sh",
+        "format": "「{}」",
+        "interval": 5,
+        "return-type": "json",
+        "on-click": "nmcli connection up nl-free-79",
+        "on-click-right": "nmcli connection down nl-free-79"
+    }
+}

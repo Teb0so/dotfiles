@@ -14,6 +14,7 @@ declare -a config=(
     "dunst"
     "fuzzel"
     "sway"
+    "waybar"
 )
 
 declare -a local=(
