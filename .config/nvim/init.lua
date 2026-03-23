@@ -41,7 +41,7 @@ vim.opt.incsearch = true
 -- File handling
 vim.opt.backup = false
 vim.opt.writebackup = false
-vim.opt.swapfile = true
+vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand("~/.vim/undodir")
 vim.opt.autoread = true

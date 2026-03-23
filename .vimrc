@@ -40,6 +40,7 @@ set incsearch
 set nobackup
 set nowritebackup
 set autoread
+set noswapfile
 
 "Set line numbers
 set number
