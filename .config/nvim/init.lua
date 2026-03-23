@@ -83,7 +83,7 @@ vim.keymap.set('v', 'Y', ":m '<-2<CR>gv=gv")
 -- Open copen
 vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")
 vim.keymap.set("n", "<leader>ca", function()
-  vim.diagnostic.setqflist({ open = true })
+    vim.diagnostic.setqflist({ open = true })
 end, { desc = "Open diagnostics in quickfix" })
 
 -- Open new empty buffer
@@ -96,24 +96,19 @@ vim.opt.path:append("**")
 -- List buffers
 vim.keymap.set('n', '<leader>fb', ':buffers<CR>:b ', { desc = "List buffers" })
 
------------------------------- Status line ----------------------------------------
+-- Comment
+vim.keymap.set("n", "gcc", function()
+    require("vim._comment").toggle_linewise_current()
+end, { desc = "Toggle comment line" })
 
--- -- Show LSP status
--- _G.lsp_status = function()
---     local bufnr = vim.api.nvim_get_current_buf()
---     local clients = vim.lsp.get_clients({ buffer = bufnr })
---     if not clients or vim.tbl_isempty(clients) then
---         return "LSP: none"
---     end
---     local seen = {}
---     local names = {}
---     for _, client in pairs(clients) do
---         if not seen[client.name] then
---             table.insert(names, client.name)
---             seen[client.name] = true
---         end
---     end
---     return "LSP: " .. table.concat(names, ", ")
--- end
---
--- vim.o.statusline = "%f %m %r %= %l:%c    %p%%    %{%v:lua.lsp_status()%}"
+vim.keymap.set("v", "gc", function()
+  require("vim._comment").toggle_linewise_visual()
+end, { desc = "Toggle comment selection" })
+
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    if vim.bo.commentstring == "" then
+      vim.bo.commentstring = "# %s"
+    end
+  end,
+})
