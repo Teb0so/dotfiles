@@ -96,19 +96,11 @@ vim.opt.path:append("**")
 -- List buffers
 vim.keymap.set('n', '<leader>fb', ':buffers<CR>:b ', { desc = "List buffers" })
 
--- Comment
-vim.keymap.set("n", "gcc", function()
-    require("vim._comment").toggle_linewise_current()
-end, { desc = "Toggle comment line" })
-
-vim.keymap.set("v", "gc", function()
-  require("vim._comment").toggle_linewise_visual()
-end, { desc = "Toggle comment selection" })
-
-vim.api.nvim_create_autocmd("FileType", {
-  callback = function()
-    if vim.bo.commentstring == "" then
-      vim.bo.commentstring = "# %s"
-    end
-  end,
+-- Align
+vim.api.nvim_create_user_command("Align", function(opts)
+  local delim = opts.args ~= "" and opts.args or " "
+  vim.cmd("'<,'>!column -t -s '" .. delim .. "' -o '" .. delim .. " '")
+end, {
+  nargs = "?",
+  range = true,
 })
