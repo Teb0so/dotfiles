@@ -102,9 +102,9 @@ vim.keymap.set('n', '<leader>fb', ':buffers<CR>:b ', { desc = "List buffers" })
 
 -- Align
 vim.api.nvim_create_user_command("Align", function(opts)
-  local delim = opts.args ~= "" and opts.args or " "
-  vim.cmd("'<,'>!column -t -s '" .. delim .. "' -o '" .. delim .. " '")
+    local delim = opts.args ~= "" and opts.args or " "
+    vim.cmd("'<,'>!column -t -s '" .. delim .. "' -o '" .. delim .. " '")
 end, {
-  nargs = "?",
-  range = true,
+nargs = "?",
+range = true,
 })
