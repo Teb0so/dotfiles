@@ -5,7 +5,9 @@ vim.g.maplocalleader = "\\"
 local ok, lazy_config = pcall(require, "config.lazy")
 
 if ok then
-  require("lazy").setup("plugins")
+    require("lazy").setup("plugins")
+else
+    vim.keymap.set("n", "<leader>,", "<CMD>Ex<CR>")
 end
 
 -- Load theme
