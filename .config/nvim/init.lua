@@ -2,9 +2,11 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Load Plugins
-require("config.lazy")
-require("lazy").setup("plugins")
+local ok, lazy_config = pcall(require, "config.lazy")
+
+if ok then
+  require("lazy").setup("plugins")
+end
 
 -- Load theme
 vim.cmd("colorscheme wildcharm")
