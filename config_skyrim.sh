@@ -12,6 +12,7 @@ declare -a config=(
     "rmpc"
     "ranger"
     "dunst"
+    "zathura"
     "fuzzel"
     "sway"
     "waybar"
