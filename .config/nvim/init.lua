@@ -1,3 +1,5 @@
+-- Neovim config by Teb0so
+
 -- Set leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -11,14 +13,7 @@ else
 end
 
 -- Load theme
-vim.cmd("colorscheme wildcharm")
-vim.cmd("set background=light")
-vim.cmd("highlight Identifier ctermfg=0 guifg=#000000")
-vim.cmd("highlight Comment ctermfg=90 guifg=#870087")
-vim.cmd("highlight Whitespace ctermfg=246 guifg=#949494")
-vim.cmd("highlight NonText ctermfg=246 guifg=#949494")
-vim.cmd("highlight SpecialKey ctermfg=246 guifg=#949494")
-vim.cmd("highlight LineNr ctermfg=238 guifg=#444444")
+vim.cmd("colorscheme wildchato")
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
