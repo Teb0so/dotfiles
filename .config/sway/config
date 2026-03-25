@@ -142,8 +142,9 @@ input type:keyboard {
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
-    # Assign workspace 1 to main monitor
+    # Assign workspace 1 to main monitor and 4 to secondary monitor
     workspace 1 output DP-1
+    workspace 4 output HDMI-A-1
 
 # Scratchpad
 

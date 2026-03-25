@@ -9,7 +9,15 @@
     "modules-right": ["tray", "mpd", "custom/vpn", "network", "cpu", "memory", "pulseaudio", "clock"],
 
     "clock": {
-        "format": "「{:%Y-%m-%d %H:%M}」"
+        "format": "「{:%Y-%m-%d %H:%M}」",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 4,
+            "format": {
+                "today": "<span color='#008787'><b><u>{}</u></b></span>"
+            }
+        }
     },
 
     "sway/workspaces": {
