@@ -21,6 +21,7 @@ set(0, "LineNrBelow", { fg = "#5f5f5f" })
 
 -- Syntax
 set(0, "Comment", { fg = "#870087", italic = false})
+set(0, "Todo", { fg = "#ffffff", bg = "#870087", italic = false})
 set(0, "String", { fg = "#008700" })
 set(0, "Special", { fg = "#5f875f" })
 set(0, "Keyword", { fg = "#af5f00", bold = false})
