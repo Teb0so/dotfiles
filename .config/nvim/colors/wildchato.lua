@@ -28,7 +28,8 @@ set(0, "Statement", { fg = "#af5f00", bold = false})
 set(0, "Function", { fg = "#000000" })
 set(0, "Identifier", { fg = "#000000" })
 set(0, "Type", { fg = "#004175" })
+set(0, "PreProc", { fg = "#002747", bold = false})
 set(0, "Constant", { fg = "#000000" })
 
 -- Visual
-set(0, "Visual", { bg = "#005faf" })
+set(0, "Visual", { bg = "#00afaf" })
