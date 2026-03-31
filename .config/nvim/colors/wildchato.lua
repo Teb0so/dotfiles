@@ -1,5 +1,5 @@
--- A very boring colorscheme by Teb0so
--- Inspired by: https://github.com/vim/colorschemes/blob/master/colors/wildcharm.vim
+-- A very boring ccheme by Teb0so
+-- Inspired by: https://github.com/vim/cchemes/blob/master/c/wildcharm.vim
 -- and: https://github.com/rexim/gruber-darker-theme
 
 vim.cmd("highlight clear")
@@ -10,27 +10,63 @@ vim.g.colors_name = "wildchato"
 
 local set = vim.api.nvim_set_hl
 
+local c  = {
+    fg          = "#000000",
+    bg          = "#c0c0c0",
+    whitespc    = "#b0b0b0",
+    orange      = "#af5f00",
+    white       = "#ffffff",
+    light_grey  = "#aaaaaa",
+    dark_grey   = "#5f5f5f",
+    magenta     = "#870087",
+    dark_green  = "#008700",
+    light_green = "#5f875f",
+    light_blue  = "#004175",
+    dark_blue   = "#002747",
+    cyan        = "#008787",
+}
+
 -- Basic UI
-set(0, "Normal", { fg = "#000000", bg = "#ffffdd" })
-set(0, "CursorLine", { bg = "#ffffdd" })
-set(0, "CursorLineNr", { fg = "#af5f00", bold = false})
-set(0, "StatusLine", { fg = "#ffffff", bg = "#5f5f5f" , bold = false})
-set(0, "LineNrAbove", { fg = "#5f5f5f" })
-set(0, "LineNr", { fg = "#af5f00" })
-set(0, "LineNrBelow", { fg = "#5f5f5f" })
+set(0, "Normal", { fg = c.fg, bg = c.bg })
+set(0, "Whitespace", { fg = c.whitespc })
+set(0, "NonText", { fg = c.whitespc })
+set(0, "StatusLine", { fg = c.white, bg = c.dark_grey })
+set(0, "StatusLineNc", { fg = fg, bg = c.light_grey })
+set(0, "NormalFloat", { fg = c.fg, bg = c.light_grey })
+set(0, "FloatBorder", { fg = c.dark_grey, bg = c.light_grey })
+set(0, "Pmenu", { fg = c.fg, bg = c.light_grey })
+set(0, "PmenuSel", { fg = c.white, bg = c.dark_grey })
+set(0, "PmenuSbar", { bg = c.light_grey })
+set(0, "PmenuThumb", { bg = c.dark_grey })
+set(0, "CurSearch", { fg = c.white, bg = c.orange })
+set(0, "CursorLine", { fg = c.white, bg = c.dark_grey })
+set(0, "CursorLineNr", { fg = c.orange })
+set(0, "LineNrAbove", { fg = c.dark_grey })
+set(0, "LineNr", { fg = c.orange })
+set(0, "LineNrBelow", { fg = c.dark_grey })
+set(0, "MsgArea", { fg = c.fg, bg = c.bg })
+set(0, "ModeMsg", { fg = c.fg, bold = true })
+set(0, "MoreMsg", { fg = c.cyan, bold = true })
 
 -- Syntax
-set(0, "Comment", { fg = "#870087", italic = false})
-set(0, "Todo", { fg = "#ffffff", bg = "#870087", italic = false})
-set(0, "String", { fg = "#008700" })
-set(0, "Special", { fg = "#5f875f" })
-set(0, "Keyword", { fg = "#af5f00", bold = false})
-set(0, "Statement", { fg = "#af5f00", bold = false})
-set(0, "Function", { fg = "#000000" })
-set(0, "Identifier", { fg = "#000000" })
-set(0, "Type", { fg = "#004175" })
-set(0, "PreProc", { fg = "#002747", bold = false})
-set(0, "Constant", { fg = "#000000" })
+set(0, "Comment", { fg = c.magenta })
+set(0, "Todo", { fg = c.white, bg = c.magenta })
+set(0, "String", { fg = c.dark_green })
+set(0, "Special", { fg = c.light_green })
+set(0, "Keyword", { fg = c.orange })
+set(0, "Statement", { fg = c.orange })
+set(0, "Function", { fg = fg })
+set(0, "Identifier", { fg = fg })
+set(0, "Type", { fg = c.light_blue })
+set(0, "PreProc", { fg = c.dark_blue })
+set(0, "Constant", { fg = fg })
 
 -- Visual
-set(0, "Visual", { bg = "#00afaf" })
+set(0, "Visual", { bg = c.dark_grey })
+
+-- Oil
+set(0, "Directory", { fg = c.cyan })
+set(0, "OilDirHidden", { fg = c.dark_grey })
+set(0, "OilFileHidden", { fg = c.dark_grey })
+set(0, "OilLinkHidden", { fg = c.dark_grey })
+set(0, "OilLinkTargetHidden", { fg = c.dark_grey })
