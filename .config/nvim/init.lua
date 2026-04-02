@@ -18,9 +18,6 @@ vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
--- Keep 10 lines above / bellow cursor
-vim.opt.scrolloff = 10
-
 -- Set dots
 vim.cmd("set list")
 vim.cmd("set listchars=tab:-->,space:·")
@@ -72,6 +69,13 @@ vim.keymap.set("v", "<", "<gv")
 -- Help
 vim.keymap.set("n", "K", "viwK")
 
+-- Center cursor while scrolling
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+
 -- Move chunks of code
 vim.keymap.set("n", "E", "ddp")
 vim.keymap.set("n", "Y", "ddkP")
@@ -99,7 +103,4 @@ vim.keymap.set('n', '<leader>fb', ':buffers<CR>:b ', { desc = "List buffers" })
 vim.api.nvim_create_user_command("Align", function(opts)
     local delim = opts.args ~= "" and opts.args or " "
     vim.cmd("'<,'>!column -t -s '" .. delim .. "' -o '" .. delim .. " '")
-end, {
-nargs = "?",
-range = true,
-})
+end, { nargs = "?", range = true, })
