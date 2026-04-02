@@ -1,4 +1,4 @@
--- A very boring ccheme by Teb0so
+-- A very boring scheme by Teb0so
 -- Inspired by: https://github.com/vim/cchemes/blob/master/c/wildcharm.vim
 -- and: https://github.com/rexim/gruber-darker-theme
 
@@ -13,15 +13,15 @@ local set = vim.api.nvim_set_hl
 local c  = {
     fg          = "#000000",
     bg          = "#c0c0c0",
-    whitespc    = "#b0b0b0",
+    whitespc    = "#9f9f9f",
     selection   = "#a8a8a8",
     orange      = "#af5f00",
     white       = "#ffffff",
     light_grey  = "#aaaaaa",
     dark_grey   = "#5f5f5f",
     magenta     = "#870087",
-    dark_green  = "#008700",
     light_green = "#5f875f",
+    dark_green  = "#008700",
     light_blue  = "#004175",
     dark_blue   = "#002747",
     cyan        = "#008787",
