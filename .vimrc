@@ -17,9 +17,6 @@ if has("gui_running")
     set guifont=Consolas:h16
 endif
 
-" Keep 10 lines above / bellow cursor
-set scrolloff=10
-
 " Set dots
 set list
 set listchars=tab:-->,space:·
@@ -58,6 +55,13 @@ vnoremap <leader>d "_d
 " Keep selection after indenting
 vnoremap > >gv
 vnoremap < <gv
+
+" Center cursor while scrolling
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 " Move chunks of code
 nnoremap E ddp
