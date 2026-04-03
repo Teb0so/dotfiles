@@ -92,12 +92,20 @@ end, { desc = "Open diagnostics in quickfix" })
 -- Open new empty buffer
 vim.keymap.set("n", "<leader>e", "<CMD>enew<CR>", { desc = "Open new empty buffer" })
 
+-- Shell command
+vim.keymap.set("n", "<leader>sh", ":! ", { desc = "Run shell command" })
+
 -- Quick search
 vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
 vim.opt.path:append("**")
 
 -- List buffers
 vim.keymap.set('n', '<leader>fb', ':buffers<CR>:b ', { desc = "List buffers" })
+
+-- Grep
+vim.opt.grepprg = "rg --vimgrep --smart-case --hidden --no-binary"
+vim.opt.grepformat = "%f:%l:%c:%m"
+vim.keymap.set('n', '<leader>fg', ':grep ', { desc = "Vim grep" })
 
 -- Align
 vim.api.nvim_create_user_command("Align", function(opts)
