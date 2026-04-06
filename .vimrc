@@ -79,6 +79,9 @@ nnoremap <C-l> <C-w>l
 " Open copen
 nnoremap <leader>co :copen<CR>
 
+" Shell command
+nnoremap <leader>sh :!<Space>
+
 " Open new empty buffer
 nnoremap <leader>e :enew<CR>
 

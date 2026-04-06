@@ -2,13 +2,16 @@ declare -a home=(
     ".gdbinit"
     ".tmux.conf"
     ".vimrc"
-    ".zprofile"
     ".zshrc"
 )
 
 declare -a config=(
-    "alacritty"
     "nvim"
+    "mpd"
+    "rmpc"
+    "ranger"
+    "dunst"
+    "zathura"
 )
 
 declare -a local=(

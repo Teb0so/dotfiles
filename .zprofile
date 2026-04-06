@@ -6,3 +6,7 @@ export XDG_DATA_DIRS="/home/teb0so/.local/share/flatpak/exports/share:/var/lib/f
 
 export TERM=foot
 export EDITOR=nvim
+
+if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+    exec dbus-run-session sway
+fi
