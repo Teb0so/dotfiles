@@ -5,18 +5,6 @@ let mapleader = " "
 syntax on
 
 highlight SpecialKey ctermfg=246
-
-if has("gui_running")
-    colorscheme wildcharm
-    set background=light
-    highlight Normal guibg=#ffffdd guifg=#000000
-    highlight NormalNC guibg=#ffffdd
-    highlight EndOfBuffer guibg=#ffffdd
-    highlight Comment guifg=#870087
-    highlight Identifier guifg=#000000
-    set guifont=Consolas:h16
-endif
-
 " Set dots
 set list
 set listchars=tab:-->,space:·
@@ -94,3 +82,56 @@ nnoremap <leader>fb :buffers<CR>:b<Space>
 
 "Open explorer
 nnoremap <leader>, :Ex<CR>
+
+if has("gui_running")
+
+    highlight clear
+    if exists("syntax_on")
+      syntax reset
+    endif
+
+    set background=light
+
+    " Basic UI
+    hi Normal        guifg=#000000 guibg=#ffffdd
+    hi SpecialKey    guifg=#ddddcc
+    hi NonText       guifg=#9f9f9f
+    hi Pmenu         guifg=#000000 guibg=#aaaaaa
+    hi PmenuSel      guifg=#ffffff guibg=#5f5f5f
+    hi PmenuSbar     guibg=#aaaaaa
+    hi PmenuThumb    guibg=#5f5f5f
+    hi CurSearch     guifg=#ffffff guibg=#af5f00
+    hi CursorLine    guifg=#ffffff guibg=#5f5f5f
+    hi CursorLineNr  guifg=#af5f00
+    hi LineNrAbove   guifg=#5f5f5f
+    hi LineNr        guifg=#af5f00
+    hi LineNrBelow   guifg=#5f5f5f
+    hi ModeMsg       guifg=#000000
+    hi MoreMsg       guifg=#008787
+    hi Cursor        guifg=#ffffff guibg=#af5f00
+
+    " Syntax
+    hi Comment       guifg=#870087
+    hi Todo          guifg=#ffffff guibg=#870087
+    hi String        guifg=#008700
+    hi Special       guifg=#5f875f
+    hi Keyword       guifg=#af5f00
+    hi Statement     guifg=#af5f00
+    hi Function      guifg=#000000
+    hi Identifier    guifg=#000000
+    hi Type          guifg=#004175
+    hi PreProc       guifg=#002747
+    hi Constant      guifg=#000000
+
+    " Ex
+    hi Directory             guifg=#008787
+    set guifont=Consolas:h16
+
+    " Copy
+    nnoremap <C-S-c> "+y
+    vnoremap <C-S-c> "+y
+
+    " Paste
+    nnoremap <C-S-v> "+p
+    inoremap <C-S-v> <C-r>+
+endif
