@@ -101,7 +101,7 @@ alias clipb='xclip -selection clipboard'
 
 # Apt
 alias inst='sudo apt install --no-install-recommends'
-alias remv='sudo apt autoremove -y'
+alias remv='sudo apt autoremove'
 
 # Open glow in notes directory
 alias notes='glow $HOME/Notes'
