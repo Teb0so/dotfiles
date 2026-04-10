@@ -4,13 +4,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-local ok, lazy_config = pcall(require, "config.lazy")
-
-if ok then
-    require("lazy").setup("plugins")
-else
-    vim.keymap.set("n", "<leader>,", "<CMD>Ex<CR>")
-end
+-- Load plugins
+require("plugins/oil")
+require("plugins/tmux-navigation")
 
 -- Load theme
 vim.cmd("colorscheme wildchato")
@@ -18,7 +14,7 @@ vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
--- Set dots
+-- Set lists
 vim.cmd("set list")
 vim.cmd("set listchars=tab:-->,space:·")
 
@@ -44,6 +40,9 @@ vim.opt.autoread = true
 
 -- Update file
 vim.keymap.set("n", "<leader>uu", "<CMD>checktime<CR>", { desc = "Check for external updates to file" })
+
+-- Copy to clipboard
+vim.keymap.set("v", "<leader>c", '"+y')
 
 -- Diff
 vim.keymap.set("n", "<leader>fd", "<CMD>diffthis<CR>")
