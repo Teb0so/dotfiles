@@ -5,8 +5,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- Load plugins
-require("plugins/oil")
-require("plugins/tmux-navigation")
+require("plugins.oil")
+require("plugins.tmux-navigation")
 
 -- Load theme
 vim.cmd("colorscheme wildchato")
