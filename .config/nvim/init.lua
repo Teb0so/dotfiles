@@ -44,11 +44,6 @@ vim.keymap.set("n", "<leader>uu", "<CMD>checktime<CR>", { desc = "Check for exte
 -- Copy to clipboard
 vim.keymap.set("v", "<leader>c", '"+y')
 
--- Diff
-vim.keymap.set("n", "<leader>fd", "<CMD>diffthis<CR>")
-vim.keymap.set("n", "<leader>fdf", ":vert diffsplit ")
-vim.keymap.set("n", "<leader>fof", "<CMD>diffoff<CR>")
-
 -- Set line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -88,9 +83,6 @@ vim.keymap.set("n", "<leader>ca", function()
     vim.diagnostic.setqflist({ open = true })
 end, { desc = "Open diagnostics in quickfix" })
 
--- Open new empty buffer
-vim.keymap.set("n", "<leader>e", "<CMD>enew<CR>", { desc = "Open new empty buffer" })
-
 -- Shell command
 vim.keymap.set("n", "<leader>sh", ":! ", { desc = "Run shell command" })
 
@@ -100,11 +92,6 @@ vim.opt.path:append("**")
 
 -- List buffers
 vim.keymap.set('n', '<leader>fb', ':buffers<CR>:b ', { desc = "List buffers" })
-
--- Make the make command not automatically jump to the first error
-vim.cmd([[
-  command! -nargs=* Make silent make <args>
-]])
 
 -- Grep
 vim.opt.grepprg = "rg --vimgrep --smart-case --hidden --no-binary"
