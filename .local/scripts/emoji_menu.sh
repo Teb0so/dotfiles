@@ -12,12 +12,11 @@ case "$1" in
     if [ ! -z "$input" ]; then
       emoji=${input: -1}
       echo -n "$emoji" | xclip -selection c
-      echo -n "$emoji" | wl-copy
       command -v notify-send > /dev/null && notify-send -t 800 "$emoji copied!"
     fi
     ;;
   "")
-    bash $0 list | fuzzel --dmenu -p 'Emoji: ' | bash $0 copy
+    bash $0 list | dmenu -c -l 20 -p 'Emoji: ' | bash $0 copy
     ;;
 esac
 

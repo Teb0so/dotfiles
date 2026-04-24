@@ -7,6 +7,7 @@ declare -a home=(
 
 declare -a config=(
     "nvim"
+    "picom"
     "foot"
     "mpd"
     "rmpc"

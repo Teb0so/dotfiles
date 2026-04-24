@@ -101,10 +101,16 @@ vim.opt.path:append("**")
 -- List buffers
 vim.keymap.set('n', '<leader>fb', ':buffers<CR>:b ', { desc = "List buffers" })
 
+-- Make the make command not automatically jump to the first error
+vim.cmd([[
+  command! -nargs=* Make silent make <args>
+]])
+
 -- Grep
 vim.opt.grepprg = "rg --vimgrep --smart-case --hidden --no-binary"
 vim.opt.grepformat = "%f:%l:%c:%m"
 vim.keymap.set('n', '<leader>fg', ':grep ', { desc = "Vim grep" })
+vim.keymap.set('v', '<leader>fg', '"zy:grep <C-r>z<CR>', { desc = "Vim visual grep" })
 
 -- Align
 vim.api.nvim_create_user_command("Align", function(opts)

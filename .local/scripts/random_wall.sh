@@ -9,5 +9,6 @@ random=($(($RANDOM % ${#walls[@]})))
 if ($WAYLAND_DISPLAY); then
     feh --bg-fill "${walls[$random]}"
 else
+    pkill -x swaybg &&
     swaybg -m fill -i "${walls[$random]}" & disown
 fi

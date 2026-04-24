@@ -9,7 +9,7 @@ exec lxqt-policykit-agent
 exec_always ~/.local/scripts/restart_program waybar
 
 # Variables
- 
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -52,6 +52,7 @@ input type:keyboard {
 
 # Key bindings
 
+    bindsym $mod+Return exec $term
     bindsym $mod+m exec $term
     bindsym $mod+q kill
     bindsym $mod+p exec $menu
@@ -200,9 +201,9 @@ bindsym $mod+r mode "resize"
 
 # Theme
 
-default_border pixel 2
-default_floating_border pixel 2
-gaps inner 10
+default_border pixel 3
+default_floating_border pixel 3
+gaps inner 6
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #870087 #870087 #ffffff #870087   #870087

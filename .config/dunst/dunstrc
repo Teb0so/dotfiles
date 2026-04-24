@@ -1,7 +1,7 @@
 [global]
-    transparency = 20
+    transparency = 7
     frame_color = "#870087"
-    frame_width = 2
+    frame_width = 3
 
 [urgency_low]
     foreground = "#000000"
