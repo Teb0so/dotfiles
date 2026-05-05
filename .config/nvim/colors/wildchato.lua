@@ -15,11 +15,11 @@ local c  = {
     bg          = "#c0c0c0",
     whitespc    = "#9f9f9f",
     selection   = "#a8a8a8",
-    red         = "#af0000",
+    light_red   = "#af0000",
+    dark_red    = "#750000",
     orange      = "#af5f00",
     green       = "#008700",
-    light_blue  = "#004175",
-    dark_blue   = "#002747",
+    blue        = "#004175",
     magenta     = "#870087",
     cyan        = "#008787",
     white       = "#ffffff",
@@ -39,6 +39,7 @@ set(0, "Pmenu", { fg = c.fg, bg = c.light_grey })
 set(0, "PmenuSel", { fg = c.white, bg = c.dark_grey })
 set(0, "PmenuSbar", { bg = c.light_grey })
 set(0, "PmenuThumb", { bg = c.dark_grey })
+set(0, "Cursor", { fg = c.bg, bg = c.orange })
 set(0, "CurSearch", { fg = c.white, bg = c.orange })
 set(0, "CursorLine", { fg = c.white, bg = c.dark_grey })
 set(0, "CursorLineNr", { fg = c.orange })
@@ -48,25 +49,30 @@ set(0, "LineNrBelow", { fg = c.dark_grey })
 set(0, "MsgArea", { fg = c.fg, })
 set(0, "ModeMsg", { fg = c.fg, })
 set(0, "MoreMsg", { fg = c.cyan, })
-set(0, "ErrorMsg", { fg = c.red })
-set(0, "Error", { fg = c.red })
+set(0, "ErrorMsg", { fg = c.light_red })
+set(0, "Error", { fg = c.light_red })
 
 -- Syntax
 set(0, "Comment", { fg = c.magenta })
 set(0, "Todo", { fg = c.white, bg = c.magenta })
 set(0, "String", { fg = c.green })
-set(0, "Special", { fg = c.cyan })
+set(0, "Special", { fg = c.blue })
 set(0, "Keyword", { fg = c.orange })
 set(0, "Statement", { fg = c.orange })
 set(0, "Function", { fg = "none" })
 set(0, "Identifier", { fg = "none" })
-set(0, "Type", { fg = c.light_blue })
-set(0, "Operator", { fg = c.light_blue })
-set(0, "PreProc", { fg = c.dark_blue })
-set(0, "Constant", { fg = "none" })
-
--- Visual
+set(0, "Type", { fg = c.blue })
+set(0, "Operator", { fg = c.blue })
+set(0, "PreProc", { fg = c.blue })
+set(0, "Constant", { fg = c.dark_red })
+set(0, "Delimiter", { fg = c.dark_grey })
 set(0, "Visual", { bg = c.selection })
+
+-- LSP
+-- set(0, "DiagnosticError", { fg = c.red })
+-- set(0, "DiagnosticWarn", { fg = c.orange })
+-- set(0, "DiagnosticInfo", { fg = c.black })
+-- set(0, "DiagnosticHint", { fg = c.gray })
 
 -- Oil
 set(0, "Directory", { fg = c.cyan })

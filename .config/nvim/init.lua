@@ -7,6 +7,8 @@ vim.g.maplocalleader = "\\"
 -- Load plugins
 require("plugins.oil")
 require("plugins.tmux-navigation")
+require("plugins.lsp")
+require("plugins.treesitter")
 
 -- Load theme
 vim.cmd("colorscheme wildchato")
@@ -79,9 +81,9 @@ vim.keymap.set('v', 'Y', ":m '<-2<CR>gv=gv")
 
 -- Open copen
 vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")
-vim.keymap.set("n", "<leader>ca", function()
-    vim.diagnostic.setqflist({ open = true })
-end, { desc = "Open diagnostics in quickfix" })
+-- vim.keymap.set("n", "<leader>ca", function()
+--     vim.diagnostic.setqflist({ open = true })
+-- end, { desc = "Open diagnostics in quickfix" })
 
 -- Shell command
 vim.keymap.set("n", "<leader>sh", ":! ", { desc = "Run shell command" })
