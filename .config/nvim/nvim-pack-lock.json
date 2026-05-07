@@ -8,6 +8,14 @@
       "rev": "1617522ae80ca2436813da8afe2fc4b1280e975d",
       "src": "https://github.com/Saghen/blink.cmp"
     },
+    "cmp-nvim-lsp": {
+      "rev": "cbc7b02bb99fae35cb42f514762b89b5126651ef",
+      "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
+    },
+    "cmp_luasnip": {
+      "rev": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90",
+      "src": "https://github.com/saadparwaiz1/cmp_luasnip"
+    },
     "friendly-snippets": {
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
@@ -24,6 +32,14 @@
       "rev": "9504524e5ed0e326534698f637f9d038ba4cd0ee",
       "src": "https://github.com/rose-pine/neovim"
     },
+    "nvim-autopairs": {
+      "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
+      "src": "https://github.com/windwp/nvim-autopairs"
+    },
+    "nvim-cmp": {
+      "rev": "a1d504892f2bc56c2e79b65c6faded2fd21f3eca",
+      "src": "https://github.com/hrsh7th/nvim-cmp"
+    },
     "nvim-lspconfig": {
       "rev": "0e25d7445ba0d7cc0ad02a39aa843cc8b9d2525e",
       "src": "https://github.com/neovim/nvim-lspconfig"
@@ -39,6 +55,14 @@
     "oil.nvim": {
       "rev": "975a77cce3c8cb742bc1b3629f4328f5ca977dad",
       "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "one-nvim": {
+      "rev": "faf6fb3f98fccbe009c3466f657a8fff84a5f956",
+      "src": "https://github.com/Th3Whit3Wolf/one-nvim"
+    },
+    "onenord.nvim": {
+      "rev": "b68f1e66736840e837c2a77ebff59c932fcb70c7",
+      "src": "https://github.com/rmehri01/onenord.nvim"
     }
   }
 }

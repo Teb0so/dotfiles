@@ -5,8 +5,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- Load plugins
+require("plugins.utils")
 require("plugins.oil")
 require("plugins.tmux-navigation")
+require("plugins.completion")
 require("plugins.lsp")
 require("plugins.treesitter")
 

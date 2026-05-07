@@ -14,17 +14,15 @@ local c  = {
     fg          = "#000000",
     bg          = "#c0c0c0",
     whitespc    = "#9f9f9f",
-    selection   = "#a8a8a8",
-    light_red   = "#af0000",
-    dark_red    = "#750000",
-    orange      = "#af5f00",
+    light_grey  = "#a8a8a8",
+    dark_grey   = "#5f5f5f",
+    red         = "#750000",
     green       = "#008700",
+    orange      = "#af5f00",
     blue        = "#004175",
     magenta     = "#870087",
     cyan        = "#008787",
     white       = "#ffffff",
-    light_grey  = "#aaaaaa",
-    dark_grey   = "#5f5f5f",
 }
 
 -- Basic UI
@@ -49,8 +47,8 @@ set(0, "LineNrBelow", { fg = c.dark_grey })
 set(0, "MsgArea", { fg = c.fg, })
 set(0, "ModeMsg", { fg = c.fg, })
 set(0, "MoreMsg", { fg = c.cyan, })
-set(0, "ErrorMsg", { fg = c.light_red })
-set(0, "Error", { fg = c.light_red })
+set(0, "ErrorMsg", { fg = c.red })
+set(0, "Error", { fg = c.red })
 
 -- Syntax
 set(0, "Comment", { fg = c.magenta })
@@ -62,17 +60,17 @@ set(0, "Statement", { fg = c.orange })
 set(0, "Function", { fg = "none" })
 set(0, "Identifier", { fg = "none" })
 set(0, "Type", { fg = c.blue })
-set(0, "Operator", { fg = c.blue })
+set(0, "Operator", { fg = "none" })
 set(0, "PreProc", { fg = c.blue })
-set(0, "Constant", { fg = c.dark_red })
-set(0, "Delimiter", { fg = c.dark_grey })
-set(0, "Visual", { bg = c.selection })
+set(0, "Constant", { fg = c.red })
+set(0, "Delimiter", { fg = "none" })
+set(0, "Visual", { bg = c.light_grey })
 
 -- LSP
--- set(0, "DiagnosticError", { fg = c.red })
--- set(0, "DiagnosticWarn", { fg = c.orange })
--- set(0, "DiagnosticInfo", { fg = c.black })
--- set(0, "DiagnosticHint", { fg = c.gray })
+set(0, "DiagnosticError", { fg = c.red })
+set(0, "DiagnosticWarn", { fg = c.orange })
+set(0, "DiagnosticInfo", { fg = c.black })
+set(0, "DiagnosticHint", { fg = c.gray })
 
 -- Oil
 set(0, "Directory", { fg = c.cyan })
