@@ -3,7 +3,10 @@ vim.pack.add({
     "https://github.com/hrsh7th/cmp-nvim-lsp",
     "https://github.com/L3MON4D3/LuaSnip",
     "https://github.com/saadparwaiz1/cmp_luasnip",
+    "https://github.com/rafamadriz/friendly-snippets",
 })
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 local cmp = require("cmp")
 local luasnip = require("luasnip")
@@ -22,7 +25,7 @@ cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ["<C-Space>"] = cmp.mapping.complete(),
 
-        ["<CR>"] = cmp.mapping.confirm({
+        ["<C-y>"] = cmp.mapping.confirm({
             select = true,
         }),
 
