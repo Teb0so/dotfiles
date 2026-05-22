@@ -1,0 +1,5 @@
+#!/bin/sh
+
+xrandr --newmode "1440x1080_74.97"  164.93  1440 1536 1696 1952  1080 1081 1084 1127  -HSync +Vsync
+xrandr --addmode DisplayPort-0 "1440x1080_74.97"
+xrandr --output DisplayPort-0 --mode "1440x1080_74.97"

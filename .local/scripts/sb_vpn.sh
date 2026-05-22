@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 VPN_NAME="nl-free-79"
 
 if nmcli -t -f NAME connection show --active | grep -q "^$VPN_NAME$"; then
-    echo '{"text":" VPN","class":"connected"}'
+    printf "「VPN - nl-free-79」"
 else
-    echo '{"text":" VPN","class":"disconnected"}'
+    printf "「VPN - disconnected」"
 fi
