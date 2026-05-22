@@ -15,6 +15,36 @@ require("mason-lspconfig").setup({
     run_on_start = true,
 })
 
+vim.lsp.config("lua_ls", {
+    settings = {
+        Lua = {
+            runtime = {
+                version = "LuaJIT",
+            },
+
+            diagnostics = {
+                globals = {
+                    "love",
+                },
+            },
+
+            workspace = {
+                checkThirdParty = false,
+                library = {
+                    vim.env.VIMRUNTIME,
+                    os.getenv("HOME") .. "/.local/share/love2d-library/library",
+                },
+            },
+
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
+})
+
+vim.lsp.enable("lua_ls")
+
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 vim.lsp.config("*", {
