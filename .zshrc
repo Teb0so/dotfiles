@@ -104,7 +104,7 @@ alias inst='sudo apt install --no-install-recommends'
 alias remv='sudo apt autoremove'
 
 # Open glow in notes directory
-alias notes='glow $HOME/Notes'
+alias notes='cd $HOME/Notes && nvim ./ && cd -'
 
 # Load other aliases.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
