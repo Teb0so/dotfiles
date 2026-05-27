@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+WALLPAPPER_DIR=$HOME/Pictures/wals
+VIEWER=ranger
+
+walls=( "$WALLPAPPER_DIR"/* )
+random=($((RANDOM % ${#walls[@]})))
+
+set_wall() {
+    if ($WAYLAND_DISPLAY); then
+        feh --bg-fill "$wall"
+    else
+        pkill -x swaybg &&
+            swaybg -m fill -i "$wall" & disown
+    fi
+}
+
+if [[ $# == 0 ]]; then
+    wall="${walls[random]}"
+    set_wall
+elif [[ $1 == "-s" ]]; then
+    $VIEWER "$WALLPAPPER_DIR"
+else
+    wall="$1"
+    set_wall
+fi
+
