@@ -40,7 +40,7 @@ output DP-1 pos 1920 0
 
 # Input configuration
 
-input type:pointer accel_profile flat
+# input type:pointer accel_profile flat
 # mouse_warping none
 
 input type:keyboard {

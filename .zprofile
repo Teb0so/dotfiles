@@ -6,7 +6,8 @@ export XDG_DATA_DIRS="/home/teb0so/.local/share/flatpak/exports/share:/var/lib/f
 
 export EDITOR=nvim
 
-if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-    # source .startw
-    exec startx
-fi
+#if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+#    # source .startw
+#    # exec startx
+#    exec startxfce4
+#fi
