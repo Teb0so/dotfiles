@@ -11,12 +11,13 @@ require("plugins.tmux-navigation")
 require("plugins.completion")
 require("plugins.lsp")
 require("plugins.treesitter")
+require("plugins.colorscheme")
 
 -- Load theme
-vim.cmd("colorscheme wildchato")
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+-- vim.cmd("colorscheme wildchato")
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
 -- Set lists
 vim.cmd("set list")
