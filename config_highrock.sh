@@ -7,10 +7,7 @@ declare -a home=(
 
 declare -a config=(
     "nvim"
-    "mpd"
-    "rmpc"
     "ranger"
-    "dunst"
     "zathura"
 )
 

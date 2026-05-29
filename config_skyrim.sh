@@ -7,16 +7,8 @@ declare -a home=(
 
 declare -a config=(
     "nvim"
-    "picom"
-    "foot"
-    "mpd"
-    "rmpc"
     "ranger"
-    "dunst"
     "zathura"
-    "fuzzel"
-    "sway"
-    "waybar"
 )
 
 declare -a local=(
