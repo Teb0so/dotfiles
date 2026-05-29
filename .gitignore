@@ -1,3 +1,14 @@
 .uuid
 .config/mpd/database
 .config/mpd/log
+
+
+# Suckless stuff
+suckless/st/st
+**/*.o
+**/config.mk
+**/*.orig
+**/*.rej
+**/core
+**/build/
+**/bin/

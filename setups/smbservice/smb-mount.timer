@@ -1,9 +1,0 @@
-[Unit]
-Description=Check and Remount SMB Share
-
-[Timer]
-OnBootSec=30s
-OnUnitActiveSec=1min
-
-[Install]
-WantedBy=timers.target

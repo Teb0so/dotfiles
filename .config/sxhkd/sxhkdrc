@@ -1,8 +1,0 @@
-super + w
-    firefox
-
-super + Return
-    alacritty
-
-super + p
-    rofi -show drun
