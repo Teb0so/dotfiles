@@ -21,7 +21,8 @@ require("plugins.colorscheme")
 
 -- Set lists
 vim.cmd("set list")
-vim.cmd("set listchars=tab:-->,space:·")
+-- vim.cmd("set listchars=tab:-->,space:·")
+vim.cmd("set listchars=tab:-->")
 
 -- Set Identation
 vim.opt.expandtab = true
