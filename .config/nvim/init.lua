@@ -11,7 +11,6 @@ require("plugins.tmux-navigation")
 require("plugins.completion")
 require("plugins.lsp")
 require("plugins.treesitter")
-require("plugins.colorscheme")
 
 -- Load theme
 -- vim.cmd("colorscheme wildchato")
