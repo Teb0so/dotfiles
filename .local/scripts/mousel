@@ -3,5 +3,5 @@
 xinput --set-prop 'pointer:''Kensington Eagle Trackball' 'libinput Accel Profile Enabled' 0, 1
 xinput --set-prop 'pointer:''Kensington Eagle Trackball' 'libinput Accel Speed' -0.0
 
-xmodmap -e "pointer = 1 2 3"
-xinput set-prop 'Kensington Eagle Trackball' "libinput Natural Scrolling Enabled" 0
+xmodmap -e "pointer = 3 2 1"
+xinput set-prop 'Kensington Eagle Trackball' "libinput Natural Scrolling Enabled" 1

@@ -1,0 +1,41 @@
+#!/bin/env bash
+
+# Simple session manager
+# See more information at: https://github.com/Teb0so/ssm
+
+session_select() {
+    sessions=("$HOME"/.ssm/*.session)
+
+    for i in "${!sessions[@]}"; do
+        name="${sessions[i]##*/}"
+        printf '%d - %s\n' "$i" "${name%.session}"
+    done
+
+    local choice=0
+    read choice
+    echo ${sessions[choice]} > "$HOME"/.ssm_last
+    source "${sessions[choice]}"
+}
+
+session_last() {
+    if [[ -s "$HOME"/.ssm_last ]] then
+        last=$(cat "$HOME"/.ssm_last)
+        last_ext="${last##*/}"
+        last_name="${last_ext%.session}"
+
+        printf 'Press [Enter] to start %s \nType anything else to list other available sessions ' $last_name
+
+        local choice=0
+        read -r choice
+
+        if [[ -z "$choice" ]]; then
+            source $last
+        else
+            session_select
+        fi
+    else
+        session_select
+    fi
+}
+
+session_last
