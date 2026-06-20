@@ -12,6 +12,9 @@ require("plugins.completion")
 require("plugins.lsp")
 require("plugins.treesitter")
 
+-- Load other configs
+require("configs.markdown")
+
 -- Load theme
 vim.cmd("colorscheme wildchato")
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

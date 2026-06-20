@@ -9,6 +9,8 @@ require("nvim-treesitter").setup({
         "bash",
         "c",
         "lua",
+        "markdown",
+        "markdown_inline"
     },
 
     move = {
