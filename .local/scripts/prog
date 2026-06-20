@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+dir=$(find $HOME/prog -type d -print | fzf)
+dir_name=${dir##*/}
+
+if ! tmux has-session -t "$dir_name" 2>/dev/null; then
+    cd "$dir" && tmux new-session -s $dir_name && cd -
+else
+    tmux attach -t "$dir_name"
+fi

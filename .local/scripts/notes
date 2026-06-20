@@ -1,0 +1,11 @@
+#!/bin/sh
+
+SESSION="Notes"
+
+cd $HOME/Notes
+
+if ! tmux has-session -t "$SESSION" 2>/dev/null; then
+    tmux new-session -d -s "$SESSION"
+    tmux send-keys -t "$SESSION" "nvim ./" Enter
+fi
+    tmux attach -t "$SESSION"
