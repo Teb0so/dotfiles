@@ -75,6 +75,9 @@ bindkey '^e' edit-command-line
 
 # Aliases
 
+# nvim = vi
+alias vi='nvim'
+
 # ls
 alias ls='ls --color=tty'
 alias la='ls -a --color=tty'
@@ -86,12 +89,9 @@ alias grep='grep --color=tty'
 # Open cli filemanager with ","
 alias ,='ranger'
 
-# use fzf to start a tmux on specific directory
-alias cdc='cd "$(find . -type d -print | fzf)" && tmux && cd -'
-alias prog='cd "$(find $HOME/prog -type d -print | fzf)" && tmux && cd -'
-
 # Tmux
-alias ta='tmux attach-session -t $(tmux list-sessions -F "#{session_name}" | head -n 1 || echo "") || tmux new-session'
+alias ta='tmux attach-session'
+alias tx='tmux'
 
 # Find book with fzf
 alias book='cd ~/Books && zathura ~/Books/"$(fzf)" && cd -'
@@ -104,7 +104,7 @@ alias inst='sudo apt install --no-install-recommends'
 alias remv='sudo apt autoremove'
 
 # Open glow in notes directory
-alias notes='cd $HOME/Notes && nvim ./ && cd -'
+# alias notes='cd $HOME/Notes && nvim ./ && cd -'
 
 # Load other aliases.
 [ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
