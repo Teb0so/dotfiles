@@ -107,41 +107,49 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.93;
+float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
-	/* normal colors */
-	[0] = "#2E3440", /* black   */
-	[1] = "#CB4F53", /* red     */
-	[2] = "#48A53D", /* green   */
-	[3] = "#BA793E", /* yellow  */
-	[4] = "#3879C5", /* blue    */
-	[5] = "#9F4ACA", /* magenta */
-	[6] = "#3EA1AD", /* cyan    */
-	[7] = "#838FA6", /* white   */
+	// Normal Colors
+	"#000000",
+	"#af0000",
+	"#008700",
+	"#af5f00",
+	"#005faf",
+	"#870087",
+	"#008787",
+	"#8a8a8a",
 
-	/* bright colors */
-	[8]  = "#4C566A",
-	[9]  = "#D16366",
-	[10] = "#5F9E9D",
-	[11] = "#EE5E25",
-	[12] = "#1B40A6",
-	[13] = "#9665AF",
-	[14] = "#3EA1AD",
-	[15] = "#646A76",
+	// Bright Colors
+	"#808080",
+	"#d70000",
+	"#5faf5f",
+	"#d78700",
+	"#0087d7",
+	"#af00af",
+	"#00afaf",
+	"#ffffff",
 
-	/* special colors */
-	[256] = "#E0E2EA", /* background */
-	[257] = "#2E3440", /* foreground */
+	[255] = 0,
+
+	// Background color
+    // "#ffffff" // Pure white
+    // "#c0c0c0" // Cool light gray
+    // "#ffffea" // ACME light cream
+    "#fdf6e3" // Solarized light cream
 };
 
-/* default colors */
+
+/*
+ * Default colors (colorname index)
+ * foreground, background, cursor, reverse cursor
+ */
+unsigned int defaultfg = 0;
 unsigned int defaultbg = 256;
-unsigned int defaultfg = 257;
-unsigned int defaultcs = 5;
-unsigned int defaultrcs = 256;
+unsigned int defaultcs = 3;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
