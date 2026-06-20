@@ -12,7 +12,7 @@ local set = vim.api.nvim_set_hl
 
 local c  = {
     fg          = "#000000",
-    bg          = "#c0c0c0",
+    bg          = "none",
     whitespc    = "#9f9f9f",
     light_grey  = "#a8a8a8",
     dark_grey   = "#5f5f5f",
@@ -57,13 +57,13 @@ set(0, "String", { fg = c.green })
 set(0, "Special", { fg = c.blue })
 set(0, "Keyword", { fg = c.orange })
 set(0, "Statement", { fg = c.orange })
-set(0, "Function", { fg = "none" })
-set(0, "Identifier", { fg = "none" })
+set(0, "Function", { fg = c.fg })
+set(0, "Identifier", { fg = c.fg })
 set(0, "Type", { fg = c.blue })
-set(0, "Operator", { fg = "none" })
+set(0, "Operator", { fg = c.fg })
 set(0, "PreProc", { fg = c.blue })
 set(0, "Constant", { fg = c.red })
-set(0, "Delimiter", { fg = "none" })
+set(0, "Delimiter", { fg = c.fg })
 set(0, "Visual", { bg = c.light_grey })
 
 -- LSP

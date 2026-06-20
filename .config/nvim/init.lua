@@ -14,9 +14,12 @@ require("plugins.treesitter")
 
 -- Load theme
 vim.cmd("colorscheme wildchato")
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+
+-- Set linebreak
+vim.opt.linebreak = true
 
 -- Set lists
 vim.cmd("set list")
@@ -81,6 +84,12 @@ vim.keymap.set("n", "Y", "ddkP")
 
 vim.keymap.set('v', 'E', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'Y', ":m '<-2<CR>gv=gv")
+
+-- Compile commands
+vim.keymap.set("n", "<leader>mm", "<CMD>make!<CR>")
+vim.keymap.set("n", "<leader>mc", "<CMD>make! clean<CR>")
+vim.keymap.set("n", "<leader>MM", ":make! ")
+vim.keymap.set("n", "<leader>MC", ":make! clean ")
 
 -- Open copen
 vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")
