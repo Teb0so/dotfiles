@@ -21,9 +21,6 @@ vim.cmd("colorscheme wildchato")
 -- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
--- Set linebreak
-vim.opt.linebreak = true
-
 -- Set lists
 vim.cmd("set list")
 vim.cmd("set listchars=tab:-->,space:·")
