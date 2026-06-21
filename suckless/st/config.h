@@ -107,7 +107,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 1;
+float alpha = 0.93;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -135,10 +135,9 @@ static const char *colorname[] = {
 	[255] = 0,
 
 	// Background color
-    // "#ffffff" // Pure white
-    // "#c0c0c0" // Cool light gray
-    // "#ffffea" // ACME light cream
-    "#fdf6e3" // Solarized light cream
+	// "#ffffff"
+	// "#fdf6e3"
+	"#c0c0c0"
 };
 
 
