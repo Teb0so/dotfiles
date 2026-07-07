@@ -23,8 +23,7 @@ vim.cmd("colorscheme wildchato")
 
 -- Set lists
 vim.cmd("set list")
-vim.cmd("set listchars=tab:-->,space:·")
--- vim.cmd("set listchars=tab:-->")
+vim.cmd("set listchars=tab:-->")
 
 -- Set Identation
 vim.opt.expandtab = true
@@ -93,9 +92,9 @@ vim.keymap.set("n", "<leader>MC", ":make! clean ")
 
 -- Open copen
 vim.keymap.set("n", "<leader>co", "<CMD>copen<CR>")
--- vim.keymap.set("n", "<leader>ca", function()
---     vim.diagnostic.setqflist({ open = true })
--- end, { desc = "Open diagnostics in quickfix" })
+vim.keymap.set("n", "<leader>ci", function()
+    vim.diagnostic.setqflist({ open = true })
+end, { desc = "Open diagnostics in quickfix" })
 
 -- Shell command
 vim.keymap.set("n", "<leader>sh", ":! ", { desc = "Run shell command" })

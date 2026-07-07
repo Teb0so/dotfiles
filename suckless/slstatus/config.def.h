@@ -69,6 +69,6 @@ static const struct arg args[] = {
     { netspeed_tx, "   %s 」",    "enp10s0"  },
     { ram_perc, "「   %s%% |",     NULL },
     { cpu_perc, "   %s%% 」",     NULL },
-    { battery_perc, "「 󰁹 %s%% 」",     "BAT0" },
+    // { battery_perc, "「 󰁹 %s%% 」",     "BAT0" },
     { datetime, "「 %s 」",           "  %F   %T" },
 };

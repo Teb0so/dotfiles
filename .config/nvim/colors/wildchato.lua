@@ -12,9 +12,9 @@ local set = vim.api.nvim_set_hl
 
 local c  = {
     fg          = "#000000",
-    bg          = "none",
-    whitespc    = "#9f9f9f",
-    light_grey  = "#a8a8a8",
+    bg          = "#ffffff",
+    whitespc    = "#eeeeee",
+    light_grey  = "#cccccc",
     dark_grey   = "#5f5f5f",
     red         = "#750000",
     green       = "#008700",
@@ -40,9 +40,9 @@ set(0, "PmenuThumb", { bg = c.dark_grey })
 set(0, "Cursor", { fg = c.bg, bg = c.orange })
 set(0, "CurSearch", { fg = c.white, bg = c.orange })
 set(0, "CursorLine", { fg = c.white, bg = c.dark_grey })
-set(0, "CursorLineNr", { fg = c.orange })
+set(0, "CursorLineNr", { fg = c.orange, bold = true })
 set(0, "LineNrAbove", { fg = c.dark_grey })
-set(0, "LineNr", { fg = c.orange })
+set(0, "LineNr", { fg = c.orange, bold = true })
 set(0, "LineNrBelow", { fg = c.dark_grey })
 set(0, "MsgArea", { fg = c.fg, })
 set(0, "ModeMsg", { fg = c.fg, })
@@ -55,8 +55,8 @@ set(0, "Comment", { fg = c.magenta })
 set(0, "Todo", { fg = c.white, bg = c.magenta })
 set(0, "String", { fg = c.green })
 set(0, "Special", { fg = c.blue })
-set(0, "Keyword", { fg = c.orange })
-set(0, "Statement", { fg = c.orange })
+set(0, "Keyword", { fg = c.orange, bold = true })
+set(0, "Statement", { fg = c.orange, bold = true })
 set(0, "Function", { fg = c.fg })
 set(0, "Identifier", { fg = c.fg })
 set(0, "Type", { fg = c.blue })

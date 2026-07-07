@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rofi -show run -disable-history
+rofi -show combi -modes combi -combi-modes "window,drun,run" -disable-history -show-icons

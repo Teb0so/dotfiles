@@ -1,0 +1,28 @@
+[main]
+initial-window-size-chars= 80x40
+font=IosevkaTermslab Nerd Font:size=14:style=Medium
+
+[bell]
+system=no
+
+[colors]
+background=ffffff
+foreground=000000
+
+regular0=000000
+regular1=af0000
+regular2=008700
+regular3=af5f00
+regular4=005faf
+regular5=870087
+regular6=008787
+regular7=5f5f5f
+
+bright0=cfcfcf
+bright1=d70000
+bright2=5faf5f
+bright3=d78700
+bright4=0087d7
+bright5=af00af
+bright6=00afaf
+bright7=004175

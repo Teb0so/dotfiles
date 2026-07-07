@@ -107,7 +107,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.93;
+float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -120,24 +120,24 @@ static const char *colorname[] = {
 	"#005faf",
 	"#870087",
 	"#008787",
-	"#8a8a8a",
+	"#5f5f5f",
 
 	// Bright Colors
-	"#808080",
+	"#cfcfcf",
 	"#d70000",
 	"#5faf5f",
 	"#d78700",
 	"#0087d7",
 	"#af00af",
 	"#00afaf",
-	"#ffffff",
+	"#004175",
 
 	[255] = 0,
 
 	// Background color
-	// "#ffffff"
+	"#ffffff"
 	// "#fdf6e3"
-	"#c0c0c0"
+	// "#c0c0c0"
 };
 
 
@@ -164,7 +164,7 @@ static unsigned int cursorshape = 2;
  */
 
 static unsigned int cols = 80;
-static unsigned int rows = 24;
+static unsigned int rows = 40;
 
 /*
  * Default colour and shape of the mouse cursor
