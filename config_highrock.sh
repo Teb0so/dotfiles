@@ -9,6 +9,7 @@ declare -a config=(
     "nvim"
     "ranger"
     "zathura"
+    "foot"
 )
 
 declare -a local=(
@@ -21,7 +22,7 @@ declare -a fonts=(
 
 declare -a dirs=(
     "home"
-    # "config"
+    "config"
     "local"
-    # "fonts"
+    "fonts"
 )

@@ -8,7 +8,6 @@ declare -a home=(
 declare -a config=(
     "nvim"
     "ranger"
-    "zathura"
 )
 
 declare -a local=(
