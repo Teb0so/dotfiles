@@ -1,0 +1,11 @@
+#!/bin/sh
+
+STATE=/tmp/clicklock.state
+
+if [ -f "$STATE" ]; then
+    ydotool click 0x40
+    rm "$STATE"
+else
+    ydotool click 0x80
+    touch "$STATE"
+fi
