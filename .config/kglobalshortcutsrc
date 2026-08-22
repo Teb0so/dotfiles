@@ -260,6 +260,9 @@ _launch=Meta+Return
 [services][io.github.Qalculate.qalculate-qt.desktop]
 _launch=Meta+C
 
+[services][net.local.click_lock.desktop]
+_launch=Meta+Num+*
+
 [services][org.kde.krunner.desktop]
 _launch=Alt+F2\tSearch\tMeta+P
 
