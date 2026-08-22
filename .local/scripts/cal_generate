@@ -1,0 +1,40 @@
+#!/bin/env bash
+
+set -e
+
+FORMAT="### %B %d %A"
+
+year=$1
+
+print_separator() {
+    printf "\n\n"
+    for i in {1..80}; do
+        printf "-"
+    done
+        printf "\n\n"
+}
+
+echo "generating calendar for $year..."
+
+[[ $# -eq 1 ]] || {
+    echo "Usage: $0 YEAR" >&2
+    exit 1
+}
+
+mkdir "$year"
+cd "$year"
+
+for (( month=1; month<=12; month++ )); do
+    days=$(date -d "$year-$month-01 +1 month -1 day" +%d)
+    month_name=$(date -d "$year-$month-01" +"%B")
+    printf -v month_num "%02d" "$month"
+    month_file="$month_num-$month_name.md"
+
+    printf "# ${month_name^}" > $month_file
+
+    for (( day=1; day<=days; day++ )); do
+        print_separator >> $month_file
+        date -d "$year-$month-$day 12:00" +"$FORMAT" >> $month_file
+    done
+done
+echo "done!"
