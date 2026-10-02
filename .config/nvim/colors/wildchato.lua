@@ -12,7 +12,7 @@ local set = vim.api.nvim_set_hl
 
 local c  = {
     fg          = "#000000",
-    bg          = "#ffffff",
+    bg          = "#fbefd5",
     whitespc    = "#eeeeee",
     light_grey  = "#cccccc",
     dark_grey   = "#5f5f5f",
