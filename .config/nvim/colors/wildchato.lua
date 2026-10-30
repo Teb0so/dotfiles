@@ -12,9 +12,10 @@ local set = vim.api.nvim_set_hl
 
 local c  = {
     fg          = "#000000",
-    bg          = "#fbefd5",
-    whitespc    = "#eeeeee",
-    light_grey  = "#cccccc",
+    bg          = "#fbefd5", -- Thanks UESP
+    selection   = "#c8e1f4",
+    whitespc    = "#e8e0d2",
+    light_grey  = "#fcfff0", -- Thanks again UESP
     dark_grey   = "#5f5f5f",
     red         = "#750000",
     green       = "#008700",
@@ -64,7 +65,7 @@ set(0, "Operator", { fg = c.fg })
 set(0, "PreProc", { fg = c.blue })
 set(0, "Constant", { fg = c.red })
 set(0, "Delimiter", { fg = c.fg })
-set(0, "Visual", { bg = c.light_grey })
+set(0, "Visual", { bg = c.selection })
 
 -- LSP
 set(0, "DiagnosticError", { fg = c.red })

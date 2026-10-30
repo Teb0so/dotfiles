@@ -1,6 +1,7 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-2201653f-1f50-419e-92e1-9a152784b4aa=none,none,Switch to activity "Default"
+switch-to-activity-651074bf-3770-45d0-b648-71af698d714f=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (Colemak-DH)=none,none,Switch keyboard layout to English (Colemak-DH)
@@ -222,6 +223,22 @@ playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
 
+[org_kde_powerdevil]
+Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
+Decrease Screen Brightness=Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness
+Decrease Screen Brightness Small=Shift+Monitor Brightness Down,Shift+Monitor Brightness Down,Decrease Screen Brightness by 1%
+Hibernate=Hibernate,Hibernate,Hibernate
+Increase Keyboard Brightness=Keyboard Brightness Up,Keyboard Brightness Up,Increase Keyboard Brightness
+Increase Screen Brightness=Monitor Brightness Up,Monitor Brightness Up,Increase Screen Brightness
+Increase Screen Brightness Small=Shift+Monitor Brightness Up,Shift+Monitor Brightness Up,Increase Screen Brightness by 1%
+PowerDown=Power Down,Power Down,Power Down
+PowerOff=Power Off,Power Off,Power Off
+Sleep=Sleep,Sleep,Suspend
+Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight
+Turn Off Screen=none,none,Turn Off Screen
+_k_friendly_name=Power Management
+powerProfile=Battery\tMeta+B,Battery\tMeta+B,Switch Power Profile
+
 [plasmashell]
 _k_friendly_name=plasmashell
 activate application launcher=Alt+F1,Meta\tAlt+F1,Activate Application Launcher
@@ -263,8 +280,11 @@ _launch=Meta+C
 [services][net.local.click_lock.desktop]
 _launch=Meta+Num+*
 
+[services][net.local.fuzzel.desktop]
+_launch=Meta+P
+
 [services][org.kde.krunner.desktop]
-_launch=Alt+F2\tSearch\tMeta+P
+_launch=Search\tAlt+F2
 
 [services][org.kde.kscreen.desktop]
 ShowOSD=Display

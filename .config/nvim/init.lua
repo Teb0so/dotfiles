@@ -7,6 +7,7 @@ vim.g.maplocalleader = "\\"
 -- Load plugins
 require("plugins.utils")
 require("plugins.oil")
+require("plugins.fzf")
 require("plugins.tmux-navigation")
 require("plugins.completion")
 require("plugins.lsp")
@@ -23,7 +24,7 @@ vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
 -- Set lists
 vim.cmd("set list")
-vim.cmd("set listchars=tab:-->")
+vim.cmd("set listchars=tab:-->,space:·")
 
 -- Set Identation
 vim.opt.expandtab = true
@@ -100,17 +101,17 @@ end, { desc = "Open diagnostics in quickfix" })
 vim.keymap.set("n", "<leader>sh", ":! ", { desc = "Run shell command" })
 
 -- Quick search
-vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
-vim.opt.path:append("**")
+-- vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
+-- vim.opt.path:append("**")
 
 -- List buffers
-vim.keymap.set('n', '<leader>fb', ':buffers<CR>:b ', { desc = "List buffers" })
+-- vim.keymap.set('n', '<leader>fb', ':buffers<CR>:b ', { desc = "List buffers" })
 
 -- Grep
-vim.opt.grepprg = "rg --vimgrep --smart-case --hidden --no-binary"
-vim.opt.grepformat = "%f:%l:%c:%m"
-vim.keymap.set('n', '<leader>fg', ':grep ', { desc = "Vim grep" })
-vim.keymap.set('v', '<leader>fg', '"zy:grep <C-r>z<CR>', { desc = "Vim visual grep" })
+-- vim.opt.grepprg = "rg --vimgrep --smart-case --hidden --no-binary"
+-- vim.opt.grepformat = "%f:%l:%c:%m"
+-- vim.keymap.set('n', '<leader>fg', ':grep ', { desc = "Vim grep" })
+-- vim.keymap.set('v', '<leader>fg', '"zy:grep <C-r>z<CR>', { desc = "Vim visual grep" })
 
 -- Align
 vim.api.nvim_create_user_command("Align", function(opts)

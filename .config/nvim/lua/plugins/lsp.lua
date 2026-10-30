@@ -32,6 +32,8 @@ vim.lsp.config("lua_ls", {
                 checkThirdParty = false,
                 library = {
                     vim.env.VIMRUNTIME,
+                    -- git clone https://github.com/LuaCATS/love2d ~/.local/share/love2d-library
+                    -- don't forget to run update.sh
                     os.getenv("HOME") .. "/.local/share/love2d-library/library",
                 },
             },
