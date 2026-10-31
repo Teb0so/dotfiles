@@ -6,10 +6,11 @@
 hostname=$(hostname)
 
 case "$hostname" in
-    skyrim)   PS1='%F{grey}%B[%F{blue}%n%F{grey}@%F{blue}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
-    highrock) PS1='%F{grey}%B[%F{green}%n%F{grey}@%F{green}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
-    cyrodiil) PS1='%F{grey}%B[%F{red}%n%F{grey}@%F{red}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
-    *)        PS1='%F{grey}%B[%F{grey}%n%F{grey}@%F{grey}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
+    localhost) PS1='[%F{magenta}%1~%f]$ ' ;;
+    skyrim)    PS1='%F{grey}%B[%F{blue}%n%F{grey}@%F{blue}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
+    highrock)  PS1='%F{grey}%B[%F{green}%n%F{grey}@%F{green}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
+    cyrodiil)  PS1='%F{grey}%B[%F{red}%n%F{grey}@%F{red}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
+    *)         PS1='%F{grey}%B[%F{grey}%n%F{grey}@%F{grey}%m%f %F{magenta}%1~%f%F{grey}]%f%B$ ' ;;
 esac
 
 # History in cache directory:

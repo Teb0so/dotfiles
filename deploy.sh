@@ -5,6 +5,12 @@ set -e
 script_path=$(pwd)
 hostname=$(cat /etc/hostname)
 
+if command -v hostname > /dev/null; then
+    hostname=$(hostname)
+else
+    hostname=$(cat /etc/hostname)
+fi
+
 if [[ -e "$script_path"/config_"$hostname".sh ]]; then
     source "$script_path"/config_"$hostname".sh
 else
