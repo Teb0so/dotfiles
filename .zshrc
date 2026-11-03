@@ -79,6 +79,12 @@ fi
 # nvim = vi
 alias vi='nvim'
 
+# lazygit = lz
+alias lz='lazygit'
+ 
+# rr = ranger
+alias rr='ranger'
+
 # ls
 alias ls='ls --color=tty'
 alias la='ls -a --color=tty'
