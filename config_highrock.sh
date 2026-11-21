@@ -4,6 +4,7 @@ declare -a home=(
     ".vimrc"
     ".zprofile"
     ".zshrc"
+    ".gitconfig"
 )
 
 declare -a config=(
