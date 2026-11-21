@@ -41,13 +41,20 @@ output HDMI-A-1 mode 1280x720 pos 1920 800
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
-
 ### Input configuration
 #
-    input type:pointer {
-        accel_profile flat
-    }
-#
+input type:pointer {
+    accel_profile flat
+}
+
+input 2:10:TPPS/2_IBM_TrackPoint {
+    accel_profile adaptive
+}
+ 
+input 2:7:SynPS/2_Synaptics_TouchPad {
+    accel_profile adaptive
+}
+ 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
