@@ -1,0 +1,10 @@
+[global]
+    frame_width = 3
+    frame_color="#5f5f5f"
+    foreground = "#000000"
+    background = "#fcfff0"
+    font = IosevkaTermslab Nerd Font
+
+[urgency_critical]
+    background = "#750000"
+    foreground = "#ffffff"

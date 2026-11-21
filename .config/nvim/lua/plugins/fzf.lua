@@ -4,3 +4,4 @@ vim.keymap.set("n", "<leader>ff", "<CMD>FzfLua files<CR>", { desc = "fzf menu fo
 vim.keymap.set("n", "<leader>fb", "<CMD>FzfLua buffers<CR>", { desc = "fzf menu for buffers" })
 vim.keymap.set("n", "<leader>fg", "<CMD>FzfLua live_grep<CR>", { desc = "fzf menu for grep" })
 vim.keymap.set("v", "<leader>fg", "<CMD>FzfLua grep_visual<CR>", { desc = "fzf menu for visual grep" })
+vim.keymap.set("n", "<leader>fo", "<CMD>FzfLua nvim_options<CR>", { desc = "fzf menu for nvim options" })

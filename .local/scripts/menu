@@ -1,0 +1,18 @@
+#!/bin/sh
+
+fuzzel \
+    --cache /dev/null \
+    --dpi-aware no \
+    --border-radius 0 \
+    --border-width 3 \
+    --horizontal-pad 0 \
+    --vertical-pad 0 \
+    --border-color 5f5f5fff \
+    --background fcfff0ff \
+    --text-color 000000ff \
+    --match-color af5f00ff \
+    --selection-match-color d78700ff \
+    --selection-text-color ffffffff \
+    --selection-color 5f5f5fff \
+    --input-color 000000ff \
+    --prompt-color 000000ff

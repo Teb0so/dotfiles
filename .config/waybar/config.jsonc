@@ -1,0 +1,57 @@
+
+ // -*- mode: jsonc -*-
+{
+    "spacing": 8,
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+
+    "modules-center": [
+        "sway/window"
+    ],
+
+    "modules-right": [
+        "tray",
+        "pulseaudio",
+        "clock",
+    ],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十"
+        }
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "tray": {
+        "spacing": 4
+    },
+
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M:%S}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+
+    "pulseaudio": {
+        "format": " {volume}%",
+        "on-click": "pavucontrol"
+    }
+}
+

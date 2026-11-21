@@ -9,9 +9,10 @@ declare -a config=(
     "nvim"
     "ranger"
     "foot"
-    "kglobalshortcutsrc"
-    "kwinrc"
-    "plasmashellrc"
+    "zathura"
+    "sway"
+    "waybar"
+    "dunst"
 )
 
 declare -a local=(
