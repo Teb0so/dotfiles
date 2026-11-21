@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: IosevkaTermslab Nerd Font;
-    font-size: 14px;
+    font-size: 14px
 }
 
 window#waybar {
@@ -13,7 +13,7 @@ window#waybar {
 button {
     border: none;
     border-radius: 0;
-    padding: 2px;
+    padding: 6px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
