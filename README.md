@@ -1,4 +1,6 @@
-# My dotfiles and configurations for the programs I use.
+# Dotfiles
+
+My dotfiles and configurations for the programs I use.
 
 ### Usage
 
