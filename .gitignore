@@ -1,6 +1,7 @@
 .uuid
 .config/mpd/database
 .config/mpd/log
+.luarc.json
 neovim/
 builds/
 
