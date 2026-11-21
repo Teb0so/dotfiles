@@ -6,6 +6,11 @@
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
 
+set $flatpak_user ~/.local/share/flatpak/exports/share
+set $flatpak_system /var/lib/flatpak/exports/share
+
+exec_always sh -c 'export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share"'
+
 exec vesktop -m
 exec_always pkill -f waybar
 exec_always waybar

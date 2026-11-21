@@ -2,14 +2,18 @@ declare -a home=(
     ".gdbinit"
     ".tmux.conf"
     ".vimrc"
+    ".zprofile"
     ".zshrc"
 )
 
 declare -a config=(
     "nvim"
     "ranger"
-    "zathura"
     "foot"
+    "zathura"
+    "sway"
+    "waybar"
+    "dunst"
 )
 
 declare -a local=(

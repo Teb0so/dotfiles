@@ -2,6 +2,7 @@ declare -a home=(
     ".gdbinit"
     ".tmux.conf"
     ".vimrc"
+    ".zprofile"
     ".zshrc"
 )
 
