@@ -11,6 +11,10 @@ build_nvim() {
         unzip \
         curl
 
+    echo Making build directory
+    mkdir -p builds
+    cd builds
+
     echo Cloning neovim...
     git clone https://github.com/neovim/neovim
     cd neovim

@@ -1,7 +1,8 @@
 .uuid
 .config/mpd/database
 .config/mpd/log
-
+neovim/
+builds/
 
 # Suckless stuff
 suckless/st/st
@@ -12,4 +13,3 @@ suckless/st/st
 **/core
 **/build/
 **/bin/
-neovim
