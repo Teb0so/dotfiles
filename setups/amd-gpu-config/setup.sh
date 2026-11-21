@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/sh
+
+echo Installing Packages
 set -e
 
 echo "Enabling i386 architecture..."
@@ -26,3 +28,9 @@ lspci -k | grep -EA3 'VGA|3D|Display'
 echo
 echo "Checking Vulkan:"
 vulkaninfo --summary
+
+echo Copying configuration...
+
+sudo cp ./20-amdgpu.conf /etc/X11/xorg.conf.d/
+
+echo Finished!
