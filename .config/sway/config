@@ -11,10 +11,10 @@ set $flatpak_system /var/lib/flatpak/exports/share
 
 exec_always sh -c 'export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share"'
 
-exec vesktop -m
-exec_always pkill -f waybar
-exec_always waybar
+exec_always restart_program waybar
 exec_always swaybg -m fill -i ~/Pictures/wals/luckystar.jpg & disown
+
+exec vesktop -m
 
 ### Variables
 #
@@ -75,7 +75,7 @@ input type:keyboard {
 
     bindsym $mod+Alt+e exec $file_manager
 
-    bindsym $mod+KP_Multiply exec /home/teb0so/.local/scripts/click_lock
+    bindsym $mod+KP_Multiply exec click_lock
 
     bindsym $mod+Alt+l exec $screen_lock
 
