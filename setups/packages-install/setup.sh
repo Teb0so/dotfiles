@@ -1,3 +1,5 @@
+echo Running setup: $0
+
 echo Installing packages...
 
 sudo apt install -y \

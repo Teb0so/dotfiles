@@ -42,3 +42,7 @@ for dir in "${dirs[@]}"; do
         fi
     done
 done
+
+for setup in "${setups[@]}"; do
+    "$script_path"/setups/"$setup"/setup.sh
+done

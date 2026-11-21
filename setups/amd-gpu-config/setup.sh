@@ -1,16 +1,17 @@
-#!/bin/sh
-
+echo Running setup: $0
 echo Installing Packages
 set -e
 
+script_path=$(pwd)/setups/amd-gpu-config
+
 echo "Enabling i386 architecture..."
-dpkg --add-architecture i386
+sudo dpkg --add-architecture i386
 
 echo "Updating package lists..."
-apt update
+sudo apt update
 
 echo "Installing AMD GPU drivers..."
-apt install -y \
+sudo apt install -y \
     firmware-amd-graphics \
     mesa-vulkan-drivers \
     mesa-vulkan-drivers:i386 \
@@ -29,8 +30,8 @@ echo
 echo "Checking Vulkan:"
 vulkaninfo --summary
 
-echo Copying configuration...
+echo Setting vsync configuration for xorg...
 
-sudo cp ./20-amdgpu.conf /etc/X11/xorg.conf.d/
+sudo cp $script_path/20-amdgpu.conf /etc/X11/xorg.conf.d/
 
 echo Finished!

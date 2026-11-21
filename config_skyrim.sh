@@ -30,3 +30,9 @@ declare -a dirs=(
     "local"
     "fonts"
 )
+
+declare -a setups=(
+    "packages-install"
+    "nvim-build"
+    "amd-gpu-config"
+)
