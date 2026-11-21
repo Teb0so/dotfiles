@@ -13,6 +13,7 @@ window#waybar {
 button {
     border: none;
     border-radius: 0;
+    padding: 2px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
