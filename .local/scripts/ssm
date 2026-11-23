@@ -18,7 +18,7 @@ session_select() {
 }
 
 session_last() {
-    if [[ -s "$HOME"/.ssm_last ]] then
+    if [[ -s "$HOME"/.ssm_last ]]; then
         last=$(cat "$HOME"/.ssm_last)
         last_ext="${last##*/}"
         last_name="${last_ext%.session}"

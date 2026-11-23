@@ -1,27 +1,36 @@
-
  // -*- mode: jsonc -*-
+ // 「」
 {
     "spacing": 8,
 
     "modules-left": [
         "sway/workspaces",
-        "sway/mode"
-    ],
-
-    "modules-center": [
+        "sway/mode",
         "sway/window"
     ],
 
     "modules-right": [
-        "tray",
         "battery",
         "pulseaudio",
         "clock",
+        "tray"
     ],
 
     "sway/workspaces": {
         "disable-scroll": true,
         "warp-on-scroll": false,
+        "persistent-workspaces": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十"
+        },
         "format": "{icon}",
         "format-icons": {
             "1": "一",
@@ -41,6 +50,10 @@
         "format": "<span style=\"italic\">{}</span>"
     },
 
+    "sway/window": {
+        "format": "「{title}」"
+    },
+
     "tray": {
         "spacing": 4
     },
@@ -51,16 +64,13 @@
     },
 
     "pulseaudio": {
-        "format": " {volume}%",
+        "format": "VOL: {volume}%",
         "on-click": "pavucontrol"
     },
 
     "battery": {
         "bat": "BAT0",
         "interval": 60,
-        "format": "{capacity}% {icon}",
-        "format-icons": [" ", " ", " ", " ", " "],
-        "max-length": 25
+        "format": "BAT: {capacity}%"
+    }
 }
-}
-
